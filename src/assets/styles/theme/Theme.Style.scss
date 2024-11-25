@@ -1,0 +1,624 @@
+// ======================================================== Start Custom Themes
+@import './utilities/Buttons.Style.scss';
+@import './utilities/Scrollbar.Style.scss';
+@import './utilities/TextEditor.Style.scss';
+// ======================================================== End Custom Themes
+//========================================================= Start Main Tags Override
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// TODO important considered as a bad practice, avoid that at all cost
+// * {
+//   outline: 0 !important;
+// }
+
+html {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $c-white;
+  font-size: $fz-default;
+  font-family: $ff-default !important;
+  color: $c-gray-primary;
+  min-width: 320px;
+  margin: 0;
+  padding: 0 !important;
+  font-weight: $fw-normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // TODO remove it later
+  .tox.tox-silver-sink.tox-tinymce-aux .tox-notifications-container {
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+  &.rtl {
+    text-align: right;
+    font-family: $ff-default-rtl !important;
+  }
+}
+
+#root > .container {
+  width: 100%;
+  padding: 0;
+}
+
+// @include rtl-in {
+//   .MuiPickersCalendarHeader-iconButton {
+//     .MuiSvgIcon-root {
+//       transform: scale(-1);
+//     }
+//   }
+// }
+
+// label {
+//   margin-bottom: 0;
+// }
+
+// p,
+// label {
+//   font-weight: 300;
+// }
+
+// ========================================================= End Main Tags Override
+// ======================================================== Start Global Override
+// Start Toaster Override
+.react-toast-notifications__container > div {
+  height: initial !important;
+}
+// End Toaster Override
+.MuiTouchRipple-root {
+  .MuiTouchRipple-ripple {
+    color: $c-accent-secondary;
+  }
+}
+
+.MuiTypography-body1,
+.MuiButtonBase-root,
+.MuiFormControl-root,
+.MuiSelect-root,
+.autocomplete,
+.MuiFormLabel-root,
+.MuiChip-label,
+.MuiInputBase-input,
+.MuiTableCell-root,
+.MuiTypography-root,
+.MuiOutlinedInput-notchedOutline legend {
+  font-family: $ff-default !important;
+  @include rtl {
+    font-family: $ff-default-rtl !important;
+  }
+  font-size: $fz-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-default !important;
+  @include rtl {
+    font-family: $ff-default-rtl !important;
+  }
+}
+
+.fas,
+.far,
+.fab,
+.fa,
+.ni {
+  @include rtl {
+    transform: scaleX(-1);
+  }
+}
+
+.progress .progress-bar {
+  @include rtl {
+    float: right;
+  }
+}
+
+.MuiIconButton-label {
+  .fas,
+  .far,
+  .fab {
+    @include rtl {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.MuiStepConnector-alternativeLabel {
+  @include rtl {
+    right: calc(-50% + 20px);
+    left: calc(50% + 20px);
+  }
+}
+
+.MuiStepper-root {
+  @include rtl {
+    right: -12.5%;
+    left: 0;
+  }
+}
+
+.MuiStepLabel-label {
+  @include rtl {
+    left: 0;
+    right: 50%;
+  }
+}
+
+.MuiSelect-outlined.MuiSelect-outlined {
+  @include rtl {
+    padding-right: 1rem;
+    padding-left: 2rem;
+  }
+}
+
+.MuiSelect-iconOutlined {
+  @include rtl {
+    right: initial;
+    left: 0.5rem;
+  }
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-formControl {
+  @include rtl {
+    left: initial;
+    transform-origin: top right;
+    transform: translate(-14px, 20px) scale(1);
+  }
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-formControl.MuiInputLabel-shrink {
+  @include rtl {
+    transform: translate(-14px, -6px) scale(0.75);
+  }
+}
+
+.MuiOutlinedInput-notchedOutline legend {
+  font-size: 12px;
+  @include rtl {
+    text-align: right;
+  }
+}
+
+.MuiStepper-root.MuiStepper-alternativeLabel {
+  left: 0;
+  width: 100%;
+  @include rtl {
+    right: 0;
+    left: initial;
+  }
+
+  .MuiStepLabel-label {
+    left: -50%;
+    transform: translateX(50%);
+    @include rtl {
+      right: -50%;
+      left: initial;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.BaseBadge-badge {
+  &.MuiBadge-colorSecondary {
+    background-color: $c-danger;
+  }
+}
+
+.MuiInputLabel-root + .MuiInputBase-root {
+  margin-top: 0 !important;
+}
+
+.MuiCard-root.MuiPaper-root,
+.MuiPickerStaticWrapper-root {
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.15);
+}
+// toaster
+.Toastify {
+  .toaster-undo-wrapper {
+    @include d-flex-v-center-h-between;
+    @include phones-s-max {
+      flex-wrap: wrap;
+    }
+  }
+}
+// end toaster
+
+a {
+  color: inherit;
+}
+
+// custom fullcalendar styles
+.calendar {
+  .fc-daygrid-day {
+    .fc-daygrid-day-frame {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #67779d;
+
+      a {
+        color: #67779d;
+      }
+    }
+
+    &.fc-day-today {
+      background-color: $c-white;
+
+      a {
+        color: #fb6340;
+      }
+    }
+  }
+
+  .fc th {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #899298;
+    text-transform: uppercase;
+  }
+}
+
+// To be remove when remove all reactstrap things
+p {
+  margin-bottom: 0;
+}
+
+.custom-toggle-slider {
+  &.rounded-circle {
+    border-radius: 30px !important;
+  }
+}
+
+.dropup,
+.dropend,
+.dropdown,
+.dropstart {
+  position: initial;
+}
+
+.dropdown-menu-xl {
+  min-width: 420px;
+  border-radius: 0.4375rem;
+}
+
+select.form-control[multiple],
+select.form-control[size],
+textarea.form-control {
+  height: auto;
+}
+
+.carousel-content-wrapper {
+  left: 55px;
+  position: relative;
+  @include rtl {
+    left: initial;
+    right: 55px;
+  }
+}
+
+a,
+a:hover,
+.btn-link {
+  text-decoration: none;
+}
+
+.badge-dot {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: none;
+  color: inherit;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #e9ecef;
+}
+
+table {
+  border-collapse: initial;
+  border-spacing: 0;
+}
+
+.table thead tr th,
+.table tbody tr td {
+  border-collapse: initial;
+  vertical-align: middle;
+}
+
+.stage-card.pipeline-stage-card h4,
+.stage-card.premium-card h4 {
+  font-size: 19px;
+}
+//.fr-element,
+//.fb-rich-text {
+//  p {
+//    font-size: inherit;
+//  }
+//}
+
+.form-select {
+  background-repeat: no-repeat !important;
+}
+
+h1 {
+  font-size: 1.625rem !important;
+}
+
+h2 {
+  font-size: 1.25rem !important;
+}
+
+h3 {
+  font-size: 1.0625rem !important;
+}
+
+h4 {
+  font-size: 0.9375rem !important;
+}
+
+h5 {
+  font-size: 0.8125rem !important;
+}
+
+h6 {
+  font-size: 0.625rem !important;
+}
+
+.h1 {
+  font-size: 2.5rem !important;
+}
+
+.h2 {
+  font-size: 2rem !important;
+}
+
+.h3 {
+  font-size: 1.75rem !important;
+}
+
+.h4 {
+  font-size: 1.5rem !important;
+}
+
+.h5 {
+  font-size: 1.25rem !important;
+}
+
+.h6 {
+  font-size: 1rem !important;
+}
+
+.h7 {
+  font-size: 0.75rem !important;
+}
+
+.h8 {
+  font-size: 0.625rem !important;
+}
+
+.list-activity-table .table td,
+.list-activity-table .table th,
+.list-assessment-table .table td,
+.list-assessment-table .table th,
+.list-template-table .table td,
+.list-template-table .table th {
+  color: #899298 !important;
+}
+
+.btn {
+  border-radius: 8px;
+  white-space: nowrap;
+
+  &.rounded-circle {
+    padding: 0;
+  }
+
+  &.btn-secondary {
+    color: initial;
+    background-color: transparent;
+    border-color: transparent;
+
+    &.step-button.back-button {
+      background: #b7b7b7;
+      border-color: #b7b7b7;
+      color: white;
+    }
+  }
+}
+
+.MuiStepper-root.MuiStepper-alternativeLabel {
+  margin-top: 25px;
+}
+
+.card-header,
+.card-footer {
+  background-color: inherit;
+}
+
+.skills-badge {
+  background: #f5f5fa;
+  color: #32325d;
+  border-radius: 10px;
+  margin: 3px;
+  box-shadow:
+    0 1px 2px 0 rgb(50 50 93 / 15%),
+    0 1px 0 0 rgb(0 0 0 / 2%);
+  font-size: 13px;
+  line-height: 13px;
+  width: fit-content;
+}
+
+.text-primary {
+  color: var(--c-primary, #051274) !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #32325d;
+  font-family: $ff-default !important;
+
+  @include rtl {
+    font-family: $ff-default-rtl !important;
+  }
+}
+
+.ellipsis-icon-button {
+  color: #6d737a !important;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+  opacity: 0.5;
+  transition: all 0.15s ease;
+  appearance: none;
+  background-color: initial;
+  border: 0;
+}
+
+.btn-primary {
+  background-color: var(--bg-primary, #051274) !important;
+  box-shadow:
+    0 4px 6px rgb(50 50 93 / 11%),
+    0 1px 3px rgb(0 0 0 / 8%);
+  border-color: var(--bc-primary, #051274);
+}
+
+.btn-neutral,
+.btn-neutral:hover {
+  //color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-neutral {
+  color: var(--c-primary, #051274);
+}
+
+.page-item {
+  margin: 0 0.25rem;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+// To be remove when remove agron dashboard pro react
+b,
+strong {
+  font-weight: revert;
+}
+
+.invalid-feedback {
+  display: block !important;
+}
+
+.dropdown-menu .dropdown-item > i,
+.dropdown-menu .dropdown-item > svg {
+  //@include rtl {
+  //  margin-left: 1rem;
+  //  margin-right: 0;
+  //}
+}
+
+.dropdown-menu .dropdown-item img {
+  @include rtl {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+}
+
+.modal-header .close {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.btn i:not(:last-child),
+.btn svg:not(:last-child) {
+  @include rtl {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+}
+
+// ======================================================== End Global Override
+// ======================================================== Start Global Views
+@import './utilities/GlobalViews.Style.scss';
+// ======================================================== End Global Views
+// ======================================================== Start Images
+@import './utilities/Images.Style.scss';
+// ======================================================== End Images
+// ======================================================== Start Icons
+@import './utilities/Icons.Style.scss';
+// ======================================================== End Icons
+// ======================================================== Start Display
+@import './utilities/Display.Style.scss';
+// ======================================================== End Display
+// ======================================================== Start Positions
+@import './utilities/Positions.Style.scss';
+// ======================================================== End Positions
+// ======================================================== Start Borders
+@import './utilities/Borders.Style.scss';
+// ======================================================== End Borders
+// ========================================================= Start Gradients Classes
+@import './utilities/Gradients.Style.scss';
+// ========================================================= End Gradients Classes
+// ========================================================= Start Texts Classes
+@import './utilities/Texts.Style.scss';
+// ========================================================= End Texts Classes
+// ========================================================= Start Separators Classes
+@import './utilities/Separators.Style.scss';
+// ========================================================= End Separators Classes
+// ======================================================== Start Font Sizes
+@include font-sizes;
+// ======================================================== End Font Sizes
+// ======================================================== Start Font Weights
+@include font-weights;
+// ======================================================== End Font Weights
+// ======================================================== Start Font Family
+@include font-family;
+// ======================================================== End Font Family
+// ======================================================== Start Widths
+@include widths;
+// ======================================================== End Widths
+// ======================================================== Start Heights
+@include heights;
+// ======================================================== End Heights
+// ======================================================== Start Margins & Padding
+@include padding-marin-loop;
+// ======================================================== End Margins & Padding
+// ======================================================== Start Colors
+@include colors-loop;
+// ======================================================== End Colors

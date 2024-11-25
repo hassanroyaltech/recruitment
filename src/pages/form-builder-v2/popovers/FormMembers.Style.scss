@@ -1,0 +1,50 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.form-members-popover-wrapper {
+  .permissions-checkboxes {
+    margin: 0px;
+    margin-inline-start: auto;
+    min-width: fit-content;
+    gap: 6px;
+  }
+  .break-word {
+    word-break: break-word;
+  }
+  .MuiPaper-root {
+    width: 450px;
+    min-height: 471px;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+  .form-member-tab-wrapper {
+    .profile-meet-member-custom {
+      margin-inline: auto;
+      width: fit-content;
+      .circle-theme-component-wrapper {
+        height: 100px;
+        width: 100px;
+      }
+    }
+    @include phones-max {
+      min-width: 270px;
+    }
+
+    .list-items-wrapper {
+      @include d-flex-column;
+      justify-content: flex-start;
+      padding: 0 0.5rem;
+      height: 350px;
+      overflow-y: auto;
+
+      .list-item {
+        @include d-flex-v-center;
+        margin-bottom: 0.5rem;
+        padding: 0 0.5rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: $c-gray-lighter-more;
+        }
+      }
+    }
+  }
+}

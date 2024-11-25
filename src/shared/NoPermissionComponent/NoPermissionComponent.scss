@@ -1,0 +1,64 @@
+.no-permission-component-wrapper {
+  position: relative;
+  z-index: 99999999;
+  margin: 0.5rem;
+
+  .permission-arrow {
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    top: -0.6rem;
+  }
+
+  .no-permission-component-content {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    .permission-title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      padding-bottom: 1rem;
+
+      .permission-title {
+        max-width: 17rem;
+      }
+
+      .fas {
+        font-size: 28px;
+        color: #8eccaa;
+      }
+
+      &.is-assessment {
+        .fas {
+          color: #68529f;
+        }
+      }
+    }
+
+    .no-permission-action {
+      margin-bottom: 0.5rem;
+
+      .MuiButtonBase-root {
+        color: white;
+        text-transform: capitalize;
+        background-color: #8eccaa;
+        border-radius: 0.5rem;
+      }
+
+      &.is-assessment {
+        .MuiButtonBase-root {
+          background-color: #68529f;
+        }
+      }
+    }
+  }
+}

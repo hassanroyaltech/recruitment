@@ -1,0 +1,18 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.visa-pipeline-header-actions-wrapper {
+  .small-control {
+    flex: 0 1;
+    min-width: 125px;
+    max-width: 125px;
+  }
+}
+
+.stages-display-popover {
+  .stage-display-items-wrapper {
+    padding: 0.5rem 1rem;
+
+    .stage-display-item {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

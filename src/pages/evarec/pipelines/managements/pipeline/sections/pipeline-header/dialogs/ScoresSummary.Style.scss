@@ -1,0 +1,70 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.scorecard-summary-dialog-wrapper {
+  .bg-brown-scale-6 {
+    background-color: $c-brown-scale-6;
+  }
+  .border-radius-10 {
+    border-radius: 12px;
+  }
+  .h-w-40px {
+    height: 40px;
+    width: 40px;
+  }
+  .separator-neutral-scale-5 {
+    border-bottom: 1px solid $c-neutral-scale-5;
+  }
+  .c-neutral-scale-3 {
+    color: $c-neutral-scale-3;
+  }
+  .c-neutral-scale-1 {
+    color: $c-neutral-scale-1;
+  }
+  .fz-28px {
+    font-size: 28px;
+  }
+  .section-title {
+    .scor-star-rating-wrapper {
+      .MuiRating-root {
+        font-size: 18px;
+      }
+    }
+  }
+  .scorecard-summary-btn {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid $c-secondary-4;
+  }
+  .score-assign-avatars {
+    border: 1px solid $c-secondary-4;
+    border-radius: 20px;
+  }
+  .scorecard-summary-wrapper {
+    padding-inline: 2rem;
+    @include tablets-max {
+      padding-inline: 0px;
+    }
+  }
+  .scrollable-summary-items {
+    min-height: 150px;
+    max-height: calc(100vh - 360px);
+    overflow-y: auto;
+  }
+  .candidate-avg-score {
+    min-width: 40px;
+  }
+  .p-end-15px {
+    padding-inline-end: 15px;
+  }
+  .summary-parent {
+    .side-bar-scores {
+      width: 28%;
+    }
+    @include tablets-max {
+      flex-flow: wrap;
+      flex-direction: column-reverse;
+      .side-bar-scores {
+        width: 100%;
+      }
+    }
+  }
+}

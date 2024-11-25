@@ -1,0 +1,17 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.tag-avatar-wrapper {
+  @include d-inline-flex-v-center-h-between;
+  border-radius: 0.25rem;
+  min-height: 40px;
+  border: 1px solid $c-gray-lighter;
+  color: $c-black-light;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem 0.5rem;
+  .btns-icon.theme-outline {
+    border-color: $c-black-light;
+    color: $c-black-light;
+    height: 22px;
+    width: 22px;
+    min-width: 22px;
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.groups-management-content-dialog-wrapper {
+  .permissions-responsive-handler {
+    min-width: 767px;
+    overflow-x: auto;
+  }
+  .collapse-header-wrapper {
+    .collapse-btn {
+      border: 1px solid $c-gray-light;
+      &.is-open {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+  .collapse-wrapper {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    .MuiCollapse-wrapper {
+      padding-top: 1rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+      border: 1px solid $c-gray-light;
+    }
+  }
+}

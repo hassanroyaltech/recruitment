@@ -1,0 +1,85 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.organization-chart-wrapper {
+  direction: ltr;
+  @include d-flex-center;
+  min-width: 500px;
+  min-height: 521px;
+  padding: 1rem 1rem 0;
+  &.is-with-grid-background {
+    background-size:
+      100px 100px,
+      100px 100px,
+      20px 20px,
+      20px 20px !important;
+    background-position:
+      20px 20px,
+      20px 20px,
+      20px 20px,
+      20px 20px !important;
+    background-blend-mode: difference !important;
+    background-image: linear-gradient(rgba(130, 130, 130, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(130, 130, 130, 0.5) 1px, transparent 1px),
+      linear-gradient(rgba(130, 130, 130, 0.25) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(130, 130, 130, 0.25) 1px, transparent 1px) !important;
+  }
+  > ul {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  .nodes-wrapper {
+    @include d-inline-flex-center;
+    background-color: $c-white;
+    padding: 0.5rem;
+    min-height: 70px;
+    min-width: 100px;
+    border-radius: 0.5rem;
+    border: 1px solid var(--bc-primary, $c-primary);
+    position: relative;
+    overflow: hidden;
+    color: var(--c-primary, $c-primary);
+    font-weight: $fw-simi-bold;
+    &:after {
+      background-color: var(--bg-primary, $c-primary);
+      content: ' ';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 80%;
+      border-radius: 0.5rem;
+      width: 1rem;
+      z-index: 1;
+      pointer-events: none;
+      left: -0.7rem;
+      @include rtl {
+        left: initial;
+        right: -0.7rem;
+      }
+    }
+    &.second-nodes {
+      color: $c-green-primary;
+      border-color: $c-green-primary;
+      &:after {
+        background-color: $c-green-primary;
+      }
+    }
+    &.third-nodes {
+      color: $c-secondary;
+      border-color: $c-secondary;
+      &:after {
+        background-color: $c-secondary;
+      }
+    }
+    &.fourth-nodes {
+      color: $c-info;
+      border-color: $c-info;
+      &:after {
+        background-color: $c-info;
+      }
+    }
+    &.is-include-search {
+      border-style: dashed;
+      border-width: 2px;
+      border-color: $c-primary-dark;
+    }
+  }
+}

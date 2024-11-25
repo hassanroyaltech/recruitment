@@ -1,0 +1,21 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.notifications-settings-dialog-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  max-height: calc(100vh - 188px);
+  overflow-y: hidden;
+  border-top: 1px solid rgba(36, 37, 51, 0.04);
+}
+.notifications-settings-data-wrapper {
+  max-height: 90vh;
+  overflow-y: auto;
+  border-left: 1px solid rgba(36, 37, 51, 0.04);
+}
+.width-100-align-text {
+  width: 100px;
+  text-align: left;
+  &.rtl {
+    text-align: right;
+  }
+}

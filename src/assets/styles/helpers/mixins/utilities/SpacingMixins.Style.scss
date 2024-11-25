@@ -1,0 +1,90 @@
+// Start Padding & Margin Loop
+@mixin padding-marin-loop() {
+  @each $prop, $value in $spacing-types {
+    @each $size, $length in $spaces {
+      .#{$value}-#{$size} {
+        #{$prop}: $length + $spaces-unit !important;
+      }
+      .#{$value}t-#{$size},
+      .#{$value}y-#{$size} {
+        #{$prop}-top: $length + $spaces-unit !important;
+      }
+      .#{$value}r-#{$size},
+      .#{$value}x-#{$size} {
+        #{$prop}-right: $length + $spaces-unit !important;
+      }
+      .#{$value}b-#{$size},
+      .#{$value}y-#{$size} {
+        #{$prop}-bottom: $length + $spaces-unit !important;
+      }
+      .#{$value}l-#{$size},
+      .#{$value}x-#{$size} {
+        #{$prop}-left: $length + $spaces-unit !important;
+      }
+      .#{$value}l-#{$size}-reversed {
+        #{$prop}-left: $length + $spaces-unit !important;
+        @include rtl {
+          #{$prop}-left: 0 !important;
+          #{$prop}-right: $length + $spaces-unit !important;
+        }
+      }
+      .#{$value}r-#{$size}-reversed {
+        #{$prop}-right: $length + $spaces-unit !important;
+        @include rtl {
+          #{$prop}-right: 0 !important;
+          #{$prop}-left: $length + $spaces-unit !important;
+        }
+      }
+    }
+  }
+}
+// Start Paddings
+@mixin pl($value: 0.5rem) {
+  padding-left: $value;
+}
+@mixin pr($value: 0.5rem) {
+  padding-right: $value;
+}
+@mixin pt($value: 0.5rem) {
+  padding-top: $value;
+}
+@mixin pb($value: 0.5rem) {
+  padding-bottom: $value;
+}
+@mixin px($value: 0.5rem) {
+  @include pl($value);
+  @include pr($value);
+}
+@mixin py($value: 0.5rem) {
+  @include pt($value);
+  @include pb($value);
+}
+@mixin p($value: 0.5rem) {
+  @include px($value);
+  @include py($value);
+}
+// Start Margins
+@mixin ml($value: 0.5rem) {
+  margin-left: $value;
+}
+@mixin mr($value: 0.5rem) {
+  margin-right: $value;
+}
+@mixin mt($value: 0.5rem) {
+  margin-top: $value;
+}
+@mixin mb($value: 0.5rem) {
+  margin-bottom: $value;
+}
+@mixin mx($value: 0.5rem) {
+  @include ml($value);
+  @include mr($value);
+}
+@mixin my($value: 0.5rem) {
+  @include mt($value);
+  @include mb($value);
+}
+@mixin m($value: 0.5rem) {
+  @include mx($value);
+  @include my($value);
+}

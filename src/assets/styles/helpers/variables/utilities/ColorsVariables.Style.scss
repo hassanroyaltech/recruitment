@@ -1,0 +1,109 @@
+$c-primary-dark: #133c89;
+$c-primary: #272c6a;
+$c-primary-light: #525f7f;
+$c-accent-secondary: #6663F0;
+$c-accent-secondary-light: #644DED14;
+$c-accent-secondary-light-more: #9492FA;
+$c-accent-secondary-lighter: #AD9FFF;
+$c-accent-secondary-lighter-more: #C0BDFC;
+$c-accent-secondary-lightest: #ECE9FC;
+$c-secondary: #31bfe0;
+$c-secondary-light: #e8f0ff;
+$c-pink: #c165db;
+$c-pink-light: #f4e0fa;
+$c-purple: #68529f;
+$c-success: #31c7aa;
+$c-success-light: #6ae5d3;
+$c-warning: #f69e95;
+$c-warning-light: #ffe2de;
+$c-danger: #db504a;
+$c-info: #857bff;
+$c-black: #000000;
+$c-black-dark: #020311;
+$c-black-light: #242533;
+$c-black-lighter: #484964;
+$c-white: #ffffff;
+$c-white-dark: #dfe9ea;
+$c-yellow: #ffb902;
+$c-blue: #0066cc;
+$c-blue-light: #3e7192;
+$c-blue-lighter: #5fb7ff;
+$c-blue-lightest: #b6d2ff;
+$c-blue-lightest-more: #f3fbfe;
+$c-red: #ff0000;
+$c-green-dark: #25d366;
+$c-green-primary: #5eb041;
+$c-green: #72d179;
+$c-green-light: #dbf5ee;
+$c-green-lighter: #EDF7EE;
+// Start New Colors (Gray)
+$c-gray-primary: #808192;
+$c-gray-secondary: #808080;
+$c-gray-darker: #3a3a3c;
+$c-gray-dark: #838383;
+$c-gray: #BCBCC6;
+$c-gray-light: #dadde2;
+$c-gray-lighter: #EEEEF2;
+$c-gray-lighter-more: #F8F8FB;
+$c-gray-lighter-table: #f6f7f9;
+$c-gray-lightest: #fafafa;
+$c-neutral-scale-1: #1C1D21;
+$c-neutral-scale-2: #47494E;
+$c-neutral-scale-3: #73757C;
+$c-neutral-scale-4: #90929A;
+$c-neutral-scale-5: #E6E7EA;
+$c-neutral-scale-6: #EFEFF1;
+$c-ui-dark-primary-100: #020B1F;
+$c-secondary-3: #D9CABD;
+$c-secondary-4: #ECE5DE;
+$c-brown-scale-6: #F0EAE4;
+$c-mui-error-red: #d32f2f;
+
+// End New Colors
+// #808192 gray-primary
+// #BCBCC6 gray
+// #EEEEF2 gray-lighter
+// #F8F8FB $c-gray-lighter-more
+
+// $c-gray-lighter: #e6e6e6;
+// $c-gray-primary: #121212;
+// $c-gray-secondary: #999999;
+// $c-gray-dark: #4d4d4d;
+// $c-gray-light: #b3b3b3;
+// $c-gray-lighter: #fafafa;
+// $c-gray-lightest: #f2f2f2;
+$c-lavender: #e1e2fe;
+$c-error: #f44336;
+$bg-progress-gradient: linear-gradient(
+  90deg,
+  $c-warning 0%,
+  $c-primary 45%,
+  $c-success 100%
+);
+$bg-progress-gradient-reversed: linear-gradient(
+  -90deg,
+  $c-warning 0%,
+  $c-primary 45%,
+  $c-success 100%
+);
+$bg-gradient-primary: linear-gradient(191deg, $c-primary 91%, $c-primary-dark 10%);
+$bg-gradient-primary-right: linear-gradient(
+  to right,
+  $c-primary 0%,
+  $c-primary-dark 100%
+);
+$bg-gradient-primary-left: linear-gradient(
+  to left,
+  $c-primary 0%,
+  $c-primary-dark 100%
+);
+$bg-gradient-primary-top: linear-gradient(
+  to top,
+  $c-primary 0%,
+  $c-primary-dark 100%
+);
+$bg-gradient-primary-bottom: linear-gradient(
+  to bottom,
+  $c-primary 0%,
+  $c-primary-dark 100%
+);

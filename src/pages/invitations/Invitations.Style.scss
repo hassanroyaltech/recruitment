@@ -1,0 +1,86 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.invitations-page {
+  @include d-flex;
+  align-items: flex-start;
+  .open-side-menu-wrapper {
+    padding: 1rem;
+    position: absolute;
+    z-index: 1;
+  }
+  .invitation-side-menu {
+    height: 100vh;
+    overflow-y: auto;
+    width: 0;
+    border-right: 1px solid $c-gray-lighter;
+    transition-property: padding, width;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    padding: 0;
+    z-index: 2;
+    @include tablets-max {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $c-white;
+    }
+    &.is-open {
+      width: 300px;
+      padding: 1rem;
+    }
+    .onboarding-side-menu-header {
+      @include d-flex-v-center-h-between;
+      margin-bottom: 1rem;
+      color: $c-black-light;
+      .menu-icon-wrapper {
+        @include d-inline-flex-center;
+        background-color: $c-lavender;
+        border-radius: 0.5rem;
+        min-height: 32px;
+        min-width: 32px;
+      }
+    }
+  }
+  .invitations-page-content-wrapper {
+    @include d-flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 1rem 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    .brand-logo {
+      max-height: 55px;
+      max-width: 200px;
+      min-height: 35px;
+      min-width: 75px;
+    }
+    .invitations-page-header {
+      @include d-flex-v-center;
+      color: $c-gray-dark;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+    }
+    .invitations-page-body {
+      @include d-flex;
+      flex-wrap: wrap;
+      .group-items-wrapper {
+        @include d-flex;
+        flex-wrap: wrap;
+        .group-item-header {
+          @include d-flex;
+          padding: 0.5rem;
+          color: $c-black-light;
+          font-weight: $fw-medium;
+        }
+        .group-item-body {
+          @include d-flex;
+          flex-wrap: wrap;
+          .invitations-card-section-wrapper {
+            @include d-inline-flex;
+            flex: 0 1 0;
+          }
+        }
+      }
+    }
+  }
+}

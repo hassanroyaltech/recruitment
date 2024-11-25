@@ -1,0 +1,49 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.pipeline-management-wrapper {
+  .scorecard-btn {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid transparent;
+    &:hover {
+      border-color: $c-secondary-4;
+    }
+    .icon-with-bg {
+      background-color: $c-brown-scale-6;
+      border-radius: 6px;
+      height: 24px;
+      width: 24px;
+    }
+  }
+  .score-assign-avatars {
+    border: 1px solid $c-secondary-4;
+    border-radius: 20px;
+  }
+  .pipeline-management-body-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 0 1rem;
+
+    .pipeline-title-wrapper {
+      @include d-inline-flex-v-center;
+      white-space: nowrap;
+      padding: 0 1rem;
+      border-bottom: 2px solid $c-gray-light;
+    }
+  }
+}
+.popover-item-justify {
+  justify-content: start;
+}
+.min-width-200px {
+  min-width: 150px;
+}
+.max-height-500px {
+  max-height: 500px;
+}
+.rotate-45-reverse {
+  transform: rotate(45deg);
+  @include rtl {
+    transform: rotate(-45deg);
+  }
+}

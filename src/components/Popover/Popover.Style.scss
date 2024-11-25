@@ -1,0 +1,17 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.popover-wrapper {
+  .MuiPaper-root {
+    min-width: 100px;
+    border-radius: 12px;
+    @include d-flex;
+    flex-wrap: wrap;
+    //border: 1px solid $c-gray-light;
+    //box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 0 2px rgba(16, 17, 30, 0.2),
+      0 4px 13px rgba(9, 11, 33, 0.12);
+  }
+  &.with-backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

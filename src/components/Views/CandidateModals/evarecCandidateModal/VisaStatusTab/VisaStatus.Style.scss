@@ -1,0 +1,36 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.visa-status-tab {
+  .details-section-wrapper {
+    border-radius: 1rem;
+    border: 1px solid $c-gray-light;
+    .details-body {
+      .details-body-item {
+        @include d-flex-v-center;
+        flex-wrap: wrap;
+        min-height: 40px;
+        padding: 0.5rem;
+        .details-body-item-title {
+          min-width: 155px;
+          color: $c-gray-primary;
+          padding: 0 0.5rem;
+        }
+        //&:not(:last-child) {
+        border-bottom: 1px solid $c-gray-light;
+        //}
+      }
+    }
+    .details-footer {
+      @include d-flex-v-center-h-end;
+      flex-wrap: wrap;
+      min-height: 40px;
+      padding: 1rem 0.5rem 0.5rem;
+    }
+  }
+  .visa-logs-wrapper {
+    .details-section-wrapper {
+      background-color: $c-white;
+      box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+﻿{
+  "dispatchers": "Sevkiyatçılar",
+  "dispatchers-description": "Sevk Görevlileri Açıklaması",
+  "assign-to": "Şuna Ata",
+  "assign-to-users": "Kullanıcılara Ata",
+  "select-users": "-- Kullanıcıları Seç --",
+  "search": "Ara",
+  "this-field-is-required": "Bu alan gereklidir",
+  "dispatcher-process": "Sevkiyat Süreci",
+  "assign-to-users-successfully": "Kullanıcılara Başarıyla Atayın",
+  "assign-to-users-failed": "Kullanıcılara Atama Başarısız"
+}

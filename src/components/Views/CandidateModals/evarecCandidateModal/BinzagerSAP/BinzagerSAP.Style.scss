@@ -1,0 +1,16 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.binzager-sap-tab-wrapper {
+  .binzager-sap-tab-wrapper {
+    background-color: $c-white;
+    padding: 1rem 1rem 0;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    .binzager-sap-card-body {
+      @include d-flex-column;
+      .b-sap-item-card {
+        border-radius: 4px;
+        border: 1px solid $c-gray-light;
+      }
+    }
+  }
+}

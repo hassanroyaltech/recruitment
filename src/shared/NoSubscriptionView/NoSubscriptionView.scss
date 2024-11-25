@@ -1,0 +1,26 @@
+.no-current-plan-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 9rem;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--c-primary, #051274);
+  background-color: white;
+  img {
+    width: 26rem;
+    height: 26rem;
+    margin-bottom: -1rem;
+  }
+  .MuiButton-root {
+    background-color: #37af40;
+    text-transform: capitalize;
+    width: 10rem;
+    min-height: 3rem;
+    border-radius: 10px;
+    color: white;
+    margin-top: 1.5rem;
+  }
+}

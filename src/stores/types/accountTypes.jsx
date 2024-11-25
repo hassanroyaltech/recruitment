@@ -1,0 +1,8 @@
+export const AccountTypes = {
+  SUCCESS: 'Account_SUCCESS',
+  FAILED: 'Account_FAILED',
+  RESET: 'Account_RESET',
+  DELETE: 'Account_DELETE',
+  UPDATE_LIST: 'ACCOUNT_UPDATE_LIST_SUCCESS',
+  UPDATE_ACCOUNT: 'UPDATE_ACCOUNT_SUCCESS',
+};

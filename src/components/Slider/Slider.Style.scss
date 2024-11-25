@@ -1,0 +1,19 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.slider-wrapper {
+  @include d-flex-v-center-h-start;
+  flex-wrap: wrap;
+  width: 100%;
+  &.is-row {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    .label-wrapper {
+      white-space: nowrap;
+      padding: 0.25rem 0 0;
+      padding-right: 1rem;
+      @include rtl {
+        padding-left: 1rem;
+        padding-right: 0;
+      }
+    }
+  }
+}

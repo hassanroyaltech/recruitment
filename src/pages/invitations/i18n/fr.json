@@ -1,0 +1,11 @@
+{
+  "invitations": "Invitations",
+  "welcome-to": "Bienvenue",
+  "space": "Espace",
+  "folder": "Dossier",
+  "started": "Commencé",
+  "completed": "Terminé",
+  "generate-form-link-failed": "Échec de la génération du lien de formulaire",
+  "created-at": "Créé le",
+  "activation-date": "Date d'activation"
+}

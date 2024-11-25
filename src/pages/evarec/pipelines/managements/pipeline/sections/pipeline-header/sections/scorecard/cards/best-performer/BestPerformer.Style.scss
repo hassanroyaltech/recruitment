@@ -1,0 +1,12 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.score-best-performer-card {
+  .c-neutral-scale-1 {
+    color: $c-neutral-scale-1;
+  }
+}
+.best-decision-view {
+  border: 1px solid $c-secondary-3;
+  padding: 10px;
+  border-radius: 4px;
+  flex-grow: 1;
+}

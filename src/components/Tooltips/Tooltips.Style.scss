@@ -1,0 +1,23 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.tooltip-wrapper {
+}
+
+.tooltip-popover-wrapper {
+  z-index: 2;
+  padding: 0 0.5rem;
+
+  .MuiTooltip-tooltip {
+    font-size: $fz-12px;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .MuiTooltip-arrow {
+      color: rgba(0, 0, 0, .7);
+      //margin-left: -.5rem !important;
+      //@include rtl {
+      //  margin-left: 0 !important;
+      //  margin-right: -.5rem !important;
+      //}
+      //margin-right: -.5rem !important;
+    }
+  }
+}

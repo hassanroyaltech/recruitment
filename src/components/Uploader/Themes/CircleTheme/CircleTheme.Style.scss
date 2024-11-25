@@ -1,0 +1,64 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+
+.circle-theme-component-wrapper {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  position: relative;
+  @include d-flex-v-center-h-between;
+  background-color: $c-gray-lightest;
+  border: 1px solid $c-gray;
+  padding: 0.5rem;
+
+  &:hover {
+    :not([disabled]) {
+      border-color: $c-gray-light;
+    }
+  }
+
+  &:focus:not([disabled]) {
+    border-color: $c-primary !important;
+    box-shadow: 0 0 2px 2px rgba($c-primary, 0.3);
+  }
+
+  &.drag-over {
+    border-style: dashed;
+  }
+
+  .dropzone-wrapper {
+    width: 100%;
+    overflow: hidden !important;
+    height: 100%;
+    @include d-inline-flex-v-center;
+    flex-wrap: wrap;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .drop-here {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  .btns-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include rtl {
+      right: initial;
+      left: 0;
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include rtl {
+      right: initial;
+      left: 0;
+    }
+  }
+}

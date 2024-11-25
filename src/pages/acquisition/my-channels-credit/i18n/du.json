@@ -1,0 +1,54 @@
+{
+  "my-channels-credit": "Mijn kanalen krediet",
+  "all channels": "Alle kanalen",
+  "recommended": "Aanbevolen",
+  "new-campaign": "Nieuwe campagne",
+  "search": "Zoeken",
+  "sort-by": "Sorteren op",
+  "sort-by-dots": "Sorteren op:",
+  "my-channels-credit-description": "Verspreid uw banen via gekochte kanalen om uw bereik te vergroten en toegang te krijgen tot verschillende talentenpools",
+  "transaction-pay-failed": "Transactiebetaalfout",
+  "add-selected-channels-failed-description": "Geselecteerde kanalen toevoegen mislukt, selecteer ze opnieuw uit de dialoog",
+  "there-are-no-channels-credit-available": "Er zijn geen kanaalkredieten beschikbaar",
+  "CardFilterBy": {
+    "regions": "Regio's",
+    "job-title": "Functietitel",
+    "select-regions": "-- Selecteer regio's --",
+    "channel-type": "Kanaaltype",
+    "select-channel-type": "-- Selecteer kanaaltype --",
+    "job-category": "Functiecategorie",
+    "select-job-category": "-- Selecteer functiecategorie --",
+    "industries": "Industrieën",
+    "select-industry": "-- Selecteer industrie --",
+    "social-media": "Sociale media",
+    "job-board": "Vacaturebank",
+    "publication": "Publicatie",
+    "community": "Gemeenschap",
+    "aggregator": "Aggregator",
+    "not-channel": "Geen kanaal"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "U moet minstens één kanaal selecteren om door te gaan",
+    "selected-channels": "Geselecteerde kanalen",
+    "estimated-performance": "Geschatte prestatie",
+    "total": "Totaal",
+    "credits": "Credits",
+    "channels": "Kanalen",
+    "clicks": "Klikken"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "Kosten: Laag-Hoog",
+    "cost-high-to-low": "Kosten: Hoog-Laag",
+    "name-a-to-z": "Naam: A-Z",
+    "name-z-to-a": "Naam: Z-A"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "Mijn kanaalkrediet",
+    "days": "Dagen",
+    "time-to-process": "Verwerkingstijd",
+    "active-duration": "Actieve duur",
+    "matching-score": "Overeenkomende score",
+    "channel-add-failed": "Kanaal toevoegen mislukt",
+    "channel-delete-failed": "Kanaal verwijderen mislukt"
+  }
+}

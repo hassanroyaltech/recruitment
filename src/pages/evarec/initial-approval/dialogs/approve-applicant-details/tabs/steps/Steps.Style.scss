@@ -1,0 +1,24 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.steps-tab {
+  //@include d-flex;
+  //flex-wrap: wrap;
+  //align-items: flex-start;
+  padding: 0.5rem;
+
+  .step-item-wrapper {
+    @include d-inline-flex;
+    align-items: flex-start;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    .step-item-body {
+      @include d-flex;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+      align-items: flex-start;
+      border: 1px solid $c-gray-light;
+      border-radius: 1rem;
+    }
+  }
+}

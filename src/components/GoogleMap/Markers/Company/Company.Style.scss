@@ -1,0 +1,8 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.company-marker-wrapper {
+  @include d-inline-flex-center;
+  color: var(--c-primary, $c-primary);
+  .marker-icon {
+    transform: translate(-50%, -50%);
+  }
+}

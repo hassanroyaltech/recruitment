@@ -1,0 +1,95 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.pipeline-template-management-dialog-content-wrapper {
+  //@include d-flex;
+  //overflow-x: auto;
+  .stages-header-wrapper {
+    @include d-flex-v-center-h-between;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    background-color: $c-white;
+    top: -0.5rem;
+    z-index: 2;
+
+    .stages-header-item-wrapper {
+      @include d-flex;
+      padding: 0 0.5rem;
+    }
+  }
+
+  .btns.MuiButtonBase-root {
+    min-height: 40px;
+  }
+
+  .stages-body-wrapper {
+    @include d-flex;
+
+    .stages-body-items-wrapper {
+      @include d-flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .stages-body-item-wrapper {
+        @include d-flex;
+        margin-bottom: 1rem;
+        background-color: $c-white;
+
+        .collapse-item-wrapper {
+          @include d-flex;
+          flex-wrap: wrap;
+          border-radius: 0.5rem;
+          border: 1px solid $c-gray-lighter;
+
+          .stage-content-wrapper {
+            padding: 1rem 0.5rem 0.5rem;
+          }
+
+          .collapse-btn {
+            @include d-flex-v-center-h-between;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.29);
+            margin: 0;
+            padding: 0.5rem;
+
+            .collapse-btn-item-wrapper {
+              @include d-flex-v-center-h-between;
+              padding: 0 0.5rem;
+            }
+
+            .dragging-btn {
+              box-shadow: none;
+              color: $c-gray;
+
+              &:hover {
+                color: var(--c-primary, $c-primary);
+              }
+            }
+          }
+
+          &.is-open {
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.29);
+            border-color: var(--bc-primary, $c-primary);
+
+            .collapse-btn {
+              border-bottom: 1px solid var(--bc-primary, $c-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.pipeline-template-dialog-wrapper {
+  .MuiDialog-paper {
+    max-width: 1500px;
+  }
+}
+.pipeline-automation-drawer {
+  z-index: 1300 !important;
+
+  .MuiPaper-root {
+    padding-top: 1rem !important;
+  }
+}

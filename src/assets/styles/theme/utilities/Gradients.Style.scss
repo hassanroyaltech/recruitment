@@ -1,0 +1,27 @@
+.bg-gradient-primary {
+  background-image: $bg-gradient-primary;
+}
+
+.bg-gradient-primary-left {
+  background-image: $bg-gradient-primary-left;
+
+  @include rtl {
+    background-image: $bg-gradient-primary-right;
+  }
+}
+
+.bg-gradient-primary-right {
+  background-image: $bg-gradient-primary-right;
+
+  @include rtl {
+    background-image: $bg-gradient-primary-left;
+  }
+}
+
+.bg-gradient-primary-top {
+  background-image: $bg-gradient-primary-top;
+}
+
+.bg-gradient-primary-bottom {
+  background-image: $bg-gradient-primary-bottom;
+}

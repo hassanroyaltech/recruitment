@@ -1,0 +1,19 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.card-filter-by-wrapper {
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  min-width: 320px;
+  @include laptops-l-max {
+    min-width: initial;
+  }
+  @include tablets-max {
+    width: 100%;
+  }
+  .card-filter-by-body {
+    background-color: $c-white;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+    color: $c-black;
+  }
+}

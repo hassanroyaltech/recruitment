@@ -1,0 +1,54 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.visa-pipeline-body-section-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  max-width: 100%;
+
+  .checkbox-wrapper {
+    background-color: $c-accent-secondary-lightest;
+  }
+
+  .checkbox-item-wrapper {
+    @include d-inline-flex-center;
+    min-width: 35px;
+    width: 35px;
+    height: 35px;
+
+    .checkbox-groups-wrapper {
+      .form-control-label {
+        margin: 0;
+      }
+    }
+  }
+
+  .stages-items-wrapper {
+    @include d-flex;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+
+    .stage-item-wrapper {
+      @include d-inline-flex;
+      padding: 0 0.5rem;
+
+      .item-content-wrapper {
+        @include d-flex-column;
+        background-color: $c-gray-lighter-more;
+        color: $c-black-light;
+        border-radius: 0.5rem;
+        min-height: 100px;
+        min-width: 280px;
+
+        .item-header-wrapper {
+          @include d-flex-v-center-h-between;
+          flex: 0;
+          padding: 0.5rem;
+        }
+        .item-body-wrapper {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

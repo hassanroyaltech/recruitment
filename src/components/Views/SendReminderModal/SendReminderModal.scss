@@ -1,0 +1,61 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+
+.send-reminder-modal-wrapper {
+  .modal-header {
+    position: sticky;
+    top: 0;
+    padding-bottom: 2rem;
+    z-index: 9;
+    background-color: $c-white;
+  }
+
+  .modal-content {
+    min-height: 80vh;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal-actions {
+    z-index: 9;
+    background-color: $c-white;
+  }
+
+  .total-number-wrapper {
+    color: var(--c-primary, $c-primary);
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+
+  .MuiAccordion-root {
+    margin-bottom: 0.5rem;
+  }
+
+  .deadline-wrapper {
+    .MuiFormControl-root {
+      min-width: 15rem;
+    }
+  }
+
+  .MuiPaper-elevation1 {
+    box-shadow: 0 0 0 0 transparent;
+    border: 1px solid rgb(216, 216, 216);
+  }
+
+  .MuiAccordionDetails-root {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .accordion-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--c-primary, $c-primary);
+  }
+}

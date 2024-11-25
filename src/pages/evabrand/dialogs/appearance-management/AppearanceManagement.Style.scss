@@ -1,0 +1,20 @@
+@import 'src/assets/styles/helpers/mixins/Mixins.Style';
+.appearance-management-dialog-wrapper {
+  .global-style-management-section-wrapper {
+    padding: 0 0.5rem;
+    width: 100%;
+  }
+  .control-wrapper {
+    @include d-inline-flex-v-center;
+    width: 100%;
+    max-width: 50%;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+    .color-picker__container {
+      width: 100%;
+    }
+    @include tablets-max {
+      max-width: 100%;
+    }
+  }
+}

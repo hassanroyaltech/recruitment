@@ -1,0 +1,180 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+// Start Radio Groups
+.radio-control-wrapper {
+  .MuiFormControlLabel-root {
+    margin: 0;
+  }
+
+  &.theme-default {
+    &.MuiFormControl-root {
+      padding: 0 0.5rem 0 1.5rem;
+      @include rtl {
+        padding: 0 1.5rem 0 0.5rem;
+      }
+
+      .radio-control-label-wrapper {
+        .radio-wrapper {
+          .radio-icon {
+            color: $c-gray-dark;
+            @include d-inline-flex-center;
+            padding: 1px;
+            border-radius: 100%;
+          }
+
+          &.Mui-checked {
+            .radio-icon {
+              border-color: var(--bc-primary, $c-primary);
+              color: var(--c-primary, $c-primary);
+            }
+          }
+
+          .MuiSvgIcon-root {
+            color: $c-gray-primary;
+          }
+        }
+
+        .MuiFormControlLabel-label {
+          color: $c-gray-primary;
+        }
+      }
+
+      .radio-group-wrapper {
+        flex-direction: row;
+      }
+
+      &::before {
+        content: ' ';
+        border: 0.25rem solid $c-gray-secondary;
+        position: absolute;
+        left: 0.25rem;
+        top: 0;
+        height: 100%;
+
+        @include rtl {
+          right: 0.25rem;
+          left: initial;
+        }
+      }
+
+      .MuiFormLabel-root {
+        margin: 0 0 0.25rem;
+        border-bottom: none;
+        color: $c-gray-primary !important;
+      }
+    }
+  }
+
+  &.theme-line-secondary,
+  &.theme-line {
+    .label-wrapper {
+      font-weight: $fw-simi-bold;
+      margin-bottom: 0;
+    }
+
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .label-wrapper {
+      width: initial;
+    }
+
+    .radio-control-label-wrapper {
+      &.MuiFormControlLabel-root {
+        @include d-inline-flex-v-center;
+
+        .radio-wrapper {
+          .radio-icon,
+          + .MuiTypography-root {
+            color: $c-gray-primary;
+            font-size: $fz-default;
+          }
+
+          .radio-icon {
+            font-size: $fz-19px;
+          }
+
+          &.Mui-checked {
+            .radio-icon,
+            + .MuiTypography-root {
+              color: var(--c-primary, $c-primary);
+            }
+          }
+
+          .PrivateSwitchBase-input-8 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .radio-group-wrapper {
+      flex-direction: row;
+    }
+  }
+
+  &.theme-line-secondary {
+    .radio-control-label-wrapper {
+      &.MuiFormControlLabel-root {
+        .radio-wrapper {
+          .radio-icon,
+          + .MuiTypography-root {
+            color: $c-gray-light;
+            border-radius: 100%;
+          }
+
+          &:not(.Mui-checked) {
+            .radio-icon {
+              background-color: $c-gray-lighter;
+            }
+          }
+
+          &.Mui-checked {
+            .radio-icon,
+            + .MuiTypography-root {
+              color: $c-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-column {
+    .label-wrapper {
+      margin-bottom: 0.25rem;
+      color: $c-black;
+      font-size: $fz-16px;
+    }
+
+    .radio-group-wrapper {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+
+    .radio-wrapper {
+      .radio-icon,
+      + .MuiTypography-root {
+        color: $c-gray-primary;
+        font-size: $fz-default;
+      }
+
+      .radio-icon {
+        font-size: $fz-19px;
+      }
+
+      &.Mui-checked {
+        .radio-icon,
+        + .MuiTypography-root {
+          color: var(--c-primary, $c-primary);
+        }
+      }
+
+      .PrivateSwitchBase-input-8 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// End Radio Groups

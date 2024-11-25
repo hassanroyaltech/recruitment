@@ -1,0 +1,77 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.approve-applicants-page-wrapper {
+  padding: 2rem 2rem;
+
+  .approve-applicants-header-wrapper {
+    padding: 0 1rem;
+  }
+
+  .filter-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    .filter-section {
+      align-items: center;
+      display: flex;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+    }
+    .filter-section:nth-child(2) {
+      @include d-flex-v-center-h-between;
+      flex-wrap: wrap;
+      @include tablets-max {
+        justify-content: center;
+      }
+    }
+  }
+
+  .content-section-wrapper {
+    padding: 1rem 0.5rem 0;
+    @include d-flex;
+    flex: 0 1 100%;
+    max-height: 595px;
+    overflow-y: auto;
+    flex-wrap: wrap;
+  }
+
+  .applicants-tooltips-wrapper {
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .applicants-tooltip-title {
+      color: $c-gray-darker;
+      padding: 0.5rem 1rem 1rem;
+      font-weight: bold;
+    }
+
+    .applicants-tooltip-items {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      .applicants-tooltip-item {
+        max-width: 20rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+
+        .applicants-tooltip-item-icon {
+          color: $c-gray-darker;
+          padding-bottom: 0.3rem;
+
+          &.is-disabled {
+            color: $c-gray;
+          }
+        }
+
+        .applicants-tooltip-item-title {
+        }
+      }
+    }
+  }
+}

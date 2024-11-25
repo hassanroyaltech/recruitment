@@ -1,0 +1,11 @@
+{
+  "invitations": "Invitaciones",
+  "welcome-to": "Bienvenido",
+  "space": "Espacio",
+  "folder": "Carpeta",
+  "started": "Comenzado",
+  "completed": "Completado",
+  "generate-form-link-failed": "Error al generar el enlace del formulario",
+  "created-at": "Creado el",
+  "activation-date": "Fecha de activación"
+}

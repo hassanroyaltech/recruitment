@@ -1,0 +1,54 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+
+.section-item-wrapper {
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 10rem;
+  border: 1px solid $c-gray-light;
+  box-shadow: 0 0 5px $c-gray-light;
+  background-color: $c-white;
+  margin-bottom: 1rem;
+
+  .section-item-title {
+    color: var(--c-primary, $c-primary);
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 1rem;
+  }
+
+  .section-item-action {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .section-item-body-wrapper {
+    padding-top: 1rem;
+
+    .section-body-title {
+      color: $c-primary-light;
+      font-weight: bold;
+      padding-bottom: 1rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      font-size: 14px;
+    }
+
+    .present-text-wrapper {
+      font-size: 16px;
+      color: var(--c-primary, $c-primary);
+      align-items: center;
+      display: flex;
+
+      .mdi:before {
+        font-size: 18px;
+        color: var(--c-primary, $c-primary);
+        font-weight: bold;
+      }
+    }
+
+    .experience-section-wrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+}

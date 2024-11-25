@@ -1,0 +1,12 @@
+{
+  "dispatchers": "Abfertiger",
+  "dispatchers-description": "Beschreibung der Abfertiger",
+  "assign-to": "Zuweisen an",
+  "assign-to-users": "Benutzern zuweisen",
+  "select-users": "-- Benutzer auswählen --",
+  "search": "Suchen",
+  "this-field-is-required": "Dieses Feld ist erforderlich",
+  "dispatcher-process": "Dispatcher-Prozess",
+  "assign-to-users-successfully": "Zuweisung an Benutzer fehlgeschlagen erfolgreich",
+  "assign-to-users-failed": "Zuweisung an Benutzer fehlgeschlagen"
+}

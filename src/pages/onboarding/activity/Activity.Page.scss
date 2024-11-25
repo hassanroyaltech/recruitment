@@ -1,0 +1,107 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.activity-icon {
+  background: #f6f6f6;
+  border-radius: 12px;
+}
+.filter-activity-autoComplete {
+  .shared-select-wrapper.shared-control-wrapper {
+    margin-bottom: 0;
+  }
+  .input-wrapper.theme-solid .text-field-wrapper .inputs .MuiInputBase-input,
+  .input-wrapper.theme-header .text-field-wrapper .inputs .MuiInputBase-input {
+    color: $c-black-lighter;
+    top: 2px;
+    position: relative;
+  }
+  .autocomplete-wrapper .autocomplete .dropdown-icon-wrapper,
+  .autocomplete-wrapper .autocomplete .dropdown-close-icon-wrapper {
+    color: $c-black-lighter;
+  }
+  .autocomplete-wrapper .autocomplete .dropdown-icon-wrapper::before,
+  .autocomplete-wrapper .autocomplete .dropdown-close-icon-wrapper::before {
+    font-size: 13px;
+  }
+  .input-wrapper.theme-solid
+    .text-field-wrapper
+    .inputs
+    .MuiInputBase-input::placeholder,
+  .input-wrapper.theme-header
+    .text-field-wrapper
+    .inputs
+    .MuiInputBase-input::placeholder,
+  .input-wrapper.theme-transparent
+    .text-field-wrapper
+    .inputs
+    .MuiInputBase-input::placeholder {
+    color: $c-black-lighter;
+    opacity: 1;
+  }
+}
+.activity-card {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 6px;
+  background: #f6f6f6;
+  .activity-type-icon {
+    color: rgba(72, 73, 100, 0.3);
+    font-size: 20px;
+  }
+  .dot-icon {
+    font-size: 6px;
+  }
+  .activity-tag {
+    background: rgba(36, 37, 51, 0.06);
+    border-radius: 3px;
+    line-height: 15px;
+  }
+  .progress {
+    background: #e4e4eb;
+    height: 4px;
+    .progress-rate {
+      background: $c-black-light;
+    }
+  }
+  .title-wrapper {
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @supports (-webkit-appearance: none) {
+      white-space: normal;
+      height: 78px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; /* number of lines to show */
+    }
+  }
+}
+.activity-filters {
+  @include d-flex-v-center-h-between;
+  flex-wrap: wrap;
+  .shared-control-wrapper {
+    display: inline-flex;
+    flex: 0 1;
+    min-width: 216px;
+    @include tablets-max {
+      flex: 0 1 50%;
+    }
+    @include phones-max {
+      flex: 0 1 100%;
+    }
+  }
+
+  > div.d-inline-flex:first-child {
+    flex: 0 1 calc(100% - 650px);
+    row-gap: 0.5rem;
+    @include laptops-l-max {
+      flex-basis: 100%;
+    }
+  }
+}
+.activity-tab-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 1rem;
+}

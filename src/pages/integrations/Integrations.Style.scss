@@ -1,0 +1,111 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.integrations-page-wrapper {
+  .integrations-card-wrapper {
+    @include d-inline-flex-column;
+    width: 16.666666667%;
+    @include laptops-l-max {
+      width: 20%;
+    }
+    @include laptops-max {
+      width: 25%;
+    }
+    @include tablets-max {
+      width: 33.333333%;
+    }
+    @include phones-max {
+      width: 100%;
+    }
+    min-width: 240px;
+    align-items: flex-start;
+    justify-content: space-between;
+    word-break: break-word;
+    min-height: 360px;
+    &.bg-transparent {
+      min-height: 213px;
+    }
+    background-color: $c-white;
+    padding: 1rem 0.5rem 0.5rem;
+    margin: 0 0.5rem 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid $c-white;
+    &:hover {
+      border-color: var(--bc-primary, $c-primary);
+    }
+    .integrations-card-body {
+      .image-wrapper {
+        justify-content: center;
+        .integration-image {
+          min-height: 100px;
+          min-width: 100px;
+          max-height: 150px;
+          max-width: 150px;
+          background-position: center;
+        }
+      }
+      @include d-flex;
+      align-items: flex-start;
+      flex: 0 1 100%;
+      flex-wrap: wrap;
+    }
+    .integrations-card-footer {
+      @include d-flex;
+      align-items: center;
+      &.with-switch {
+        @include d-flex-v-center-h-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex: 0 0 100%;
+      }
+      position: relative;
+      justify-content: center;
+      flex: 0 1 100%;
+      width: 100%;
+      &:after {
+        position: absolute;
+        content: ' ';
+        background-color: $c-gray-light;
+        height: 1px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @include rtl {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        width: 95%;
+      }
+      padding: 1rem 0.5rem 0.5rem;
+    }
+    .integrations-card-row {
+      @include d-flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      //text-align: left;
+      //@include rtl {
+      //  text-align: right;
+      //}
+      //&.header-text {
+      //  text-align: center;
+      //}
+      width: 100%;
+      padding: 0 0.5rem;
+      margin-bottom: 0.25rem;
+      &.title-wrapper {
+        height: 23px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @supports (-webkit-appearance: none) {
+          white-space: normal;
+          height: 48px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; /* number of lines to show */
+        }
+      }
+    }
+  }
+}

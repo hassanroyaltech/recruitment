@@ -1,0 +1,54 @@
+{
+  "my-channels-credit": "Crédit pour mes canaux",
+  "all channels": "Tous les canaux",
+  "recommended": "Recommandé",
+  "new-campaign": "Nouvelle campagne",
+  "search": "Recherche",
+  "sort-by": "Trier par",
+  "sort-by-dots": "Trier par:",
+  "my-channels-credit-description": "Distribuez vos emplois via des canaux achetés pour augmenter votre portée et accéder à différents bassins de talents",
+  "transaction-pay-failed": "Échec du paiement de la transaction",
+  "add-selected-channels-failed-description": "Échec de l'ajout des canaux sélectionnés, veuillez les sélectionner à nouveau à partir de la boîte de dialogue",
+  "there-are-no-channels-credit-available": "Aucun crédit de canal disponible",
+  "CardFilterBy": {
+    "regions": "Régions",
+    "job-title": "Titre du poste",
+    "select-regions": "-- Sélectionnez les régions --",
+    "channel-type": "Type de canal",
+    "select-channel-type": "-- Sélectionnez le type de canal --",
+    "job-category": "Catégorie d'emploi",
+    "select-job-category": "-- Sélectionnez la catégorie d'emploi --",
+    "industries": "Industries",
+    "select-industry": "-- Sélectionnez l'industrie --",
+    "social-media": "Réseaux sociaux",
+    "job-board": "Tableau des offres d'emploi",
+    "publication": "Publication",
+    "community": "Communauté",
+    "aggregator": "Agrégateur",
+    "not-channel": "Pas un canal"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "Vous devez sélectionner au moins un canal pour continuer",
+    "selected-channels": "Canaux sélectionnés",
+    "estimated-performance": "Performance estimée",
+    "total": "Total",
+    "credits": "Crédits",
+    "channels": "Canaux",
+    "clicks": "Clics"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "Coût: Bas-Haut",
+    "cost-high-to-low": "Coût: Haut-Bas",
+    "name-a-to-z": "Nom: A-Z",
+    "name-z-to-a": "Nom: Z-A"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "Crédit de mon canal",
+    "days": "Jours",
+    "time-to-process": "Temps de traitement",
+    "active-duration": "Durée active",
+    "matching-score": "Score de correspondance",
+    "channel-add-failed": "Échec de l'ajout du canal",
+    "channel-delete-failed": "Échec de la suppression du canal"
+  }
+}

@@ -1,0 +1,83 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.campaign-management-dialog-wrapper {
+  .MuiDialog-paper {
+    // min-height: 400px;
+    // height: 87vh;
+    background-color: $c-gray-lighter-more;
+  }
+  .channels-card-wrapper {
+    height: 100%;
+    min-height: 437px;
+    max-height: 48vh;
+  }
+  .dialog-title-wrapper {
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
+    .campaign-manage-title-dialog-wrapper {
+      @include d-flex-center;
+      .title-contents-wrapper {
+        @include d-flex-v-center;
+        width: 100%;
+        max-width: 80%;
+        @include phones-s-max {
+          max-width: 100%;
+          padding: 1.5rem 1rem 0;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        margin-bottom: 1rem;
+        .campaign-title-icon-wrapper {
+          @include d-inline-flex-center;
+          background-color: $c-gray-lighter;
+          min-height: 100px;
+          min-width: 100px;
+          border-radius: 100%;
+        }
+        .title-contents-items-wrapper {
+          width: 100%;
+          .title-header-wrapper {
+            font-weight: $fw-bold;
+            font-size: $fz-19px;
+            padding: 0.5rem;
+            .btns {
+              font-size: $fz-19px;
+              font-weight: $fw-bold;
+            }
+          }
+          .title-body-wrapper {
+            padding: 0 1rem;
+            .title-body-item-wrapper {
+              color: $c-gray-secondary;
+              font-size: 1rem;
+              .stepper-wrapper {
+                padding: 0;
+                margin-left: -0.5rem;
+                @include rtl {
+                  margin-left: 0;
+                  margin-right: -0.5rem;
+                }
+              }
+              .connect-icon {
+                margin: 0 0.5rem;
+                &:before {
+                  color: $c-gray-light;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-and-footer-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+    @include phones-s-max {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .dialog-content-wrapper {
+      margin-top: 1rem;
+    }
+  }
+}

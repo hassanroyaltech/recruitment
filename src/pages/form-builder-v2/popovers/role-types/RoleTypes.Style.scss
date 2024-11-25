@@ -1,0 +1,29 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.role-types-popover-wrapper {
+  .MuiPaper-root {
+    max-width: 300px;
+    min-width: 280px;
+  }
+  &.is-small-width {
+    .MuiPaper-root {
+      max-width: 150px;
+      min-width: 100px;
+    }
+  }
+  .role-types-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 0.5rem;
+    .role-type-item-wrapper {
+      @include d-flex;
+      flex-wrap: wrap;
+      .role-type-item {
+        @include d-flex;
+        flex-wrap: wrap;
+        .switch-item-content-wrapper {
+          @include d-flex-v-center-h-between;
+        }
+      }
+    }
+  }
+}

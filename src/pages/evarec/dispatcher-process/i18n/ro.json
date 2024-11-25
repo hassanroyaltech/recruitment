@@ -1,0 +1,12 @@
+{
+  "dispatchers": "Dispeceri",
+  "dispatchers-description": "Descriere dispeceri",
+  "assign-to": "Atribuiți Către",
+  "assign-to-users": "Atribuiți utilizatorilor",
+  "select-users": "-- Selectați Utilizatori --",
+  "search": "Căutare",
+  "this-field-is-required": "Acest câmp este obligatoriu",
+  "dispatcher-process": "Procesul dispecerului",
+  "assign-to-users-successfully": "Atribuiți utilizatorilor cu succes",
+  "assign-to-users-failed": "Atribuirea utilizatorilor a eșuat"
+}

@@ -1,0 +1,51 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.candidate-scorecard-tab {
+  .scorecard-tab-btn {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid $c-secondary-4;
+  }
+  .separator-candidate-scorecard {
+    border-bottom: 1px solid $c-neutral-scale-5;
+  }
+  .c-neutral-scale-1 {
+    color: $c-neutral-scale-1;
+  }
+
+  .section-title {
+    .scor-star-rating-wrapper {
+      .MuiRating-root {
+        font-size: 18px;
+      }
+    }
+  }
+  .fz-11px {
+    font-size: 11px;
+  }
+  .p-end-1 {
+    padding-inline-end: 1rem;
+  }
+  .small-decision-btns {
+    .decision-Button {
+      min-width: 73px !important;
+      min-height: 32px !important;
+      height: 33px;
+      font-size: 12px !important;
+      margin: 0;
+    }
+  }
+  .score-assign-avatars {
+    border: 1px solid $c-secondary-4;
+    border-radius: 20px;
+  }
+  .min-h-50px {
+    min-height: 50px;
+  }
+}
+.short-decision-view {
+  border: 1px solid $c-secondary-3;
+  border-radius: 4px;
+  width: 50px;
+  height: 30px;
+  gap: 5px;
+}

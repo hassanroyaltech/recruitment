@@ -1,0 +1,56 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.candidate-actions-section-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  .candidate-actions-description-wrapper {
+    @include d-flex-v-center-h-between;
+    padding: 0.5rem 0.5rem 0;
+  }
+
+  .candidate-actions-item-wrapper {
+    @include d-inline-flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+
+    .btns {
+      &.MuiButtonBase-root {
+        &.theme-outline {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .candidate-actions-items-wrapper {
+    @include d-inline-flex;
+    padding: 0.5rem 0 0;
+    flex-wrap: wrap;
+
+    .candidate-actions-item-wrapper {
+      @include d-inline-flex;
+      padding: 0 0.5rem;
+      margin-bottom: 1rem;
+
+      .candidate-actions-item-body {
+        @include d-flex-v-center-h-between;
+        border: 1px solid $c-gray-light;
+        border-radius: 0.5rem;
+        padding: 0.25rem;
+
+        .user-image-wrapper {
+          border-radius: 100%;
+          width: 28px;
+          min-width: 28px;
+          height: 28px;
+        }
+
+        .MuiAvatar-root {
+          width: 28px !important;
+          min-width: 28px !important;
+          height: 28px !important;
+        }
+      }
+    }
+  }
+}

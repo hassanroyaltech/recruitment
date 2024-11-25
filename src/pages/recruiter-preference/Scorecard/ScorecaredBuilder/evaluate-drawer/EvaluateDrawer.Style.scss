@@ -1,0 +1,52 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.evaluation-drawer {
+  .evaluation-section-preview {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+  .separator-sidebar-scorecard {
+    border-bottom: 1px solid #e6e7ea;
+  }
+  .steps-btns {
+    border: 1px solid $c-secondary-4;
+    border-radius: 6px;
+    padding: 5px;
+    .btns.MuiButtonBase-root {
+      width: 80px;
+      border-radius: 4px;
+    }
+  }
+  .error-score {
+    padding-block: 5px;
+    font-size: 0.75rem;
+    color: $c-mui-error-red;
+  }
+  .done-blocks-label {
+    width: 56%;
+    padding-inline: 10px;
+  }
+  .score-drawer-steps-actions {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  .scorecard-evaluate-drawer-width {
+    width: 400px;
+    @include tablets-max {
+      width: 100vw;
+      max-width: 100vw;
+    }
+    @include phones-max {
+      width: 100vw;
+      max-width: 100vw;
+    }
+    @include phones-s-max {
+      width: 100vw;
+      max-width: 100vw;
+    }
+    @include phones-xs-max {
+      width: 100vw;
+      max-width: 100vw;
+    }
+  }
+}

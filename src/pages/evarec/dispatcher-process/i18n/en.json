@@ -1,0 +1,12 @@
+{
+  "dispatchers": "Dispatchers",
+  "dispatchers-description": "Dispatchers Description",
+  "assign-to": "Assign To",
+  "assign-to-users": "Assign to Users",
+  "select-users": "-- Select Users --",
+  "search": "Search",
+  "this-field-is-required": "This Field Is Required",
+  "dispatcher-process": "Dispatcher Process",
+  "assign-to-users-successfully": "Assign To Users Successfully",
+  "assign-to-users-failed": "Assign To Users Failed"
+}

@@ -1,0 +1,12 @@
+{
+  "dispatchers": "Διεκπεραιωτές",
+  "dispatchers-description": "Περιγραφή διεκπεραιωτών",
+  "assign-to": "Ανάθεση σε",
+  "assign-to-users": "Ανάθεση σε χρήστες",
+  "select-users": "-- Επιλέξτε χρήστες --",
+  "search": "Αναζήτηση",
+  "this-field-is-required": "Αυτό το πεδίο είναι υποχρεωτικό",
+  "dispatcher-process": "Διαδικασία διεκπεραιωτή",
+  "assign-to-users-successfully": "Η ανάθεση στους χρήστες έγινε με επιτυχία",
+  "assign-to-users-failed": "Αποτυχία ανάθεσης σε χρήστες"
+}

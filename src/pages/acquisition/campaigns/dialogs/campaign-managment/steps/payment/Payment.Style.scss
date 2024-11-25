@@ -1,0 +1,30 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.payment-step-wrapper {
+  @include d-flex;
+  @include tablets-max {
+    flex-direction: column;
+  }
+  .payment-contents-wrapper {
+    width: 100%;
+    @include tablets-max {
+      margin-bottom: 1rem;
+    }
+    .payment-step-body-wrapper {
+      padding: 0.1rem 0.5rem 0;
+
+      //.payment-step-body {
+      //  padding: 1rem;
+      //  margin-bottom: .5rem;
+      //  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+      //  border-radius: 1rem;
+      //  background-color: $c-white;
+      //}
+    }
+  }
+  .channels-details-card-wrapper {
+    min-width: 365px;
+    @include phones-s-max {
+      min-width: initial;
+    }
+  }
+}

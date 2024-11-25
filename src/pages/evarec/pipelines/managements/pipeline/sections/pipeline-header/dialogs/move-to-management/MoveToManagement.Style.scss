@@ -1,0 +1,88 @@
+@import '../../../../../../../../../assets/styles/helpers/Helpers.Style';
+
+.move-to-management-dialog-wrapper {
+  .content-and-footer-wrapper {
+    padding: 0 !important;
+  }
+
+  .box-field-wrapper {
+    @include d-flex;
+    @include phones-max {
+      flex-wrap: wrap;
+      .invite-box-wrapper {
+        padding: 0;
+      }
+    }
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    .invite-box-wrapper {
+      @include d-flex;
+      padding: 0 0.5rem;
+      .invite-box-body-wrapper {
+        @include d-flex;
+        flex-wrap: wrap;
+        border-radius: 0.35rem;
+        border: 1px solid $c-gray-lighter;
+        padding: 0.5rem;
+        min-height: 30px;
+        .avatars-component-wrapper {
+          max-width: calc(50% - 0.5rem);
+        }
+      }
+    }
+  }
+  .inline-label-wrapper {
+    max-width: 160px;
+    min-width: 150px;
+    margin-top: 0.5rem;
+    color: $c-black-lighter;
+  }
+
+  .move-to-management-content-dialog-wrapper {
+    padding: 0 1rem;
+
+    .selected-candidates-details-section {
+      @include d-flex;
+      flex-wrap: wrap;
+      padding: 0 0.5rem;
+
+      .selected-candidates-details-items-wrapper {
+        @include d-flex-v-center;
+        flex-wrap: wrap;
+
+        .selected-candidates-details-item-wrapper {
+          @include d-inline-flex;
+          padding: 0 0.5rem;
+          margin-bottom: 1rem;
+
+          .selected-candidates-details-item-body {
+            @include d-flex;
+            padding: 0.5rem;
+            border: 1px solid $c-gray-lighter;
+            border-radius: 0.5rem;
+
+            .btns-icon {
+              color: $c-gray-primary;
+            }
+          }
+        }
+      }
+    }
+
+    .selected-candidates-details-section,
+    .move-to-section {
+      position: relative;
+      margin-bottom: 1rem;
+
+      &:after {
+        content: ' ';
+        background-color: $c-gray-lighter;
+        height: 1px;
+        width: calc(100% + 32px);
+        position: absolute;
+        left: -1rem;
+        bottom: 0;
+      }
+    }
+  }
+}

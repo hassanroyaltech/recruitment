@@ -1,0 +1,27 @@
+@mixin font-sizes {
+  @each $key, $value in $font-sizes {
+    .fz-#{$key} {
+      font-size: #{$value} !important;
+    }
+    .fz-before-#{$key} {
+      &:before {
+        font-size: #{$value} !important;
+      }
+    }
+  }
+}
+@mixin font-weights {
+  @each $key, $value in $font-weights {
+    .fw-#{$key} {
+      font-weight: #{$value} !important;
+    }
+  }
+}
+
+@mixin font-family {
+  @each $key, $value in $font-family {
+    .ff-#{$key} {
+      font-family: #{$value} !important;
+    }
+  }
+}

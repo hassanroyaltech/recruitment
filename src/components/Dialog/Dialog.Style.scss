@@ -1,0 +1,128 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.dialog-wrapper.MuiDialog-root {
+  .MuiDialog-paper {
+    width: 100%;
+    @include phones-max {
+      margin: 1rem;
+    }
+    border-radius: 1rem;
+    &.MuiDialog-paperWidthXl,
+    &.MuiDialog-paperWidthLg,
+    &.MuiDialog-paperWidthMd {
+      .dialog-content-wrapper {
+        min-height: 35vh;
+      }
+    }
+  }
+  .form-content-wrapper {
+    @include d-flex-column;
+    .content-and-footer-wrapper {
+      @include d-flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      width: 100%;
+      &:not(.with-custom-title) {
+        padding: 0 1rem 0;
+      }
+    }
+  }
+  .dialog-title-wrapper {
+    @include d-flex-v-center-h-between;
+    flex: 0 1 0;
+    padding: 0;
+    .MuiTypography-root:not(.MuiStepLabel-label) {
+      padding: 0.5rem 0 0;
+      @include d-flex-v-center-h-between;
+    }
+    &:not(.with-custom-title) {
+      padding: 1rem 1rem 0;
+    }
+    &.with-custom-title {
+      .close-btn-wrapper {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        @include rtl {
+          right: initial;
+          left: 0;
+        }
+      }
+    }
+    .dialog-title-text {
+      color: $c-black-light;
+      font-size: $fz-20px;
+      font-weight: $fw-bold;
+      padding: 0 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .dialog-content-wrapper {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    &:first-child {
+      padding-top: 0.5rem;
+    }
+  }
+  .content-and-footer-wrapper {
+    &:not(.with-custom-title) {
+      .dialog-content-wrapper {
+        max-height: calc(100vh - 188px);
+      }
+    }
+  }
+  .dialog-footer-wrapper {
+    @include d-flex-column;
+    .cancel-wrapper,
+    .save-wrapper {
+      margin-bottom: 0.5rem;
+    }
+    &.MuiDialogActions-spacing > :not(:first-child) {
+      margin: 0 !important;
+    }
+    &.MuiDialogActions-root {
+      padding: 0;
+      margin-bottom: 0;
+      .dialog-pagination-wrapper {
+        padding: 1rem 1rem 0;
+        .dialog-pagination-content {
+          @include d-flex-center;
+          width: 100%;
+          padding: 0.5rem 0.5rem 0;
+          border-radius: 20px 20px 0 0 !important;
+          box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.29);
+        }
+      }
+      .next-previous-wrapper,
+      .save-cancel-wrapper {
+        @include d-flex-v-center-h-end;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        .cancel-btn-wrapper,
+        .save-btn-wrapper {
+          margin: 0 0.5rem;
+        }
+        .save-btn-wrapper:not(.theme-transparent) {
+          background-color: var(--bg-primary, $c-primary);
+        }
+      }
+      .cancel-wrapper,
+      .save-wrapper {
+        @include d-inline-flex-center;
+      }
+      .save-cancel-wrapper,
+      .dialog-pagination-wrapper {
+        width: 100%;
+      }
+    }
+  }
+  &.is-old-theme {
+    .MuiDialog-paper {
+      border-radius: 0.4375rem;
+      .dialog-title-wrapper {
+        .dialog-title-text {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

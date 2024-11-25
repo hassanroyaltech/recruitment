@@ -1,0 +1,30 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  .menu-and-content-wrapper {
+    @include d-flex;
+    width: 100%;
+    height: calc(100vh - 72px);
+  }
+  .contents-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    transition: width 0.15s linear;
+    &.is-open-side-menu {
+      width: calc(100% - 295px);
+      @include tablets-max {
+        width: 100%;
+      }
+    }
+    .page-wrapper {
+      padding: 2rem;
+      @include tablets-max {
+        padding: 1rem;
+      }
+    }
+  }
+}

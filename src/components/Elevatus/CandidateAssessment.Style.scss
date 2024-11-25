@@ -1,0 +1,339 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.questionnaires-tab-wrapper {
+  .MuiAccordion-root {
+    border-radius: 10px !important;
+    border: 1px solid #37af40;
+    border-bottom: 0 solid transparent;
+
+    .MuiAccordionSummary-root {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      color: #37af40;
+      font-weight: bold;
+      background: #ffffff 0 0 no-repeat padding-box;
+      box-shadow: 0 3px 6px #00000029;
+      border-radius: 10px;
+      border-bottom: 1px solid #37af40;
+      font-size: 18px;
+    }
+  }
+  .candidate-assessment-exam-item-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .candidate-assessment-exam-item {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      padding: 2rem;
+      width: 100%;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 10px;
+      height: 5.5rem;
+      justify-content: space-between;
+
+      .exam-image-info-wrapper {
+        display: flex;
+
+        .exam-image {
+          margin-right: 1.5rem;
+          @include rtl {
+            margin-right: 0;
+            margin-left: 1.5rem;
+          }
+        }
+
+        .exam-info {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          .exam-description {
+            font-size: 14px;
+            color: #808080;
+            display: flex;
+
+            .exam-description-status {
+              padding-right: 0.5rem;
+              @include rtl {
+                padding-right: 0;
+                padding-left: 0.5rem;
+              }
+            }
+
+            .exam-description-deadline {
+              padding-left: 0.5rem;
+              @include rtl {
+                padding-right: 0.5rem;
+                padding-left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .exam-actions {
+        .MuiIconButton-root {
+          margin-left: 0.2rem;
+          @include rtl {
+            margin-right: 0.2rem;
+            margin-left: 0;
+          }
+          color: #cfd2d6;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .MuiSkeleton-root {
+      margin-top: 1rem;
+      width: 100% !important;
+    }
+  }
+  .questionnaires-tab-add-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .no-questionnaires-available {
+      font-size: 12px;
+      color: gray;
+      padding-left: 0.5rem;
+      @include rtl {
+        padding-left: 0;
+        padding-right: 0.5rem;
+      }
+    }
+
+    .MuiFormControl-root {
+      background: #f0f2f5 0 0 no-repeat padding-box;
+      border-radius: 10px;
+
+      .MuiSvgIcon-root {
+        color: gray;
+        margin-top: -0.2rem;
+      }
+
+      .MuiChip-deleteIcon {
+        margin-top: 0.1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 9999;
+      }
+
+      .MuiChip-root {
+        z-index: 999;
+        margin-left: 0.3rem;
+        @include rtl {
+          margin-right: 0.3rem;
+          margin-left: 0;
+        }
+        background-color: #37af40;
+        color: white;
+      }
+    }
+
+    .MuiOutlinedInput-root {
+      background: #f0f2f5 0 0 no-repeat padding-box;
+      border-radius: 10px;
+    }
+
+    .MuiInputLabel-outlined {
+      padding-left: 0.5rem;
+      @include rtl {
+        padding-right: 0.5rem;
+        padding-left: 0;
+      }
+    }
+
+    .select-question-wrapper {
+      padding-top: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding-right: 0.5rem;
+
+      .date-picker-button-wrapper {
+        width: 100%;
+
+        .MuiButton-root {
+          background: #f0f2f5 0 0 no-repeat padding-box;
+          border: 1px solid #a4a6aabe;
+          border-radius: 10px;
+          height: 3.5rem;
+          text-transform: capitalize;
+          width: 100%;
+          font-size: 16px;
+          color: #808080;
+          display: flex;
+          justify-content: flex-start;
+          padding-left: 1rem;
+          @include rtl {
+            padding-right: 1rem;
+            padding-left: 0;
+          }
+
+          .fa::before {
+            color: transparent;
+            font-size: 20px;
+            -webkit-text-stroke: 1.5px gray;
+          }
+        }
+      }
+
+      @include rtl {
+        .pr-2 {
+          padding-right: 0 !important;
+          padding-left: 1rem;
+        }
+      }
+
+      .send-button {
+        padding-left: 1rem;
+        @include rtl {
+          padding-right: 1rem;
+          padding-left: 0;
+        }
+
+        .MuiButton-root {
+          background: #37af40 0 0 no-repeat padding-box;
+          border-radius: 10px;
+          color: white;
+          text-transform: capitalize;
+          font-weight: bold;
+          width: 10rem;
+          font-size: 16px;
+          height: 3.5rem;
+        }
+
+        .MuiButton-root.Mui-disabled {
+          background: #a0a3a1 0 0 no-repeat padding-box;
+          border-radius: 10px;
+          color: white;
+          text-transform: capitalize;
+          font-weight: bold;
+          width: 10rem;
+          font-size: 16px;
+          height: 3.5rem;
+        }
+      }
+    }
+  }
+
+  .MuiAccordionDetails-root {
+    padding: 1rem;
+  }
+
+  .MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+    transform: rotate(-45deg) !important;
+  }
+
+  .MuiSvgIcon-root {
+    color: #37af40;
+    font-weight: bold;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .MuiAccordion-root {
+    border-radius: 10px;
+    border: 1px solid #37af40;
+    border-bottom: 0 solid transparent;
+
+    .MuiAccordionSummary-root {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      color: #37af40;
+      font-weight: bold;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 10px;
+      border-bottom: 1px solid #37af40;
+      font-size: 18px;
+    }
+  }
+
+  .select-questionnaire-tab-wrapper {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background: #dadde2 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    .MuiTabs-indicator {
+      display: none;
+    }
+
+    .MuiTabs-scroller {
+      display: flex;
+      align-items: center;
+    }
+
+    .MuiTabScrollButton-root {
+      height: 5rem;
+      border-radius: 10px;
+
+      .MuiSvgIcon-root {
+        color: rgb(22, 22, 22);
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .MuiTab-root {
+      max-height: 3.5rem;
+      min-height: 3.5rem;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 10px;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 14px;
+    }
+
+    .Mui-selected {
+      background-color: #9981d5;
+      color: white;
+    }
+  }
+
+  .question-card-wrapper {
+    .question-item-card {
+      margin-bottom: 1rem;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 10px;
+    }
+
+    .question-item-number {
+      border-radius: 0px 4px 4px 0px !important;
+      @include rtl {
+        border-radius: 4px 0px 0px 4px !important;
+      }
+    }
+
+    .question-item {
+      margin-top: -0rem;
+    }
+
+    .question-item-option {
+      cursor: inherit;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        border: 1px solid #cad1d7;
+        color: black;
+      }
+    }
+  }
+}

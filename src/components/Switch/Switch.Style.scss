@@ -1,0 +1,189 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.switch-component-wrapper {
+  @include d-flex;
+  width: 100%;
+  .inline-label-wrapper {
+    @include d-inline-flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    white-space: nowrap;
+    color: $c-black-lighter;
+    font-size: $fz-default;
+    font-weight: $fw-default;
+  }
+  .switch-control-wrapper {
+    @include d-flex;
+    width: 100%;
+
+    input[type='checkbox'],
+    input[type='radio'] {
+      margin-top: 0 !important;
+    }
+
+    .Mui-disabled {
+      cursor: not-allowed;
+
+      &.Mui-checked {
+        + .track-wrapper {
+          background-color: $c-gray !important;
+          opacity: 0.5 !important;
+        }
+      }
+
+      .thumb-wrapper {
+        background-color: $c-gray-primary !important;
+      }
+    }
+
+    .labels-wrapper {
+      @include d-flex-v-center-h-between;
+      width: 100%;
+
+      .label-wrapper {
+        font-size: $fz-16px;
+        color: $c-black;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .switch-control-label-wrapper {
+      margin: 0;
+
+      .MuiFormControlLabel-label {
+        font-size: $fz-16px;
+        color: $c-black-light;
+      }
+
+      .switch-control {
+        width: 56px;
+        height: 46px;
+        padding: 12px;
+
+        .track-wrapper {
+          border-radius: 30px;
+        }
+
+        .switch-base-wrapper {
+          padding: 9px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 6px;
+          @include rtl {
+            right: 6px;
+            left: initial;
+          }
+
+          .thumb-wrapper {
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            overflow: hidden;
+          }
+
+          &.Mui-checked {
+            transform: translate(9px, -50%);
+            @include rtl {
+              transform: translate(-9px, -50%);
+            }
+
+            .thumb-wrapper {
+              background-color: $c-white;
+            }
+
+            + .track-wrapper {
+              background-color: $c-accent-secondary;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-default {
+    .switch-control-label-wrapper {
+      &.fw-simi-bold {
+        .MuiTypography-root {
+          font-weight: $fw-simi-bold !important;
+        }
+      }
+
+      &.fw-bold {
+        .MuiTypography-root {
+          font-weight: $fw-bold !important;
+        }
+      }
+    }
+
+    &.is-flex-end {
+      justify-content: flex-end;
+
+      .switch-control-wrapper {
+        @include d-inline-flex;
+        width: initial;
+      }
+    }
+    &.is-flex-start {
+      justify-content: flex-start;
+
+      .switch-control-wrapper {
+        @include d-inline-flex;
+        width: initial;
+      }
+    }
+  }
+
+  &.theme-line {
+    @include d-flex-v-center;
+    flex-direction: row;
+    width: 100%;
+
+    &.is-flex-end {
+      justify-content: flex-end;
+
+      .switch-control-wrapper {
+        @include d-inline-flex;
+      }
+    }
+
+    .switch-control-wrapper {
+      width: initial;
+      flex-direction: row;
+
+      .labels-wrapper {
+        @include d-inline-flex;
+        width: initial;
+
+        .label-wrapper {
+          color: $c-black-light;
+          margin-bottom: 0;
+        }
+      }
+
+      .switch-control-label-wrapper {
+        &.fw-simi-bold {
+          .MuiTypography-root {
+            font-weight: $fw-simi-bold !important;
+          }
+        }
+
+        &.fw-bold {
+          .MuiTypography-root {
+            font-weight: $fw-bold !important;
+          }
+        }
+
+        .switch-control {
+          .MuiSwitch-input {
+            left: 0;
+            position: absolute;
+            width: 0;
+            display: none;
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata:
+  name: recruiter-portal
+profiles:
+  # A profile for staging cluster on GKE
+  - name: staging
+    activation:
+      - kubeContext: gke_elevatus-development_europe-west4-a_staging
+    deploy:
+      kubectl:
+        manifests:
+          - kubernetes/staging/deployment.yaml
+
+  # A profile for the master cluster on GKE
+  - name: master
+    activation:
+      - kubeContext: gke_elevatus-production_europe-west4-a_core
+    deploy:
+      kubectl:
+        manifests:
+          - kubernetes/master/deployment.yaml

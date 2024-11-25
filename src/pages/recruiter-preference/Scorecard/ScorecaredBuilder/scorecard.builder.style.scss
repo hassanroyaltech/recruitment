@@ -1,0 +1,131 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.c-ui-dark-primary-100 {
+  color: $c-ui-dark-primary-100;
+}
+.c-neutral-scale-3 {
+  color: $c-neutral-scale-3;
+}
+.separator-scorecard {
+  border-bottom: 1px solid $c-neutral-scale-6;
+}
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.max-w-120 {
+  max-width: 120px;
+}
+.w-120px {
+  width: 120px;
+}
+.score-card-wrapper {
+  .scorecard-appearance-section {
+    gap: 10px;
+    img,
+    .hint-weight {
+      max-width: 325px;
+    }
+    @include phones-max {
+      flex-flow: wrap;
+      img,
+      .hint-weight {
+        max-width: 250px;
+        margin: auto;
+      }
+    }
+  }
+
+  .main-scorecard-tabs {
+    .tabs-wrapper.theme-default.is-with-line .MuiTabs-flexContainer,
+    .tabs-wrapper.theme-default.is-with-line
+      .MuiTabs-flexContainer
+      .MuiButtonBase-root.MuiTab-root {
+      position: relative;
+      place-content: center;
+      @include phones-max {
+        place-content: unset;
+      }
+    }
+    .scorecard-tab-wrapper {
+      padding: 15px;
+      .general-tab-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .min-width-140px {
+    min-width: 140px;
+  }
+  .col-gap-35 {
+    column-gap: 35px;
+  }
+  .score-lables-input {
+    .autocomplete-wrapper.is-multiple
+      .autocomplete
+      .input-wrapper
+      .text-field-wrapper
+      .inputs
+      .MuiInputBase-root {
+      border: none;
+    }
+    .separator-h {
+      display: none;
+    }
+  }
+  .score-labels-parent,
+  .score-sm-wrap {
+    @include phones-max {
+      flex-flow: wrap;
+    }
+  }
+  .weight-action-btn {
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0px;
+    min-width: 0px;
+    min-height: 0px;
+    max-width: unset;
+  }
+
+  .w-100px {
+    width: 100px;
+  }
+
+  .separator-sidebar {
+    border-bottom: 1px solid #dadde2;
+  }
+  .score-side-menu-btn {
+    display: none;
+    @include phones-max {
+      display: inline-flex;
+    }
+  }
+  .scorecard-sidebar-wrapper {
+    width: 300px;
+    border-right: 1px solid #dadde2;
+    .MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium {
+      min-width: 128px;
+    }
+    @include phones-max {
+      width: 0px;
+      transition: all 0.2s;
+      &.side-is-open {
+        width: 300px;
+      }
+    }
+  }
+}
+.score-input-fz-22px input {
+  font-size: 22px !important;
+}
+
+.input-font-weight-700 {
+  .MuiInputBase-root {
+    box-shadow: unset !important;
+  }
+  input {
+    font-weight: 700;
+  }
+}

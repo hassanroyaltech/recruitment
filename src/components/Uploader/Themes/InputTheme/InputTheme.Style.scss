@@ -1,0 +1,65 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.input-theme-component-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  position: relative;
+  &.drag-over {
+    .input-wrapper {
+      &.theme-solid {
+        .text-field-wrapper {
+          .inputs {
+            .MuiInputBase-root {
+              border-style: dashed;
+            }
+          }
+        }
+      }
+    }
+  }
+  .inputs {
+    pointer-events: none;
+    .MuiInputBase-root {
+      .MuiInputBase-input {
+        width: 0 !important;
+        padding: 0 !important;
+      }
+    }
+    .btns,
+    .uploader-chip {
+      pointer-events: all;
+    }
+    .uploader-chip {
+      max-width: 100%;
+      margin: 0.25rem;
+      overflow: hidden;
+      &.is-failed {
+        background-color: $c-error;
+        color: $c-white;
+        .MuiChip-deleteIcon {
+          color: $c-white;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s linear;
+          }
+        }
+      }
+    }
+  }
+  .custom-dropzone-wrapper {
+    opacity: 0.25;
+    //border-radius: 1rem;
+    //max-height: 92px;
+    //overflow-y: auto;
+    width: 100%;
+    @include d-flex-v-center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    min-height: 46px;
+    pointer-events: none;
+    .drop-here {
+      @include d-flex-v-center-h-end;
+      padding: 0 0.5rem;
+    }
+  }
+}

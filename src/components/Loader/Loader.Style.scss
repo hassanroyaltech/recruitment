@@ -1,0 +1,37 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.loader-wrapper {
+  &.position-absolute {
+    .MuiSkeleton-root {
+      background-color: rgba(41, 45, 107, 0.25);
+    }
+  }
+
+  .timeline-wrapper {
+    .MuiSkeleton-text {
+      margin-top: 0.4rem;
+    }
+  }
+
+  &.skeleton-item-wrapper {
+    @include d-flex;
+  }
+
+  &.table-loader-wrapper {
+    @include d-flex-column;
+
+    .table-loader-row {
+      height: 40px;
+      width: 100%;
+      background-color: $c-gray-lighter;
+      color: $c-black-light;
+      font-size: $fz-table-footer;
+      font-weight: $fw-bold;
+    }
+    :nth-child(odd) {
+      .table-loader-row {
+        background-color: #ffffff !important;
+      }
+    }
+  }
+}

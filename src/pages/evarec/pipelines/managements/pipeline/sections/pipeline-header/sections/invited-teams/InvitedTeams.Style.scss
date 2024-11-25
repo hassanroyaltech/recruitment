@@ -1,0 +1,13 @@
+@import '../../../../../../../../../assets/styles/helpers/Helpers.Style';
+
+.invited-teams-section-wrapper {
+  @include d-inline-flex;
+  flex-wrap: wrap;
+  .user-image-wrapper,
+  .user-avatar-item {
+    @include d-inline-flex;
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}

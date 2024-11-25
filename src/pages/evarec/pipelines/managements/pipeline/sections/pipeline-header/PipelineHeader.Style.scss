@@ -1,0 +1,36 @@
+@import '../../../../../../../assets/styles/helpers/Helpers.Style';
+
+.pipeline-header-actions-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+
+  .btns,
+  .btns-icon {
+    &.MuiButtonBase-root {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.stages-display-popover {
+  .stage-display-items-wrapper {
+    padding: 0.5rem 1rem;
+
+    .stage-display-item {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.pipeline-move-to-popover-wrapper {
+  .pipeline-move-to-popover-items-wrapper {
+    padding: 0.75rem 0.5rem;
+    max-width: 280px;
+
+    .btns {
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}

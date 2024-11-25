@@ -1,0 +1,48 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.channel-details-card-wrapper {
+  @include d-flex;
+  width: 100%;
+  .card-wrapper {
+    width: 100%;
+    .card-content-wrapper {
+      max-height: 48vh;
+      width: 100%;
+      overflow-y: auto;
+    }
+    .card-header-wrapper {
+      font-weight: $fw-medium;
+      color: $c-black;
+    }
+    .card-body-wrapper {
+      padding: 0 1rem 0.5rem;
+      color: $c-black;
+      .title-wrapper {
+        color: $c-gray-secondary;
+        text-transform: uppercase;
+        font-weight: $fw-medium;
+      }
+
+      .card-body-item-wrapper {
+        margin-bottom: 1rem;
+        &.selected-channels-items-wrapper {
+          margin-bottom: 0.5rem;
+          .selected-channel-item {
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid $c-gray-light;
+            .channel-details-item {
+              color: $c-gray-secondary;
+              &.details-title-wrapper {
+                color: $c-black-light;
+                font-weight: $fw-medium;
+              }
+            }
+          }
+        }
+        .total-text {
+          color: $c-green-primary;
+        }
+      }
+    }
+  }
+}

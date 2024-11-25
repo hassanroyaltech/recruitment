@@ -1,0 +1,17 @@
+@import '../../../../assets/styles/helpers/Helpers.Style';
+.create-dashboard-dialog-wrapper {
+  .invite-box-wrapper {
+    @include d-flex;
+    .invite-box-body-wrapper {
+      @include d-flex;
+      flex-wrap: wrap;
+      border-radius: 0.35rem;
+      border: 1px solid $c-gray-lighter;
+      padding: 0.5rem;
+      min-height: 30px;
+      .avatars-component-wrapper {
+        max-width: calc(50% - 0.5rem);
+      }
+    }
+  }
+}

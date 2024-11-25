@@ -1,0 +1,16 @@
+@mixin rtl {
+  .rtl & {
+    @content;
+  }
+}
+@mixin not-rtl {
+  body:not(.rtl) & {
+    @content;
+  }
+}
+
+@mixin rtl-in {
+  .rtl {
+    @content;
+  }
+}

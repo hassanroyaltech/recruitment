@@ -1,0 +1,51 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.shared-control-wrapper {
+  @include tablets-max {
+    min-width: initial;
+  }
+  margin-bottom: 1rem;
+
+  &:not(.is-full-width):not(.is-half-width):not(.is-quarter-width) {
+    padding: 0 1rem;
+  }
+
+  &.is-full-width {
+    width: 100%;
+  }
+
+  &.is-half-width,
+  &.is-quarter-width {
+    @include d-inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &.is-half-width {
+    padding: 0 0.5rem;
+    width: 50%;
+    @include tablets-max {
+      width: 100%;
+    }
+  }
+
+  &.is-two-thirds-width {
+    padding: 0 0.5rem;
+    width: 66.66666667%;
+    @include tablets-max {
+      width: 100%;
+    }
+  }
+
+  &.is-quarter-width {
+    padding: 0 0.5rem;
+    width: 33.33333333%;
+
+    @include tablets-max {
+      width: 50%;
+    }
+    @include phones-max {
+      width: 100%;
+    }
+  }
+}

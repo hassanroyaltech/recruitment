@@ -1,0 +1,54 @@
+{
+  "my-channels-credit": "رصيد قنواتي",
+  "all-channels": "جميع القنوات",
+  "recommended": "الموصى به",
+  "new-campaign": "حملة جديدة",
+  "search": "البحث",
+  "sort-by": "الترتيب حسب",
+  "sort-by-dots": "الترتيب حسب:",
+  "my-channels-credit-description": "ابدأ في توزيع وظائفك عبر القنوات المشتراة لتوسيع نطاق وصولك إلى مجموعات متنوعة من المواهب",
+  "transaction-pay-failed": "فشل عملية الدفع",
+  "add-selected-channels-failed-description": "فشلت إضافة القنوات المحددة ، يرجى إعادة تحديدها من مربع الحوار",
+  "there-are-no-channels-credit-available": "لا توجد أرصدة قنوات متاحة",
+  "CardFilterBy": {
+    "regions": "المناطق",
+    "job-title": "المسمى الوظيفي",
+    "select-regions": "-- إختر المناطق --",
+    "channel-type": "نوع القناة",
+    "select-channel-type": "-- إختر نوع القناة --",
+    "job-category": "تصنيف الوظيفة الوظيفية",
+    "select-job-category": "-- إختر تصنيف الوظيفة --",
+    "industries": "الصناعات",
+    "select-industry": "-- حدد الصناعة --",
+    "social-media": "وسائل التواصل الإجتماعي",
+    "job-board": "منصة التوظيف",
+    "publication": "النشر",
+    "community": "المجتمع",
+    "aggregator": "مجمع",
+    "not-channel": "ليست قناة"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "تحتاج إلى تحديد قناة واحدة على الأقل للمتابعة",
+    "selected-channels": "القنوات المختارة",
+    "estimated-performance": "الأداء المقدر",
+    "total": "المجموع",
+    "credits": "الإعتمادات",
+    "channels": "القنوات",
+    "clicks": "النقرات"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "التكلفة: الأقل-الأعلى",
+    "cost-high-to-low": "التكلفة: الأعلى-الأقل",
+    "name-a-to-z": "الإسم: أ-ي",
+    "name-z-to-a": "الإسم: ي-أ"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "رصيد قناتي",
+    "days": "أيام",
+    "time-to-process": "الوقت المحتاج للنشر",
+    "active-duration": "منشور حتى",
+    "matching-score": "نتيجة المطابقة",
+    "channel-add-failed": "فشل إضافة القناة",
+    "channel-delete-failed": "فشل حذف القناة"
+  }
+}

@@ -1,0 +1,23 @@
+/**
+ * Type for resetting a state
+ * @type {string}
+ */
+export const RESET_STATE = {
+  EVABRAND: {
+    CONTENT_LAYOUT_ORDER: 'CONTENT_LAYOUT_ORDER',
+    APPEARANCE: 'APPEARANCE',
+    ABOUT_US: 'ABOUT_US',
+    PERKS: 'PERKS',
+    TESTIMONIALS: 'TESTIMONIALS',
+    GALLERY: 'GALLERY',
+    TEAM: 'TEAM',
+    CLIENTS: 'CLIENTS',
+    SOCIAL: 'SOCIAL',
+    SEO: 'SEO',
+    SIGNUP_REQUIREMENTS: 'SIGNUP_REQUIREMENTS',
+    COLOR: 'COLOR',
+  },
+  EVAREC: {},
+  EVASSESS: {},
+  EVAMEET: {},
+};

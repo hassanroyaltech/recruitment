@@ -1,0 +1,54 @@
+{
+  "my-channels-credit": "Πίστωση για τα κανάλια μου",
+  "all channels": "Όλα τα κανάλια",
+  "recommended": "Προτεινόμενο",
+  "new-campaign": "Νέα καμπάνια",
+  "search": "Αναζήτηση",
+  "sort-by": "Ταξινόμηση κατά",
+  "sort-by-dots": "Ταξινόμηση κατά:",
+  "my-channels-credit-description": "Διανείμετε τις θέσεις εργασίας σας μέσω αγορασμένων καναλιών για να αυξήσετε την εμβέλεια και να αποκτήσετε πρόσβαση σε διάφορες δεξαμενές ταλέντων",
+  "transaction-pay-failed": "Αποτυχία πληρωμής συναλλαγής",
+  "add-selected-channels-failed-description": "Αποτυχία προσθήκης επιλεγμένων καναλιών, παρακαλούμε επιλέξτε τα ξανά από το διάλογο",
+  "there-are-no-channels-credit-available": "Δεν υπάρχουν διαθέσιμες πιστώσεις καναλιών",
+  "CardFilterBy": {
+    "regions": "Περιοχές",
+    "job-title": "Τίτλος εργασίας",
+    "select-regions": "-- Επιλέξτε περιοχές --",
+    "channel-type": "Τύπος καναλιού",
+    "select-channel-type": "-- Επιλέξτε τύπο καναλιού --",
+    "job-category": "Κατηγορία εργασίας",
+    "select-job-category": "-- Επιλέξτε κατηγορία εργασίας --",
+    "industries": "Βιομηχανίες",
+    "select-industry": "-- Επιλέξτε βιομηχανία --",
+    "social-media": "Κοινωνικά δίκτυα",
+    "job-board": "Πίνακας εργασίας",
+    "publication": "Δημοσίευση",
+    "community": "Κοινότητα",
+    "aggregator": "Συγκεντρωτής",
+    "not-channel": "Δεν είναι κανάλι"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "Πρέπει να επιλέξετε τουλάχιστον ένα κανάλι για να συνεχίσετε",
+    "selected-channels": "Επιλεγμένα κανάλια",
+    "estimated-performance": "Εκτιμώμενη απόδοση",
+    "total": "Σύνολο",
+    "credits": "Πιστώσεις",
+    "channels": "Κανάλια",
+    "clicks": "Κλικ"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "Κόστος: Χαμηλό-Υψηλό",
+    "cost-high-to-low": "Κόστος: Υψηλό-Χαμηλό",
+    "name-a-to-z": "Όνομα: Α-Ω",
+    "name-z-to-a": "Όνομα: Ω-Α"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "Πίστωση του καναλιού μου",
+    "days": "Ημέρες",
+    "time-to-process": "Χρόνος επεξεργασίας",
+    "active-duration": "Ενεργή διάρκεια",
+    "matching-score": "Βαθμολογία αντιστοιχίας",
+    "channel-add-failed": "Αποτυχία προσθήκης καναλιού",
+    "channel-delete-failed": "Αποτυχία διαγραφής καναλιού"
+  }
+}

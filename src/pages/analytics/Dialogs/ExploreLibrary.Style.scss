@@ -1,0 +1,24 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.explore-library-dialog-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  max-height: calc(100vh - 188px);
+  overflow-y: hidden;
+  .side-bar-buttons {
+    max-height: calc(100vh - 270px);
+    overflow-y: scroll;
+  }
+}
+.explore-library-templates-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  max-height: calc(100vh - 360px);
+  overflow-y: scroll;
+  max-width: 100%;
+  .explore-library-template-item {
+    width: 50%;
+    @include tablets-max {
+      width: 100%;
+    }
+  }
+}

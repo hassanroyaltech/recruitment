@@ -1,0 +1,228 @@
+{
+  "name": "elevatus-app",
+  "version": "4.0.0",
+  "private": true,
+  "dependencies": {
+    "@date-io/date-fns": "^2.17.0",
+    "@date-io/hijri": "^2.17.0",
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/sortable": "^7.0.2",
+    "@dnd-kit/utilities": "^3.2.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/ibm-plex-sans-arabic": "^4.5.11",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fullcalendar/core": "^5.11.5",
+    "@fullcalendar/daygrid": "^5.11.5",
+    "@fullcalendar/interaction": "^5.11.5",
+    "@mui/base": "5.0.0-alpha.126",
+    "@mui/icons-material": "^5.14.16",
+    "@mui/lab": "~5.0.0-alpha.151",
+    "@mui/material": "~5.14.16",
+    "@mui/styles": "~5.14.16",
+    "@mui/x-date-pickers": "^5.0.20",
+    "@nylas/components-agenda": "^1.1.6",
+    "@nylas/components-mailbox": "^1.1.5",
+    "@nylas/react": "^1.1.7",
+    "@nylas/web-elements": "^1.1.7",
+    "@sentry/browser": "^7.77.0",
+    "@sentry/react": "^7.77.0",
+    "@sentry/tracing": "^7.77.0",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.3.2",
+    "chart.js": "^4.4.0",
+    "classnames": "^2.3.2",
+    "date-fns": "^2.30.0",
+    "dropzone": "^6.0.0-beta.2",
+    "eslint": "^8.52.0",
+    "firebase": "^9.23.0",
+    "formik": "^2.4.5",
+    "froala-editor": "^4.1.4",
+    "html2canvas": "^1.4.1",
+    "i18next": "^23.6.0",
+    "jspdf": "^2.5.1",
+    "list.js": "^2.3.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "moment-hijri": "^2.1.2",
+    "moment-timezone": "^0.5.45",
+    "nouislider": "^15.7.1",
+    "plotly.js": "^2.27.0",
+    "prettier": "^3.0.3",
+    "prop-types": "^15.8.1",
+    "qrcode.react": "^3.1.0",
+    "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-bootstrap-sweetalert": "^5.2.0",
+    "react-bootstrap-table-next": "^4.0.3",
+    "react-bootstrap-table2-paginator": "^2.1.2",
+    "react-bootstrap-table2-toolkit": "^2.1.3",
+    "react-chartjs-2": "^5.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-color": "^2.19.3",
+    "react-confetti": "^6.1.0",
+    "react-content-loader": "^6.2.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-date-range": "^1.4.0",
+    "react-datepicker": "^4.21.0",
+    "react-dom": "^18.2.0",
+    "react-drag-listview": "^0.2.1",
+    "react-dropzone": "^14.2.3",
+    "react-google-recaptcha": "^2.1.0",
+    "react-helmet": "^6.1.0",
+    "react-html-parser": "^2.0.2",
+    "react-i18next": "^13.3.1",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-loadable": "^5.5.0",
+    "react-number-format": "^4.9.4",
+    "react-organizational-chart": "^2.2.0",
+    "react-paginate": "^8.2.0",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-phone-input-2": "^2.15.1",
+    "react-places-autocomplete": "^7.3.0",
+    "react-plotly.js": "^2.6.0",
+    "react-pro-sidebar": "^0.7.1",
+    "react-quill": "^2.0.0",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.7.7",
+    "react-slider": "^2.0.6",
+    "react-social-icons": "^4.1.0",
+    "react-spring": "^9.7.3",
+    "react-tagsinput": "^3.20.3",
+    "react-to-print": "^2.14.15",
+    "react-toast-notifications": "^2.5.1",
+    "react-toastify": "^9.1.3",
+    "react-tsparticles": "^2.12.2",
+    "react-video-js-player": "^1.1.1",
+    "react-virtuoso": "^2.19.1",
+    "reactstrap": "^9.2.0",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.2",
+    "sass": "^1.69.5",
+    "styled-components": "^5.3.11",
+    "stylis": "^4.3.0",
+    "stylis-plugin-rtl": "^2.1.1",
+    "web-vitals": "^3.5.0",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "(npm run lint:fix & react-scripts --max_old_space_size=8000 start)",
+    "build": "(npm run lint:fix & react-scripts --max_old_space_size=8000 build)",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix ./src",
+    "lint:fix": "eslint --fix --ext .js,.jsx ./src",
+    "tsc": "tsc",
+    "test-c": "npm run prettier-fix && npm run lint:fix && tsc",
+    "test-all": "npm run prettier-fix && npm run lint:fix && tsc",
+    "prettier-fix": "prettier \"**/*\" --write --ignore-unknown"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:import/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": [
+      "react",
+      "import",
+      "react-hooks",
+      "jsx-a11y",
+      "testing-library"
+    ],
+    "env": {
+      "browser": true,
+      "es2020": true,
+      "amd": true,
+      "node": true,
+      "jasmine": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 11,
+      "sourceType": "module"
+    },
+    "settings": {
+      "format_on_save": true,
+      "import/resolver": {
+        "node": {
+          "paths": [
+            "src",
+            "node_modules"
+          ],
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    },
+    "rules": {
+      "react/prop-types": 1,
+      "import/no-duplicates": [
+        "error",
+        {
+          "considerQueryString": true
+        }
+      ],
+      "arrow-body-style": [
+        "error",
+        "as-needed"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "curly": [
+        "error",
+        "multi"
+      ],
+      "import/no-cycle": [
+        2,
+        {
+          "maxDepth": 1,
+          "ignoreExternal": true
+        }
+      ],
+      "camelcase": "off",
+      "react/jsx-indent": "off",
+      "no-unused-vars": "warn",
+      "operator-linebreak": [
+        "error",
+        "before"
+      ],
+      "react/no-direct-mutation-state": "warn",
+      "indent": [
+        "error",
+        2
+      ],
+      "no-duplicate-imports": "error"
+    },
+    "globals": {
+      "Vitally": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

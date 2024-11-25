@@ -1,0 +1,88 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+
+.side-drawer-width {
+  width: 33vw;
+  min-width: 33vw;
+  max-width: 33vw;
+  @include tablets-max {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  @include phones-max {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  @include phones-s-max {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  @include phones-xs-max {
+    width: 100vw;
+    max-width: 100vw;
+  }
+}
+
+.card-component-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 19rem;
+  gap: 1rem;
+
+  &.is-vertical {
+    flex-direction: column;
+  }
+}
+
+.card-component-content-item {
+  min-width: 15rem;
+  width: 28rem;
+  max-width: 28rem;
+  border: 1px solid rgba(36, 37, 51, 0.06);
+  border-radius: 6px;
+  min-height: 12rem;
+  height: 16rem;
+  @include phones-xs-max {
+    height: 18rem;
+  }
+  &.is-vertical {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &.highlighted {
+    border-color: #6371f0;
+  }
+  .icon-wrapper {
+    max-width: 10rem;
+    .card-icon {
+      background-color: #ece9fc;
+      border-radius: 8px;
+      padding: 0.5rem;
+      &.highlighted {
+        background-color: #dad4fa !important;
+      }
+    }
+    .mdi {
+      color: $c-black;
+      &:before {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+.card-component-content-item::after {
+  content: '';
+  flex: auto;
+}
+.first-input-fz-22px input {
+  font-size: 22px !important;
+}
+.highest-z-index {
+  &.MuiDrawer-root {
+    z-index: 1300 !important;
+  }
+}

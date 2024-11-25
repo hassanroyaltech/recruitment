@@ -1,0 +1,139 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.admin-header-wrapper {
+  @include d-flex;
+  position: sticky;
+  top: 0;
+  background-color: $c-white;
+  padding: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.15);
+  .header-content-wrapper {
+    @include d-flex-v-center-h-between;
+    padding: 0.5rem;
+    min-height: 72px;
+    .header-section-wrapper {
+      @include d-inline-flex-v-center;
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        width: 100%;
+        justify-content: flex-end;
+      }
+      .mobile-menu-btn {
+        display: none;
+        @include tablets-max {
+          @include d-inline-flex;
+        }
+      }
+      .navbar-nav {
+        @include d-inline-flex-v-center;
+        flex-direction: row;
+      }
+      .branches-menu-btn {
+        border-radius: 2rem;
+        padding: 0.5rem;
+
+        &.is-user-toggle {
+          padding: 0;
+        }
+        .branch-title-wrapper {
+          padding: 0 0.25rem;
+          color: var(--c-primary, $c-primary);
+          @include tablets-max {
+            display: none;
+          }
+        }
+        .box-icon-small {
+          @include d-inline-flex-center;
+          border: 1px solid var(--bc-primary, $c-primary);
+          color: var(--c-primary, $c-primary);
+          height: 14px;
+          width: 14px;
+          min-width: 14px;
+          margin: 0 0.25rem;
+          @include tablets-max {
+            display: none;
+          }
+          .fas {
+            font-size: $fz-10px;
+          }
+        }
+      }
+      &.logo-section {
+        .navbar-logo-image {
+          margin: 0 1rem;
+          img {
+            min-height: 35px;
+            min-width: 75px;
+            max-height: 55px;
+            max-width: 200px;
+            @include phones-max {
+              max-width: 125px;
+            }
+            @include phones-s-max {
+              max-width: 75px;
+              height: 1rem;
+            }
+          }
+          #header-bar .nav .btn {
+            margin: 0.5rem;
+          }
+        }
+        .nav-item {
+          white-space: nowrap;
+        }
+      }
+      &.actions-section {
+        .language-change-wrapper {
+          .language-change-btn {
+            min-width: initial;
+            .language-text {
+              @include phones-max {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .user-menu-toggle {
+    padding: 0.5rem;
+    cursor: pointer;
+    color: $c-black-light;
+    transition:
+      background-color,
+      0.18s ease-in-out;
+    .text-overflow {
+      @include tablets-max {
+        display: none;
+      }
+    }
+    &:hover {
+      background-color: rgba(221, 221, 255, 0.62);
+      border-radius: 2rem;
+    }
+  }
+}
+.branches-menu-items-wrapper {
+  @include d-flex;
+  max-width: 200px;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+  .btns.theme-transparent.branches-menu-btn {
+    border-top: 1px solid $c-gray-light;
+    width: 100%;
+    margin: 0;
+    min-height: 40px;
+    color: $c-black;
+    white-space: normal;
+    border-radius: 0;
+    &.is-active-branch {
+      color: $c-secondary;
+      font-weight: $fw-simi-bold;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dispatchers": "Dispatchers",
+  "dispatchers-description": "Description des dispatchers",
+  "assign-to": "Affecter à",
+  "assign-to-users": "Affecter aux utilisateurs",
+  "select-users": "-- Sélectionner les utilisateurs --",
+  "search": "Rechercher",
+  "this-field-is-required": "Ce champ est obligatoire",
+  "dispatcher-process": "Processus de dispatching",
+  "assign-to-users-successfully": "Attribuer aux utilisateurs avec succès",
+  "assign-to-users-failed": "Echec de l'attribution aux utilisateurs"
+}

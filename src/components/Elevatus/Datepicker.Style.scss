@@ -1,0 +1,42 @@
+@import 'src/assets/styles/helpers/variables/Variables.Style';
+.react-datepicker-popper {
+  z-index: 999;
+  .react-datepicker {
+    min-height: 18.5rem;
+    border-width: 0;
+    box-shadow: 0 0 1rem 0.05rem rgba(0, 0, 0, 0.25);
+    .react-datepicker__triangle {
+      left: calc(50% + 4.25px) !important;
+      transform: translate(50%, 0) !important;
+      &:before {
+        border-top-width: 0;
+      }
+    }
+    .react-datepicker__day {
+      &:not(.react-datepicker__day--disabled) {
+        &.react-datepicker__day--today {
+          color: $c-secondary;
+        }
+        &.react-datepicker__day--selected {
+          background-color: var(--bg-primary, $c-primary);
+          color: $c-white;
+          font-weight: $fw-simi-bold;
+        }
+        &.react-datepicker__day--keyboard-selected {
+          background-color: $c-secondary;
+          color: $c-white;
+        }
+      }
+      &.react-datepicker__day--disabled {
+        &.react-datepicker__day--selected {
+          background-color: $c-gray;
+          color: $c-white;
+        }
+      }
+      &.react-datepicker__day--disabled {
+        color: $c-gray;
+        background-color: $c-white;
+      }
+    }
+  }
+}

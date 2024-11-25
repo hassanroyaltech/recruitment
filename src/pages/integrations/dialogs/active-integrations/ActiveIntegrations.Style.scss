@@ -1,0 +1,54 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.integrations-management-dialog-wrapper {
+  .MuiPaper-root {
+    max-width: 750px;
+  }
+  .integrations-management-content-dialog-wrapper {
+    .api-key-input-wrapper {
+      @include d-flex;
+    }
+    .box-field-wrapper {
+      @include d-flex;
+      @include phones-s-max {
+        flex-wrap: wrap;
+      }
+    }
+    .inline-label-wrapper {
+      min-width: 120px;
+      &.azure-sso-attribute-label {
+        min-width: 170px;
+      }
+    }
+    .checkbox-inline-label-wrapper {
+      min-width: 170px;
+    }
+    .branches-configuration-items-wrapper {
+      padding: 0 0.5rem;
+      margin-bottom: 1rem;
+      .branches-configuration-card-wrapper {
+        @include d-flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        border-radius: 0.5rem;
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
+        .branches-configuration-card-header {
+          @include d-flex-v-center-h-end;
+          padding: 0.5rem;
+        }
+        .branches-configuration-card-body {
+          @include d-flex;
+          flex-wrap: wrap;
+          padding: 0 0.5rem;
+        }
+        .branches-configuration-card-footer {
+          @include d-flex;
+          flex-wrap: wrap;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

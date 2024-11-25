@@ -1,0 +1,57 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.visas-and-block-wrapper {
+  .blocks-item-wrapper {
+    .collapse-btn {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 40px;
+      border-radius: 0;
+      margin: 0;
+      span {
+        @include d-inline-flex-v-center;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+    }
+  }
+  .visas-and-blocks-loader-wrapper {
+    padding: 0 0.25rem;
+    .skeleton-item-wrapper {
+      margin-bottom: 0.5rem;
+      .MuiSkeleton-root {
+        border-radius: 0.25rem;
+      }
+    }
+  }
+  .shared-control-wrapper {
+    display: inline-flex;
+    flex: 0 1;
+    min-width: 154px;
+    .autocomplete-wrapper {
+      min-width: initial;
+    }
+    @include phones-max {
+      width: 100%;
+      flex: 0 1 100%;
+    }
+  }
+}
+.blocks-actions-popover-wrapper {
+  .blocks-actions-wrapper {
+    @include d-inline-flex-column;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    .actions-popover-item {
+      @include d-inline-flex-column;
+      .actions-popover-btn {
+        @include d-flex;
+        justify-content: flex-start;
+        border-radius: 0;
+        min-height: 35px;
+        padding: 0.219rem 1rem;
+        color: $c-gray-primary;
+      }
+    }
+  }
+}

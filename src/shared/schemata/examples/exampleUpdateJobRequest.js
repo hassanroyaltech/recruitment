@@ -1,0 +1,58 @@
+/* exampleUpdateJobRequest */
+export const ExampleUpdateJobRequest = {
+  address: null,
+  advertise: {
+    free_job_board: true,
+    providers: [],
+  },
+  career_level_uuid: ['22498a37-98a4-4bc9-a28a-465f84fbf58b'],
+  city: 'amman9',
+  country_uuid: '153c409d-fcc9-4fae-8f10-3318b64f0953',
+  deadline: null,
+  degree_type: ['a7e58cc0-d9c5-412e-99f9-3c1c9b7de35c'],
+  departments: [],
+  description:
+    'We are looking for a highly skilled computer programmer who is comfortable wi esign features, among other duties.Full Stack 3Developers will be required to see out a project from conception to final product, requiring good organizational skills and attention to detail.',
+  evaluation_uuid: null,
+  gender: 'male',
+  gpa: 90,
+  industry_uuid: ['fbf2d24c-e6ca-494f-addf-15f10bf7bff9'],
+  is_externally: true,
+  is_feature: true,
+  is_internally: false,
+  language_proficiency: [
+    {
+      score: 4,
+      uuid: '3b2fc8bb-7c83-4306-b7ec-4ef0dfeff30d',
+    },
+  ],
+  language_uuid: 'b439307c-d6ef-4090-92f2-b913b3f3403f',
+  lat: null,
+  long: null,
+  major_uuid: ['575e1811-1c98-4b10-a435-f7bf2843cd14'],
+  max_salary: 0,
+  min_salary: 0,
+  nationality_uuid: [
+    '721f2d42-b31c-4804-8674-bc107146bc3a',
+    'c315626a-58d5-4ca5-ae73-6bf3a95d9c7d',
+  ],
+  owns_a_car: true,
+  pipeline_uuid: 'd1ab83df-c449-4a96-9cf7-da42d3c88cd9',
+  profile_builder_uuid: '653719c0-4653-4c6d-ad6b-3d111b537141',
+  questionnaire_uuid: null,
+  reference_number: '22-21345552134544',
+  requirements:
+    'Degree in Computer Science.Strong organizational and project management skills.Proficiency with fundamental front end languages such as HTML, CSS and JavaScript.Familiarity with JavaScript frameworks such as Angular JS, React and Amber.Proficiency with server side languages such as Python, Ruby, Java, PHP and .Net.Familiarity with database technology such as MySQL, Oracle and MongoDB.Excellent verbal communication skills.Good problem solving skills.Attention to detail.',
+  skills: ['php', 'web', 'developer', 'data', 'mysql', 'laravel', 'database'],
+  teams_invite: [],
+  title: 'Full Stack Developer updated',
+  type_uuid: [
+    '0b8099f6-6805-4e28-ac46-cac65b32c1d0',
+    'c182d66d-88c1-499c-b324-8f0f04e6e77b',
+  ],
+  uuid: 'cc91cb89-0505-4db4-81ea-a3b79d66a9c1',
+  visa_sponsorship: true,
+  willing_to_relocate: true,
+  willing_to_travel: false,
+  years_of_experience: [5, 6],
+};

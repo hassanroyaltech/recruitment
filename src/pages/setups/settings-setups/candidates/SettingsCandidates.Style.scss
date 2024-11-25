@@ -1,0 +1,6 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.settings-candidates-page-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+}

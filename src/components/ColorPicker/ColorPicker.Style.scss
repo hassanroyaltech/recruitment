@@ -1,0 +1,12 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.color-picker-wrapper {
+  @include d-flex;
+  width: 100%;
+  .btns-icon {
+    &.theme-transparent {
+      &.color-picker-btn {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}

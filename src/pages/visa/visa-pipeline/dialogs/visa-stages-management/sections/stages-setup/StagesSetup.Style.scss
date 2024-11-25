@@ -1,0 +1,7 @@
+@import 'src/assets/styles/helpers/mixins/Mixins.Style';
+.stages-setup-section-wrapper {
+  @include d-flex;
+  @include flex-v-start;
+  padding-top: 1px;
+  overflow-x: auto;
+}

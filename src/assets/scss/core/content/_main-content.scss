@@ -1,0 +1,70 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+
+.main-content {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 4.5rem;
+  padding-left: 6rem;
+  transition: 0.1s linear padding-left;
+  @include rtl {
+    padding-right: 6rem;
+    padding-left: 0;
+    transition: 0.1s linear padding-right;
+  }
+  &.is-menu-open {
+    padding-left: 19rem;
+    @include rtl {
+      padding-right: 19rem;
+      padding-left: 0;
+    }
+  }
+  // Navbar
+  .navbar-nav {
+    padding: 0 0.5rem !important;
+  }
+
+  // Container
+  .container-fluid {
+    @include media-breakpoint-up(md) {
+      padding-left: ($main-content-padding-x + $grid-gutter-width / 2) !important;
+      padding-right: ($main-content-padding-x + $grid-gutter-width / 2) !important;
+    }
+  }
+}
+.main-page {
+  padding: 0;
+  min-height: 0;
+}
+.row {
+  margin: 0 !important;
+}
+.login-view-wrapper {
+  position: relative;
+  z-index: 1;
+  @include d-flex-center;
+  min-height: 100vh;
+  .content-wrapper {
+    @include d-inline-flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 88px 0.5rem;
+    .login-card-wrapper {
+      @include d-flex-center;
+      .card {
+        max-width: 29rem;
+        width: 100%;
+      }
+    }
+  }
+  @include rtl {
+    padding-right: 0;
+  }
+}
+.body-background {
+  #tsparticles {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+  }
+}

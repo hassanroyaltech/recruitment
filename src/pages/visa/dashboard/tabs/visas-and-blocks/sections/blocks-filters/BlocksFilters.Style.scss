@@ -1,0 +1,15 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.blocks-filters-section-wrapper {
+  @include d-flex-v-center-h-between;
+  margin: 1rem 0 0;
+  > div.d-inline-flex {
+    @include tablets-max {
+      flex-wrap: wrap;
+    }
+    flex: 0 1 calc(100% - 277px);
+    @include phones-max {
+      flex-basis: 100%;
+    }
+  }
+}

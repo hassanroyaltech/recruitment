@@ -1,0 +1,60 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.eva-brand-wrapper {
+  @include d-flex;
+  @include flex-v-start;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  @include laptops-max {
+    flex-wrap: wrap;
+    @include flex-h-center;
+  }
+  .eve-brand-section-wrapper {
+    @include d-inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    max-width: 1400px;
+  }
+  .eva-brand-header-wrapper {
+    @include d-flex-v-center-h-between;
+    flex-wrap: wrap;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 199;
+  }
+}
+.rtl-direction {
+  .MuiFormLabel-filled + .MuiInputBase-root {
+    .MuiInputBase-input {
+      direction: rtl;
+    }
+  }
+  .color-picker-wrapper {
+    .MuiFormLabel-filled + .MuiInputBase-root {
+      .MuiInputBase-input {
+        @include not-rtl {
+          direction: ltr;
+        }
+      }
+    }
+  }
+}
+.switch-component-wrapper
+  .switch-control-wrapper
+  .switch-control-label-wrapper
+  .MuiFormControlLabel-label {
+  color: $c-black-light;
+}
+
+.switch-component-wrapper
+  .switch-control-wrapper
+  .Mui-disabled.Mui-checked
+  + .track-wrapper {
+  background-color: #6663f0;
+  opacity: 1 !important;
+}

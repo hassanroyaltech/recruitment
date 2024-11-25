@@ -1,0 +1,50 @@
+.table {
+  & th.sortable {
+    cursor: pointer;
+  }
+  & th,
+  & td {
+    vertical-align: inherit;
+  }
+}
+.select2 .selection .select2-selection .select2-selection__rendered li,
+.select2
+  .selection
+  .select2-selection
+  .select2-selection__rendered
+  .select2-selection__choice__remove {
+  background-color: var(--bgprimary);
+  color: white;
+}
+
+.remove-action {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.collapse-button {
+  width: 100%;
+  text-align: end;
+}
+
+.ql-toolbar button svg {
+  width: 20px;
+  height: auto;
+}
+
+.react-toast-notifications__container {
+  z-index: 2000 !important;
+}
+
+// RTL Classess
+.direction-rtl {
+  direction: rtl;
+}
+.form-group.direction-rtl {
+  & label {
+    float: right;
+  }
+  & .invalid-feedback {
+    text-align: right;
+  }
+}

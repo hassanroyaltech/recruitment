@@ -1,0 +1,358 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+
+.autocomplete-wrapper {
+  @include d-inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 200px;
+
+  .autocomplete-contents-wrapper {
+    @include d-flex;
+    width: 100%;
+  }
+
+  .external-autocomplete-chips-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    padding: 1rem 0 0.5rem;
+
+    .MuiChip-root {
+      height: auto;
+    }
+
+    .external-autocomplete-chip {
+      background-color: $c-white;
+      color: $c-gray-primary;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.29);
+      margin-bottom: 0.5rem;
+
+      &.active-chip {
+        background-color: var(--bg-primary, $c-primary);
+        color: $c-white;
+      }
+
+      .MuiChip-label {
+        white-space: pre-wrap;
+      }
+
+      .chip-delete-icon-btn {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+
+        .chip-delete-icon {
+          color: $c-danger;
+          font-size: $fz-14px;
+
+          &:before {
+            font-size: $fz-14px;
+            font-weight: $fw-simi-bold;
+          }
+        }
+      }
+
+      &:not(:first-child) {
+        margin: 0 0.5rem 0.5rem;
+      }
+    }
+  }
+
+  .MuiAutocomplete-inputRoot[class*='MuiInput-root'] {
+    padding-bottom: 0;
+  }
+
+  .autocomplete {
+    @include d-flex;
+    width: 100%;
+    // font-size: $fz-primary;
+    .MuiChip-root {
+      .MuiChip-deleteIcon {
+        margin: 0 5px 0 -6px;
+        @include rtl {
+          margin: 0 -6px 0 5px;
+        }
+      }
+    }
+
+    .MuiAutocomplete-endAdornment {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      @include rtl {
+        right: initial;
+        left: 0;
+      }
+    }
+
+    .dropdown-icon-wrapper,
+    .dropdown-close-icon-wrapper {
+      @include d-flex-center;
+      color: $c-gray-dark;
+      font-size: $fz-16px;
+      width: 32px;
+      height: 32px;
+
+      &::before {
+        font-size: $fz-16px;
+      }
+    }
+
+    .input-wrapper {
+      margin-bottom: 0;
+
+      .text-field-wrapper .inputs .MuiInputBase-root {
+        // flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      &.theme-primary {
+        .text-field-wrapper {
+          .inputs {
+            .MuiInputBase-root {
+              @include not-rtl {
+                padding-right: 50px;
+              }
+              @include rtl {
+                padding-left: 50px;
+              }
+
+              .MuiInputBase-input {
+                min-height: 82%;
+                @include not-rtl {
+                  border-right: 1px solid $c-gray-light;
+                }
+                @include rtl {
+                  border-left: 1px solid $c-gray-light;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .input-loading-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    right: 1rem;
+    @include rtl {
+      left: 1rem;
+      right: initial;
+    }
+  }
+
+  &.is-multiple {
+    .autocomplete {
+      .input-wrapper {
+        .text-field-wrapper .inputs .MuiInputBase-root {
+          flex-wrap: wrap;
+          .internal-chips-wrapper {
+            @include d-inline-flex;
+            flex-wrap: wrap;
+          }
+          .MuiInputBase-input {
+            width: initial;
+            display: inline-flex;
+          }
+        }
+      }
+    }
+  }
+
+  .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon {
+    .MuiAutocomplete-inputRoot {
+      @include rtl {
+        padding-right: 0;
+        padding-left: 56px;
+      }
+    }
+  }
+
+  .MuiChip-root {
+    height: 27px;
+  }
+
+  &.autocomplete-with-btn {
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon {
+      .MuiAutocomplete-inputRoot {
+        padding-right: 150px;
+        @include rtl {
+          padding-right: 0;
+          padding-left: 150px;
+        }
+      }
+    }
+  }
+
+  .start-adornment-wrapper,
+  .end-adornment-wrapper {
+    @include d-inline-flex-v-center;
+    white-space: nowrap;
+    background-color: $c-white;
+  }
+
+  .start-adornment-wrapper {
+    padding: 0.5rem;
+  }
+
+  &.with-start-adornment {
+    .input-wrapper .text-field-wrapper .inputs .MuiInputBase-root {
+      @include not-rtl {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left-width: 0;
+      }
+      @include rtl {
+        border-right-width: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &.with-end-andorment {
+    .input-wrapper .text-field-wrapper .inputs .MuiInputBase-root {
+      @include not-rtl {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right-width: 0;
+      }
+      @include rtl {
+        border-left-width: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  &.theme-solid {
+    .text-field-wrapper {
+      .inputs {
+        .MuiInputBase-input {
+          &::placeholder {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .end-adornment-wrapper,
+    .start-adornment-wrapper {
+      border-radius: 0.35rem;
+      border: 1px solid $c-gray-light;
+      color: $c-gray-primary;
+    }
+
+    .end-adornment-wrapper {
+      border-radius: 0 0.35rem 0.35rem 0;
+      @include rtl {
+        border-radius: 0.35rem 0 0 0.35rem;
+      }
+    }
+
+    .start-adornment-wrapper {
+      font-weight: $fw-bold;
+      position: relative;
+      border-radius: 0.35rem 0 0 0.35rem;
+      @include not-rtl {
+        border-right-width: 0;
+      }
+      @include rtl {
+        border-radius: 0 0.35rem 0.35rem 0;
+        border-left-width: 0;
+      }
+
+      &:before {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 90%;
+        width: 1px;
+        background-color: $c-gray-light;
+        right: 0;
+        @include rtl {
+          left: 0;
+          right: initial;
+        }
+      }
+    }
+  }
+
+  &.theme-dark {
+    .autocomplete {
+      .dropdown-icon-wrapper,
+      .dropdown-close-icon-wrapper {
+        color: $c-white;
+      }
+
+      .text-field-wrapper {
+        .inputs {
+          .MuiInputBase-input {
+            &::placeholder {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.autocomplete-popper-wrapper {
+  &.is-free-solo {
+    display: none;
+  }
+
+  .MuiAutocomplete-paper {
+    border-radius: 0.35rem;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+    min-width: 280px;
+    .MuiAutocomplete-noOptions {
+      color: $c-black-dark;
+    }
+
+    .MuiAutocomplete-listbox {
+      max-height: 300px;
+      .MuiAutocomplete-option {
+        color: $c-black-dark;
+      }
+    }
+  }
+
+  &.with-backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.MuiChip-root {
+  .MuiChip-deleteIcon {
+    margin: 0 5px 0 -6px;
+    @include rtl {
+      margin: 0 -6px 0 5px;
+    }
+  }
+}
+
+.MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] {
+  .MuiAutocomplete-endAdornment {
+    @include rtl {
+      left: 0.3rem;
+      right: initial;
+    }
+  }
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon {
+  .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] {
+    @include rtl {
+      padding-right: 1rem;
+    }
+  }
+}

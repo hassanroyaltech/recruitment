@@ -1,0 +1,53 @@
+.text-nowrap {
+  white-space: nowrap;
+}
+.lh-100 {
+  line-height: 100% !important;
+}
+
+.text-right {
+  text-align: right;
+  @include rtl {
+    text-align: left;
+  }
+}
+
+.texts,
+.texts-header,
+.texts-form {
+  font-size: $fz-default;
+
+  &.gray-primary-bold,
+  &.primary-bold {
+    font-weight: bold;
+  }
+
+  &.primary-bold {
+    color: var(--c-primary, $c-primary);
+  }
+
+  &.gray-primary-bold {
+    color: $c-gray-primary;
+  }
+}
+
+.texts-form {
+  padding: 0 1rem 0.5rem;
+  color: $c-gray-primary;
+}
+
+.texts-truncate {
+  @include texts-truncate;
+}
+
+.texts-header {
+  font-size: 45px;
+}
+
+.wb-break-all {
+  word-break: break-all;
+}
+
+.t-align-initial {
+  text-align: initial;
+}

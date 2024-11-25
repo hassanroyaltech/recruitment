@@ -1,0 +1,16 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.job-details-step-wrapper {
+  @include d-flex-column;
+  .job-details-step-body-wrapper {
+    padding: 0.1rem 0.5rem 0;
+    overflow-y: auto;
+    max-height: 66.5vh;
+    .job-details-step-body {
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.161);
+      border-radius: 1rem;
+      background-color: $c-white;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.hierarchy-list-dialog-wrapper {
+  .hierarchy-list-content-dialog-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+    .hierarchy-item-wrapper {
+      @include d-flex-v-center;
+      padding: 0.25rem 1rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      border: 1px solid $c-gray-light;
+      border-radius: 0.5rem;
+      &:not(:last-child):after {
+        position: absolute;
+        left: 1rem;
+        bottom: -1.6rem;
+        content: ' ';
+        width: 1px;
+        height: 1.6rem;
+        background-color: $c-gray-light;
+        @include rtl {
+          left: initial;
+          right: 1rem;
+        }
+      }
+    }
+  }
+}

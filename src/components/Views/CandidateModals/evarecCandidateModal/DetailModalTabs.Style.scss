@@ -1,0 +1,14 @@
+.date-picker-button-wrapper {
+  .gray-outline {
+    div.text-field-wrapper {
+      .MuiFormControl-root.MuiTextField-root.inputs {
+        width: 100%;
+      }
+    }
+    .input-wrapper.MuiFormControl-root .MuiInputBase-root {
+      height: 56px;
+      width: 100%;
+      padding-inline: 15px;
+    }
+  }
+}

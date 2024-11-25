@@ -1,0 +1,54 @@
+{
+  "my-channels-credit": "Creditele Mele",
+  "all-channels": "Toate Canalele",
+  "recommended": "Recomanatte",
+  "new-campaign": "Campanie Noua",
+  "search": "Cautare",
+  "sort-by": "Filtreaza dupa",
+  "sort-by-dots": "Filtreaza dupa:",
+  "my-channels-credit-description": "Incepeti sa va distribuiai locurile de munca pe canalele achizitionate pentru a va extinde acoperirea si pentru a obține acces la grupuri de talente diverse",
+  "transaction-pay-failed": "Tranzactia de Plata a Esuat",
+  "add-selected-channels-failed-description": "Adaugarea canalelor selectate a esuat. Va rugam sa le reselectati din dialog",
+  "there-are-no-channels-credit-available": "Nu sunt disponibile credite pentru canale",
+  "CardFilterBy": {
+    "regions": "Regiuni",
+    "job-title": "Denumire Loc de Munca",
+    "select-regions": "-- Selecteaza Regiuni --",
+    "channel-type": "Tip Canal",
+    "select-channel-type": "-- Selecteaza Tipul Canalului --",
+    "job-category": "Categorie Loc de Munca",
+    "select-job-category": "-- Selecteaza Categorie Loc de Munca --",
+    "industries": "Industrii",
+    "select-industry": "-- Selecteaza Industrie --",
+    "social-media": "Social Media",
+    "job-board": "Panou de Control Locuri de Munca",
+    "publication": "Publicatie",
+    "community": "Comunitate",
+    "aggregator": "Agregator",
+    "not-channel": "Nu este un Canal"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "Trebuie sa selectezi cel putin un canal pentru a continua",
+    "selected-channels": "Canale Selectate",
+    "estimated-performance": "Performanta Estimata",
+    "total": "Total",
+    "credits": "Credite",
+    "channels": "Canale",
+    "clicks": "Accesari"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "Cost: Crescator",
+    "cost-high-to-low": "Cost: Descrescator",
+    "name-a-to-z": "Nume: A-Z",
+    "name-z-to-a": "Nume: Z-A"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "Credit Canalul Meu",
+    "days": "Zile",
+    "time-to-process": "Timp de Procesare",
+    "active-duration": "Durata Activa",
+    "matching-score": "Campatibilitate",
+    "channel-add-failed": "Adaugarea Canalului a Esuat",
+    "channel-delete-failed": "Stergerea Canalului a Esuat"
+  }
+}

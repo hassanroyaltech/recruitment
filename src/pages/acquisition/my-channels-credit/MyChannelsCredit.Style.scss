@@ -1,0 +1,64 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.my-channels-credit-wrapper {
+  .spinner-wrapper {
+    z-index: 999;
+    color: $c-white;
+  }
+  .second-section-wrapper {
+    @include d-flex;
+    width: 100%;
+    padding: 0 0.5rem;
+    @include laptops-max {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .channels-contents-wrapper {
+      padding: 0 0.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      @include laptops-l-max {
+        flex-direction: column;
+      }
+      .body-sections-wrapper {
+        @include laptops-l-max {
+          flex-direction: column;
+          align-items: flex-start !important;
+        }
+        @include laptops-max {
+          flex-direction: row;
+          align-items: center !important;
+        }
+        @include phones-max {
+          flex-direction: column;
+          align-items: flex-start !important;
+        }
+      }
+      .filter-section {
+        @include laptops-l-max {
+          flex-direction: column;
+        }
+        .filter-item {
+          width: 50%;
+          @include laptops-xl-max-middle {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .channels-details-card-wrapper {
+      min-width: 365px;
+      margin-bottom: 1rem;
+      @include laptops-l-max {
+        min-width: initial;
+      }
+      @include tablets-max {
+        width: 100%;
+      }
+      .card-wrapper {
+        .card-content-wrapper {
+          max-height: 60vh;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,372 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+@import 'src/assets/styles/theme/utilities/Fonts.Style';
+.forms-layout-wrapper {
+  .form-builder-wrapper {
+    .form-builder-sections-wrapper * {
+      &:not(
+          .fas,
+          .fa,
+          .far,
+          .fab,
+          .is-secondary-lang *,
+          .fb-rich-text *,
+          .text-editor-wrapper *
+        ) {
+        font-family: var(--font, inherit) !important;
+      }
+      &
+        .is-secondary-lang
+        *:not(.fas, .fa, .far, .fab, .fb-rich-text *, .text-editor-wrapper *) {
+        font-family: var(--font-fb-secondary) !important;
+      }
+    }
+  }
+  .previewer-wrapper * {
+    &:not(
+        .fas,
+        .fa,
+        .far,
+        .fab,
+        .is-secondary-lang *,
+        .fb-rich-text *,
+        .text-editor-wrapper *
+      ) {
+      font-family: var(--font, inherit) !important;
+    }
+    &
+      .is-secondary-lang
+      *:not(.fas, .fa, .far, .fab, .fb-rich-text *, .text-editor-wrapper *) {
+      font-family: var(--font-fb-secondary) !important;
+    }
+  }
+  .signature-display-box {
+    margin: 0.1rem;
+  }
+  .meet-team-field-parent {
+    &:not(.fas, .fa, .far, .fab) {
+      font-family: var(--font, inherit) !important;
+    }
+    @include d-flex-column;
+    position: relative;
+    width: 100%;
+    &.onboarding-gallery {
+      .multiple-media-cont {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 16px;
+        & > div.onboarding-gallery-item {
+          flex: calc(50% - 8px) 1 0;
+          min-width: 250px;
+          .onboarding-img {
+            border-radius: 6px;
+            max-height: 300px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+  .meet-teams-cards-cont {
+    width: 100%;
+    display: grid;
+    gap: 15px;
+    grid-auto-rows: 1fr;
+    overflow-x: unset !important;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    @include phones-max {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  fieldset {
+    span {
+      padding: 0 !important;
+    }
+    legend {
+      padding: 0 !important;
+    }
+  }
+  .field-item-wrapper {
+    font-family: var(--font, inherit) !important;
+    //overflow-x: auto;
+    //padding: 2px 0.5rem;
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+      word-break: normal;
+    }
+  }
+  .previewer-wrapper {
+    .field-item-wrapper {
+      &.is-field-switcher {
+        overflow-x: initial;
+      }
+    }
+  }
+  .select-icon {
+    position: absolute;
+    pointer-events: none;
+    right: 0;
+  }
+  .sidebar-section-wrapper {
+    @include d-inline-flex;
+    max-width: 415px;
+    width: 100%;
+    .panel-items-wrapper {
+      @include d-flex;
+      align-items: flex-start;
+      .tabs-content-wrapper {
+        width: 100%;
+      }
+    }
+    &.is-without-tabs {
+      max-width: 355px;
+    }
+    .panel-items-wrapper,
+    .info-wrapper {
+      width: 100%;
+    }
+  }
+  .form-builder-body-wrapper {
+    @include d-flex;
+  }
+  .is-required {
+    .MuiOutlinedInput-input,
+    &.MuiInputBase-root,
+    .MuiFormControlLabel-label {
+      color: #f44336;
+    }
+    .MuiOutlinedInput-notchedOutline,
+    &.MuiInputBase-root,
+    .PrivateSwitchBase-input + span,
+    &.MuiBox-root {
+      border-color: #f44336 !important;
+      outline-color: #f44336 !important;
+    }
+  }
+  img {
+    object-fit: initial;
+  }
+  .MuiFormControl-root {
+    width: 100%;
+  }
+  //.previewer-wrapper {
+  //  > div.MuiGrid-root {
+  //    min-width: 1000px !important;
+  //  }
+  //}
+  .previewer-wrapper {
+    td,
+    th,
+    tr,
+    tbody,
+    thead {
+      border: inherit;
+    }
+    .field-layout-row-wrapper {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      grid-column-gap: 1rem !important;
+      .field-row-wrapper {
+        .field-box-wrapper {
+          max-width: 100%;
+          //height: fit-content;
+        }
+
+        &.is-with-secondary {
+          .field-box-wrapper {
+            max-width: 50%;
+            @include laptops-max {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    //&.for-pdf {
+    //  .field-layout-col-wrapper{
+    //    padding-bottom: .1cm;
+    //    //margin-bottom: .2cm;
+    //  }
+    //}
+    .field-layout-col-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      &.data-section {
+        padding: 0;
+      }
+
+      .field-row-wrapper {
+        .field-box-wrapper {
+          max-width: 100%;
+          //height: fit-content;
+        }
+
+        &.is-with-secondary {
+          .field-box-wrapper {
+            max-width: 50%;
+            @include laptops-max {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .fb-section-header {
+      @include d-flex-v-center;
+      &.is-rtl {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  @include laptops-max {
+    .previewer-wrapper:not(.for-pdf),
+    .form-builder-wrapper {
+      .field-row-wrapper {
+        flex-direction: column !important;
+        .field-box-wrapper {
+          max-width: initial;
+        }
+        @include tablets-max {
+          .field-box-wrapper {
+            .field-label-wrapper {
+              margin-bottom: 0.5rem;
+              padding: 0 !important;
+            }
+          }
+          .field-box-wrapper {
+            flex-wrap: wrap;
+            .field-label-wrapper,
+            .field-item-wrapper {
+              width: 100%;
+            }
+            @include phones-max {
+              .field-item-wrapper {
+                flex-direction: column;
+                .MuiFormControl-root {
+                  width: 100%;
+                  margin: 0 0 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .side-menu-btn {
+    display: none;
+    @include tablets-max {
+      display: inline-flex;
+    }
+    &.btns-icon {
+      &.MuiButtonBase-root {
+        &.theme-transparent {
+          &.is-active {
+            &:not(.Mui-disabled) {
+              background-color: $c-accent-secondary;
+              color: $c-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .signature-display-box {
+    max-height: initial;
+    @include phones-s-max {
+      min-width: 230px;
+    }
+  }
+
+  @include tablets-max {
+    .sidebar-section-wrapper {
+      position: fixed;
+      transition: width 0.3s linear;
+      overflow-x: hidden;
+      width: 0;
+      z-index: 2;
+      background-color: $c-white;
+      left: 0;
+      @include rtl {
+        left: initial;
+        right: 0;
+      }
+      @include phones-s-max {
+        max-width: 300px;
+      }
+      @include phones-xs-max {
+        max-width: 250px;
+      }
+      &.is-open {
+        width: 400px;
+      }
+
+      &.is-without-tabs {
+        right: 0;
+        left: initial;
+        @include rtl {
+          right: initial;
+          left: 0;
+        }
+        @include phones-s-max {
+          max-width: 320px;
+        }
+        &.is-open {
+          width: 336px;
+        }
+      }
+    }
+  }
+}
+@include phones-s-max {
+  .form-section-settings-popover-wrapper {
+    .MuiPaper-root {
+      max-width: 300px !important;
+      width: 100%;
+      min-width: initial !important;
+    }
+  }
+  .form-field-settings-popover-wrapper {
+    .MuiPaper-root {
+      max-width: 300px !important;
+      .form-field-settings-body-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
+.signature-popover-wrapper {
+  .MuiPaper-root {
+    min-width: 826px;
+    @include phones-s-max {
+      max-width: 290px;
+    }
+    .signature-menu-wrapper {
+      @include phones-max {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+    .signature-canvas-wrapper {
+      height: 420px;
+      width: 100%;
+      @include phones-s-max {
+        height: 270px;
+      }
+    }
+    @include tablets-max {
+      min-width: initial;
+    }
+  }
+}

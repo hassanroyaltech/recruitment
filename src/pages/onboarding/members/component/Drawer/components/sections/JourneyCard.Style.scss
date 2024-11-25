@@ -1,0 +1,64 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.journey-tab-wrapper {
+  @include d-inline-flex;
+  flex-direction: column;
+  //width: min-content !important;
+  .journey-card-section-wrapper {
+    @include d-inline-flex;
+    .journey-card-wrapper {
+      @include d-inline-flex;
+      width: 382px;
+      align-items: flex-start;
+      justify-content: space-between;
+      word-break: break-word;
+      min-height: 88px;
+      &:hover {
+        background-color: $c-gray-lighter;
+      }
+      padding: 1rem 0.5rem 0.5rem;
+      .journey-card-icon {
+        @include d-inline-flex;
+        align-items: flex-start;
+        padding: 0.15rem 0.5rem;
+      }
+      .journey-card-body {
+        @include d-flex;
+        align-items: flex-start;
+        flex: 0 1 100%;
+        flex-wrap: wrap;
+      }
+      .journey-card-footer {
+        @include d-flex;
+        align-items: flex-end;
+        flex: 0 1 100%;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .journey-card-row {
+        @include d-flex;
+        flex-wrap: wrap;
+        text-align: left;
+        @include rtl {
+          text-align: right;
+        }
+        width: 100%;
+        padding: 0 0.5rem;
+        margin-bottom: 0.25rem;
+        &.title-wrapper {
+          height: 23px;
+          font-weight: $fw-medium;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          @supports (-webkit-appearance: none) {
+            white-space: normal;
+            height: 42px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* number of lines to show */
+          }
+        }
+      }
+    }
+  }
+}

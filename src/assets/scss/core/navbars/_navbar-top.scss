@@ -1,0 +1,69 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+// Navbar top (Topbar)
+
+.navbar-top {
+  top: 0;
+  position: fixed;
+  z-index: 999;
+  max-height: 4.5rem;
+  background-color: white;
+  border: 0;
+  width: 100vw;
+  margin-left: -6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: 0 0 15px #7e7e7e3a !important;
+  transition: 0.1s linear margin-left;
+  @include rtl {
+    margin-right: -6rem;
+    margin-left: 0;
+    transition: 0.1s linear margin-right;
+  }
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .navbar-brand {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .navbar-collapse {
+      width: 100%;
+    }
+
+    .nav-item {
+      position: static;
+
+      .dropdown-menu {
+        position: absolute;
+        width: 94%;
+        min-width: auto;
+        left: 3%;
+        right: auto;
+      }
+    }
+  }
+
+  &.border-bottom {
+    &.navbar-dark {
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    &.navbar-light {
+      border-color: rgba(0, 0, 0, 0.04) !important;
+    }
+  }
+}
+
+.sidenav-pinned {
+  .navbar-top {
+    .navbar-brand {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import 'src/assets/styles/helpers/mixins/Mixins.Style';
+.filter-section {
+  @include d-flex-v-center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  .filter-item {
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 25%;
+    @include laptops-xl-max-middle {
+      width: 33.33333333%;
+    }
+    @include laptops-l-max {
+      width: 50%;
+    }
+    @include tablets-max {
+      width: 100%;
+    }
+    &.twice {
+      width: 50%;
+      @include laptops-xl-max-middle {
+        width: 33.33333333%;
+      }
+      @include laptops-l-max {
+        width: 100%;
+      }
+    }
+  }
+}

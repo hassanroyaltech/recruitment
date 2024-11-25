@@ -1,0 +1,73 @@
+@import '../../../../../assets/styles/helpers/Helpers.Style';
+
+.approve-applicants-cards-wrapper {
+  @include d-flex-h-center;
+  flex-wrap: wrap;
+  .approve-applicants-card-wrapper {
+    width: 25%;
+    @include laptops-l-max {
+      width: 33.33333333%;
+    }
+    @include laptops-max {
+      width: 50%;
+    }
+    @include phones-max {
+      width: 100%;
+    }
+    .card-header-wrapper {
+      padding: 0.5rem 0;
+      justify-content: space-between;
+    }
+    .card-body-wrapper {
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: row !important;
+      .card-body-item-wrapper {
+        @include d-flex;
+        flex-wrap: wrap;
+        flex: 0 1 100%;
+        padding: 0 0.5rem;
+        .card-image-wrapper {
+          @include d-inline-flex;
+          height: 50px;
+          width: 50px;
+          min-width: 50px;
+          border: 1px solid $c-gray-light;
+          border-radius: 50px;
+        }
+        .item-sections-wrapper {
+          @include d-flex;
+          width: 100%;
+        }
+      }
+    }
+    .card-footer-wrapper {
+      justify-content: space-between;
+      flex: 0 1 auto !important;
+      align-items: center;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: ' ';
+        background-color: $c-gray-light;
+        height: 1px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @include rtl {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        width: 95%;
+      }
+
+      .add-user-icon-wrapper {
+        &.is-disabled {
+          color: $c-gray;
+        }
+      }
+    }
+  }
+}

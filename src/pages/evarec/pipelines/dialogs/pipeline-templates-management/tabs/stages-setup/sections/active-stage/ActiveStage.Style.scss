@@ -1,0 +1,187 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.active-stage-section-wrapper {
+  padding: 1rem 0 0.5rem;
+  min-width: 400px;
+
+  .autocomplete-wrapper {
+    min-width: initial;
+  }
+  .precondition-final-elimination-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    .precondition-final-elimination-item {
+      @include d-flex;
+      width: 100%;
+      flex-wrap: wrap;
+      .precondition-final-elimination-content {
+        @include d-flex;
+        width: 100%;
+        .precondition-final-elimination-controls {
+          @include d-flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  .stages-breadcrumb-wrapper {
+    @include d-inline-flex-v-center;
+    flex-wrap: wrap;
+    //display: block;
+    //white-space: nowrap;
+    //overflow-x: auto;
+    //max-width: 100%;
+    color: $c-gray;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem;
+
+    .btns.theme-transparent {
+      margin: 0;
+      color: $c-gray;
+      min-width: auto;
+
+      &.is-active {
+        color: $c-black-light;
+      }
+    }
+  }
+
+  .active-stage-body-wrapper {
+    padding: 0 2rem;
+
+    .small-control {
+      .inline-label-wrapper {
+        min-width: 100px;
+      }
+      .inputs {
+        max-width: 170px;
+        min-width: 100px;
+      }
+    }
+  }
+
+  .active-stage-actions-wrapper,
+  .active-stage-precondition-wrapper,
+  .active-stage-workflows-wrapper {
+    @include d-flex-column;
+    width: 100%;
+    border: 1px solid $c-gray-lighter;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    .active-stage-actions-header,
+    .active-stage-precondition-header,
+    .active-stage-workflows-header {
+      @include d-flex-v-center-h-between;
+      border-bottom: 1px solid $c-gray-lighter;
+      padding: 0.5rem;
+    }
+
+    .active-stage-actions-body,
+    .active-stage-precondition-body,
+    .active-stage-workflows-body {
+      @include d-flex-column;
+      width: 100%;
+
+      .stage-action-count-wrapper,
+      .stage-precondition-count-wrapper,
+      .stage-workflows-count-wrapper {
+        @include d-inline-flex-center;
+        color: $c-gray;
+        padding: 1rem;
+        @include not-rtl {
+          border-right: 1px solid $c-gray-lighter;
+        }
+        @include rtl {
+          border-left: 1px solid $c-gray-lighter;
+        }
+      }
+
+      .stage-actions-section-wrapper,
+      .stage-precondition-section-wrapper,
+      .stage-workflows-section-wrapper {
+        @include d-flex;
+        border-bottom: 1px solid $c-gray-lighter;
+      }
+
+      .stage-action-body-wrapper,
+      .stage-precondition-body-wrapper,
+      .stage-workflows-body-wrapper {
+        @include d-flex;
+        flex-wrap: wrap;
+        padding: 1rem 0 0;
+        .precondition-row-wrapper {
+          @include d-flex-h-between;
+          padding: 0 0.5rem;
+        }
+        .action-row-wrapper,
+        .precondition-row-wrapper,
+        .workflows-row-wrapper {
+          @include d-flex-h-between;
+          padding: 0 0.5rem;
+          //.specify-action-wrapper {
+          //  max-width: 57.5%;
+          //}
+          //.durations-field-wrapper {
+          //  max-width: 42.5%;
+          //}
+          //.specify-action-wrapper,
+          //.durations-field-wrapper {
+          //  @include d-inline-flex;
+          //  @include laptops-xl-max-middle {
+          //    max-width: 100%;
+          //  }
+          //}
+        }
+
+        .collapse-btn {
+          &.is-active {
+            &:not(.Mui-disabled),
+            &:not([disabled]) {
+              background-color: $c-accent-secondary-light;
+              color: $c-accent-secondary;
+              border-color: $c-accent-secondary-light;
+            }
+          }
+        }
+
+        .editor-body-wrapper {
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    .active-stage-actions-footer,
+    .active-stage-precondition-footer,
+    .active-stage-workflows-footer {
+      padding: 0.5rem;
+    }
+  }
+
+  .stage-responsibility-wrapper,
+  .candidate-actions-wrapper {
+    @include d-flex-column;
+    border: 1px solid $c-gray-light;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+
+    .enable-move-to {
+      .label-wrapper {
+        color: $c-gray-primary;
+      }
+    }
+  }
+}
+
+.active-stage-actions-popover-wrapper {
+  .MuiPaper-root {
+    padding: 0.5rem;
+  }
+}
+.active-stage-precondition-popover-wrapper {
+  .MuiPaper-root {
+    padding: 0.5rem;
+  }
+}

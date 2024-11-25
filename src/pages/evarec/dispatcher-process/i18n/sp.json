@@ -1,0 +1,12 @@
+{
+  "dispatchers": "Despachadores",
+  "dispatchers-description": "Descripción de los despachadores",
+  "assign-to": "Asignar a",
+  "assign-to-users": "Asignar a usuarios",
+  "select-users": "-- Seleccionar usuarios --",
+  "search": "Buscar",
+  "this-field-is-required": "Este campo es necesario",
+  "dispatcher-process": "Proceso del despachador",
+  "assign-to-users-successfully": "Asignado a usuarios satisfactoriamente",
+  "assign-to-users-failed": "Ocurrió un error asignando a los usuarios"
+}

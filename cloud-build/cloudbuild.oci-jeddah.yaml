@@ -1,0 +1,72 @@
+timeout: 4000s
+options:
+  machineType: N1_HIGHCPU_32
+
+# This is for easy transition from gcr.io --> europe-docker.pkg.dev
+substitutions:
+  _REPO: elevatus-recruiter
+  _CONTAINER: recruiter-portal-container
+  _DEPLOYMENT: recruiter-portal
+  _NAMESPACE: elevatus-services
+  _TENANT: oci-jeddah
+  _IMAGE_PATH_GCP: europe-docker.pkg.dev/${PROJECT_ID}/svc/${_REPO}
+  _ARTIFACT_BUCKET: gs://${PROJECT_ID}-build-artifacts
+  _ENVIRONMENT_PATH: ${_ARTIFACT_BUCKET}/environment
+  _KUBECONFIG_PATH: ${_ARTIFACT_BUCKET}/kubeconfig
+
+  #	me-central2-a Middle East
+  _COMPUTE_ZONE_MIDDLE_EAST_2: me-central2-a
+  _CONTAINER_CLUSTER_MIDDLE_EAST_2: dammam
+steps:
+  # Step 1: Fetch environment:
+  # Download the env file
+  - name: gcr.io/cloud-builders/gsutil
+    id: fetch-environment
+    args: [cp, $_ENVIRONMENT_PATH/$_TENANT/elevatus-recruiter.env, .env]
+
+  # Step 2: Build the Docker image
+  # This step uses the Dockerfile located in the "docker" directory to build the Docker image.
+  # The Dockerfile is passed the "PROJECT_ID" as a build argument, and two tags are created for
+  # the image.
+  - name: gcr.io/cloud-builders/docker
+    id: build-image
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        docker build . \
+          -f docker/$_DEPLOYMENT_PATH/Dockerfile \
+          -t $_IMAGE_PATH_GCP:$_TENANT-latest \
+          -t $_IMAGE_PATH_GCP:$_TENANT-$SHORT_SHA \
+          -t $_IMAGE_PATH_GCP:$_TENANT-$COMMIT_SHA \
+          -t $_IMAGE_PATH_GCP:$_TENANT-$BRANCH_NAME
+    waitFor:
+      - fetch-environment
+
+  # Step 3: Push the Docker image to GCR
+  # This step pushes the Docker image to the Google Container Registry repository.
+  # All tags for the image are pushed to the registry.
+  - name: gcr.io/cloud-builders/docker
+    id: push-image
+    args: [push, $_IMAGE_PATH_GCP, --all-tags]
+    waitFor:
+      - build-image
+
+  # Step 4: Deploy to GCP Eemshaven
+  # This step will deploy the service on the gcp-eemshaven cluster
+  - name: gcr.io/cloud-builders/kubectl
+    id: deploy-to-gcp-eemshaven
+    args:
+      [
+        -n,
+        $_NAMESPACE,
+        set,
+        image,
+        deployment/$_DEPLOYMENT,
+        $_CONTAINER=$_IMAGE_PATH_GCP:$_TENANT-$COMMIT_SHA,
+      ]
+    env:
+      - CLOUDSDK_COMPUTE_ZONE=$_COMPUTE_ZONE_MIDDLE_EAST_2
+      - CLOUDSDK_CONTAINER_CLUSTER=$_CONTAINER_CLUSTER_MIDDLE_EAST_2
+    waitFor:
+      - push-image

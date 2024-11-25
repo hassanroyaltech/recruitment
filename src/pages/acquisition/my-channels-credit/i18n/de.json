@@ -1,0 +1,54 @@
+{
+  "my-channels-credit": "Guthaben für meine Kanäle",
+  "all channels": "Alle Kanäle",
+  "recommended": "Empfohlen",
+  "new-campaign": "Neue Kampagne",
+  "search": "Suche",
+  "sort-by": "Sortieren nach",
+  "sort-by-dots": "Sortieren nach:",
+  "my-channels-credit-description": "Verteilen Sie Ihre Jobs über gekaufte Kanäle, um Ihre Reichweite zu erhöhen und Zugang zu verschiedenen Talentpools zu erhalten",
+  "transaction-pay-failed": "Transaktionszahlung fehlgeschlagen",
+  "add-selected-channels-failed-description": "Add Selected Channels Failed, Please reselect them from dialog",
+  "there-are-no-channels-credit-available": "Es sind keine Guthaben für Kanäle verfügbar",
+  "CardFilterBy": {
+    "regions": "Regionen",
+    "job-title": "Stellenbezeichnung",
+    "select-regions": "-- Regionen auswählen --",
+    "channel-type": "Kanaltyp",
+    "select-channel-type": "-- Kanaltyp auswählen --",
+    "job-category": "Job-Kategorie",
+    "select-job-category": "-- Job-Kategorie auswählen --",
+    "industries": "Branchen",
+    "select-industry": "-- Branche auswählen --",
+    "social-media": "Soziale Medien",
+    "job-board": "Stellenbörse",
+    "publication": "Veröffentlichung",
+    "community": "Gemeinschaft",
+    "aggregator": "Aggregator",
+    "not-channel": "Not a Channel"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "Sie müssen mindestens einen Kanal auswählen, um fortzufahren",
+    "selected-channels": "Ausgewählte Kanäle",
+    "estimated-performance": "Geschätzte Leistung",
+    "total": "Gesamt",
+    "credits": "Gutschriften",
+    "channels": "Kanäle",
+    "clicks": "Clicks"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "Kosten: Niedrig-Hoch",
+    "cost-high-to-low": "Kosten: Hoch-Niedrig",
+    "name-a-to-z": "Name: A-Z",
+    "name-z-to-a": "Name: Z-A"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "Mein Kanal-Guthaben",
+    "days": "Tage",
+    "time-to-process": "Zeit bis zur Bearbeitung",
+    "active-duration": "Aktive Dauer",
+    "matching-score": "Übereinstimmungsergebnis",
+    "channel-add-failed": "Kanal hinzufügen fehlgeschlagen",
+    "channel-delete-failed": "Kanal löschen fehlgeschlagen"
+  }
+}

@@ -1,0 +1,58 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.email-header-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.email-subject {
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.email-avatar {
+  padding: 5px;
+}
+
+.email-composer-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emails-filters-section,
+.email-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload-signature {
+  display: flex;
+  align-items: center;
+}
+
+.view-email-body {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  @include tablets-max {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sender {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.att-cont {
+  overflow: auto;
+}
+
+.att-text {
+  text-align: center;
+}
+
+.att-block-cont {
+  margin-right: 1rem;
+}

@@ -1,0 +1,51 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.square-rating-wrapper {
+  column-gap: 5px;
+  .square-score-btn {
+    border: 1px solid $c-neutral-scale-4;
+    border-radius: 3px !important ;
+    color: $c-neutral-scale-2;
+    width: 30px;
+    min-height: 30px !important;
+    height: 30px;
+    &.active-square-score-btn {
+      color: #fff !important ;
+      background-color: $c-neutral-scale-1 !important ;
+    }
+  }
+}
+.scor-star-rating-wrapper {
+  .MuiRating-root {
+    font-size: 25px !important;
+    //gap: 2px;
+    .MuiSvgIcon-root {
+      fill: $c-neutral-scale-1;
+    }
+    label {
+      font-size: 25px !important;
+      .MuiRating-icon,
+      .MuiSvgIcon-root {
+        font-size: 25px !important;
+      }
+    }
+  }
+}
+.scorecard-decision-wrapper {
+  column-gap: 8px;
+  .decision-Button {
+    border: 1px solid $c-neutral-scale-4;
+    border-radius: 3px !important ;
+    color: $c-neutral-scale-2;
+    width: fit-content;
+    min-width: 90px !important;
+    min-height: 40px !important;
+    height: 40px;
+    &.active-decision-btn {
+      color: #fff !important ;
+      background-color: $c-neutral-scale-1 !important ;
+    }
+  }
+}
+.scorecard-dropdown-wrapper {
+  max-width: 300px;
+}

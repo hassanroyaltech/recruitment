@@ -1,0 +1,45 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.properties-items-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 0.5rem;
+  .title-wrapper {
+    @include d-inline-flex;
+    justify-content: flex-start;
+  }
+  .properties-header-wrapper,
+  .properties-checkboxes-wrapper {
+    @include d-flex-v-center;
+    width: 100%;
+    .properties-checkbox-item-wrapper {
+      @include d-flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+  .properties-header-wrapper {
+    background-color: $c-gray-lighter-more;
+    color: var(--c-primary, $c-primary);
+    .properties-item-wrapper {
+      padding: 0.5rem 0.5rem 0;
+    }
+  }
+
+  .properties-item-wrapper {
+    @include d-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    .MuiFormControlLabel-root {
+      margin: 0 -0.5rem;
+    }
+    &.is-with-header {
+      .properties-checkbox-item-wrapper {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}

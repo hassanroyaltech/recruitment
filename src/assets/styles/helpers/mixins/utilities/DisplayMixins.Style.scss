@@ -1,0 +1,189 @@
+@mixin d-inline-flex {
+  display: inline-flex;
+  flex: 0 1 auto;
+}
+
+@mixin d-flex {
+  display: flex;
+  flex: 1 1 100%;
+}
+
+@mixin flex-h-center {
+  justify-content: center;
+}
+
+@mixin flex-h-end {
+  justify-content: flex-end;
+}
+
+@mixin flex-h-start {
+  justify-content: flex-start;
+}
+@mixin flex-self-h-start {
+  align-self: flex-start;
+}
+@mixin flex-v-start {
+  align-items: flex-start;
+}
+
+@mixin flex-v-center {
+  align-items: center;
+}
+
+@mixin flex-v-end {
+  align-items: flex-end;
+}
+
+@mixin flex-content-between {
+  align-content: space-between;
+}
+
+@mixin flex-h-between {
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  flex-direction: column;
+}
+
+@mixin flex-v-center-h-between {
+  @include flex-h-between;
+  @include flex-v-center;
+}
+
+@mixin flex-v-end-h-between {
+  @include flex-h-between;
+  @include flex-v-end;
+}
+
+@mixin flex-center {
+  @include flex-v-center;
+  @include flex-h-center;
+}
+
+@mixin d-inline-flex-center {
+  @include d-inline-flex;
+  @include flex-center;
+}
+
+@mixin d-flex-column-center {
+  @include d-flex;
+  @include flex-column;
+  @include flex-center;
+}
+
+@mixin d-flex-column {
+  @include d-flex;
+  @include flex-column;
+}
+
+@mixin d-flex-column-between {
+  @include d-flex-column;
+  @include flex-content-between;
+}
+@mixin d-flex-column-v-between {
+  @include d-flex-column;
+  @include flex-h-between;
+}
+
+@mixin d-flex-column-v-center {
+  @include d-flex;
+  @include flex-column;
+  @include flex-v-center;
+}
+
+@mixin d-flex-center {
+  @include d-flex;
+  @include flex-center;
+}
+
+@mixin d-flex-column-v-center-h-start {
+  @include d-flex-column;
+  @include flex-v-center;
+  @include flex-h-start;
+}
+@mixin d-flex-v-center-h-start {
+  @include d-flex;
+  @include flex-v-center;
+  @include flex-h-start;
+}
+
+@mixin d-inline-flex-v-center {
+  @include d-inline-flex;
+  @include flex-v-center;
+}
+@mixin d-inline-flex-h-center {
+  @include d-inline-flex;
+  @include flex-h-center;
+}
+@mixin d-flex-v-center {
+  @include d-flex;
+  @include flex-v-center;
+}
+@mixin d-flex-h-center {
+  @include d-flex;
+  @include flex-h-center;
+}
+@mixin d-flex-h-between {
+  @include d-flex;
+  @include flex-h-between;
+}
+@mixin d-flex-v-start-h-center {
+  @include d-flex;
+  @include flex-h-center;
+  @include flex-v-start;
+}
+
+@mixin d-flex-v-center-h-between {
+  @include d-flex;
+  @include flex-v-center;
+  @include flex-h-between;
+}
+
+@mixin d-flex-v-center-h-end {
+  @include d-flex;
+  @include flex-v-center;
+  @include flex-h-end;
+}
+@mixin d-flex-v-start-h-end {
+  @include d-flex;
+  @include flex-h-end;
+  @include flex-v-start;
+}
+@mixin d-inline-flex-v-center-h-end {
+  @include d-inline-flex;
+  @include flex-v-center;
+  @include flex-h-end;
+}
+@mixin d-inline-flex-v-center-h-between {
+  @include d-inline-flex;
+  @include flex-v-center;
+  @include flex-h-between;
+}
+
+@mixin d-flex-v-end-h-center {
+  @include d-flex;
+  @include flex-v-end;
+  @include flex-h-center;
+}
+@mixin d-inline-flex-h-start {
+  @include d-flex;
+  @include flex-h-start;
+}
+@mixin d-inline-flex-v-center-h-start {
+  @include d-flex;
+  @include flex-h-start;
+  @include flex-v-center;
+}
+@mixin d-inline-flex-self-h-start {
+  @include d-flex;
+  @include flex-h-start;
+}
+@mixin d-inline-flex-column-center {
+  @include d-inline-flex-column;
+  @include flex-center;
+}
+@mixin d-inline-flex-column {
+  @include d-inline-flex;
+  @include flex-column;
+}

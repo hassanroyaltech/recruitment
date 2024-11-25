@@ -1,0 +1,59 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.approval-management-content-wrapper {
+  .is-quarter-width {
+    @include d-inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 0.5rem;
+    width: 33.33333333%;
+
+    @include tablets-max {
+      width: 50%;
+    }
+    @include phones-max {
+      width: 100%;
+    }
+  }
+
+  .approvals-evaluations-wrapper {
+    .evaluation-item {
+      margin-bottom: 1rem;
+
+      .MuiAccordionDetails-root {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .approval-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .approval-question-card {
+          width: 50%;
+        }
+      }
+
+      .MuiAccordion-rounded {
+        border-radius: 0.5rem;
+      }
+
+      .MuiPaper-elevation1 {
+        border: 1px solid $c-gray;
+        box-shadow: 0 0 0 0 transparent;
+        transition: all 0.1s ease-in-out;
+
+        &.Mui-expanded {
+          border: 2px solid var(--bc-primary, $c-primary);
+          transition: all 0.1s ease-in-out;
+        }
+      }
+
+      .MuiAccordionSummary-content {
+        font-weight: bold;
+        color: $c-gray-darker;
+      }
+    }
+  }
+}

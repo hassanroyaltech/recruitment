@@ -1,0 +1,37 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.global-style-management-section-wrapper {
+  @include d-flex-v-center;
+  @include tablets-max {
+    flex-wrap: wrap;
+  }
+  .label-wrapper {
+    color: $c-gray-primary;
+    font-size: $fz-16px;
+    white-space: nowrap;
+    margin-bottom: 0.25rem;
+    min-width: 150px;
+  }
+  .global-style-actions-wrapper {
+    @include d-inline-flex-v-center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    .btns {
+      &.theme-shadow {
+        margin-bottom: 0.25rem;
+        color: $c-secondary;
+        &.is-group-start {
+          @include not-rtl {
+            margin-left: 0.75rem;
+          }
+          @include rtl {
+            margin-right: 0.75rem;
+          }
+        }
+        &.is-active {
+          background-color: $c-secondary;
+          color: $c-white;
+        }
+      }
+    }
+  }
+}

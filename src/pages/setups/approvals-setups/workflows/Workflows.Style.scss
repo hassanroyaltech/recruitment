@@ -1,0 +1,48 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.workflows-page-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  min-height: auto;
+
+  .template-action-btn-wrapper,
+  .skeleton-item-wrapper {
+    @include d-inline-flex;
+    width: 25% !important;
+    @include laptops-l-max {
+      width: 33.33333333% !important;
+    }
+    @include laptops-max {
+      width: 50% !important;
+    }
+    @include tablets-max {
+      width: 100%;
+      min-width: 270px;
+    }
+    padding: 0 0.5rem;
+
+    .template-type-btn {
+      width: 100%;
+      margin: 0 0 1rem !important;
+      background-color: $c-gray-lighter;
+      padding: 1rem 0.5rem;
+      min-height: 180px;
+      flex-direction: column;
+
+      .main-text-wrapper {
+        font-size: $fz-19px;
+        margin-bottom: 1rem;
+      }
+
+      .icons {
+        font-size: $fz-40px;
+        margin-bottom: 0.5rem;
+      }
+
+      .total-count-templates {
+        color: $c-gray-primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}

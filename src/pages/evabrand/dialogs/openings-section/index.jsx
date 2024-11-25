@@ -1,0 +1,1 @@
+export * from './OpeningsSection.Dialog';

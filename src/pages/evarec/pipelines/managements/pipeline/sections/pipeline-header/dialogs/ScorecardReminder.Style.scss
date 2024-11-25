@@ -1,0 +1,42 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.scorecard-reminder-dialog-wrapper {
+  .MuiPaper-root {
+    max-width: 570px;
+  }
+  .c-neutral-scale-3 {
+    color: $c-neutral-scale-3;
+  }
+  .w-150-px {
+    width: 150px;
+  }
+  .w-120-px {
+    width: 120px;
+  }
+  .reminder-avatars {
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    border: 1px solid $c-gray-lighter;
+    min-height: 25px;
+  }
+  .p-end-0px {
+    padding-inline-end: 0px !important;
+  }
+  .m-w-165px {
+    min-width: 165px;
+  }
+
+  @include phones-max {
+    .score-reminder-section {
+      flex-flow: wrap;
+      gap: 10px;
+    }
+    .px-sm-0 {
+      padding-inline: 0px !important ;
+    }
+    .flex-sm-col {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

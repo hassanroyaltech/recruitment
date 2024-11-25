@@ -1,0 +1,10 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.Authenticator-app-wrapper {
+  .authenticator-item-wrapper {
+    width: 50%;
+    @media (min-width: 767px) {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+﻿{
+  "my-channels-credit": "Kanallarımın kredisi",
+  "all channels": "Tüm kanallar",
+  "recommended": "Önerilen",
+  "new-campaign": "Yeni kampanya",
+  "search": "Arama",
+  "sort-by": "Göre sırala",
+  "sort-by-dots": "Göre sırala:",
+  "my-channels-credit-description": "İşlerinizi satın alınan kanallar üzerinden dağıtarak erişiminizi artırın ve çeşitli yetenek havuzlarına erişin",
+  "transaction-pay-failed": "İşlem ödemesi başarısız",
+  "add-selected-channels-failed-description": "Seçilen Kanalları Ekleyemedi, Lütfen onları diyalogtan tekrar seçin",
+  "there-are-no-channels-credit-available": "Kanal kredisi mevcut değil",
+  "CardFilterBy": {
+    "regions": "Bölgeler",
+    "job-title": "İş unvanı",
+    "select-regions": "-- Bölgeleri seçin --",
+    "channel-type": "Kanal türü",
+    "select-channel-type": "-- Kanal türünü seçin --",
+    "job-category": "İş kategorisi",
+    "select-job-category": "-- İş kategorisini seçin --",
+    "industries": "Sektörler",
+    "select-industry": "-- Sektörü seçin --",
+    "social-media": "Sosyal medya",
+    "job-board": "İş ilanları panosu",
+    "publication": "Yayın",
+    "community": "Topluluk",
+    "aggregator": "Toplayıcı",
+    "not-channel": "Bir Kanal Değil"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "Devam etmek için en az bir kanal seçmelisiniz",
+    "selected-channels": "Seçilen kanallar",
+    "estimated-performance": "Tahmini performans",
+    "total": "Toplam",
+    "credits": "Krediler",
+    "channels": "Kanallar",
+    "clicks": "Tıklamalar"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "Maliyet: Düşükten-Yükseğe",
+    "cost-high-to-low": "Maliyet: Yüksekten-Düşüğe",
+    "name-a-to-z": "Ad: A'dan Z'ye",
+    "name-z-to-a": "Ad: Z'den A'ya"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "Kanal kredim",
+    "days": "Günler",
+    "time-to-process": "İşlem süresi",
+    "active-duration": "Aktif süre",
+    "matching-score": "Eşleşme puanı",
+    "channel-add-failed": "Kanal ekleme başarısız",
+    "channel-delete-failed": "Kanal silme başarısız"
+  }
+}

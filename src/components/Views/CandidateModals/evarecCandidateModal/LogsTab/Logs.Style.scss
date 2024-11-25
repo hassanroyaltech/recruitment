@@ -1,0 +1,41 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.logs-wrapper {
+  .card-wrapper {
+    flex-direction: column;
+  }
+  .logs-timeline-wrapper {
+    .MuiTimelineItem-root {
+      &:nth-child(even) {
+        .MuiTimelineDot-root {
+          background-color: $c-info;
+        }
+      }
+      &:nth-child(odd) {
+        .MuiTimelineDot-root {
+          background-color: $c-secondary;
+        }
+      }
+    }
+  }
+  .logs-card-wrapper {
+    @include d-flex-column;
+    color: $c-gray-primary;
+    min-height: 70px;
+    border-radius: 0.5rem;
+    .card-pre-header-wrapper {
+      @include d-flex;
+      margin-top: 0.45rem;
+      color: var(--c-primary, $c-primary);
+      padding: 0 0.5rem 0.25rem;
+    }
+    .card-header-wrapper {
+      @include d-flex;
+      flex: 0 1 auto;
+      padding: 0 0.5rem 0.5rem;
+      font-weight: $fw-bold;
+    }
+    .card-body-wrapper {
+      @include d-flex-column;
+    }
+  }
+}

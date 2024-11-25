@@ -1,0 +1,21 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.review-dynamic-form-wrapper {
+  .group-name-wrapper {
+    font-weight: $fw-bold;
+    font-size: $fz-19px;
+    color: var(--c-primary, $c-primary);
+    padding: 0 0.5rem;
+  }
+  .form-control-item-wrapper {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    &.is-half-width {
+      @include d-inline-flex;
+      padding: 0 0.5rem;
+      width: 50%;
+      @include tablets-max {
+        width: 100%;
+      }
+    }
+  }
+}

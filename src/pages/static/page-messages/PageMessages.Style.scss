@@ -1,0 +1,19 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.page-messages-static-wrapper {
+  @include d-flex-center;
+  min-height: calc(100vh - 139px);
+  .page-messages-static-body {
+    @include d-inline-flex-column;
+    .page-messages-image-wrapper {
+      background-position: center;
+      height: 50%;
+      min-height: 280px;
+      width: 50%;
+      min-width: 280px;
+    }
+    .page-message-wrapper {
+      @include d-flex-h-center;
+      font-size: $fz-20px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.templates-page-wrapper {
+  .tab-wrapper {
+    margin-top: 1rem;
+  }
+
+  .hint-collapse-wrapper {
+    .MuiCollapse-wrapperInner {
+      padding: 0.5rem 1rem;
+
+      .hint-content-wrapper {
+        @include d-flex;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+      }
+    }
+
+    &.is-open {
+      .MuiCollapse-wrapperInner {
+        .hint-content-wrapper {
+          border: 1px solid $c-gray-light;
+        }
+      }
+    }
+  }
+}

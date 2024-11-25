@@ -1,0 +1,28 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.sections-add-dialog-wrapper {
+  @include d-flex-h-center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0.5rem;
+  .section-item-wrapper {
+    &.btns {
+      &.theme-transparent {
+        @include d-inline-flex-column-center;
+        color: $c-gray;
+        margin: 0 0.5rem 1rem;
+        width: 22.067%;
+        min-width: 120px;
+        &:hover:not(.Mui-disabled):not(.selected-section) {
+          color: $c-gray-secondary;
+        }
+        &.selected-section {
+          color: var(--c-primary, $c-primary);
+        }
+        .section-icon {
+          font-size: $fz-30px;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

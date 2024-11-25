@@ -1,0 +1,105 @@
+@import 'src/assets/styles/helpers/mixins/Mixins.Style';
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.assessment-test-wrapper {
+  padding: 2rem;
+
+  @include tablets-max {
+    padding: 1rem;
+  }
+
+  .assessment-test-content-wrapper {
+    .assessment-test-cards-wrapper {
+      flex-wrap: wrap;
+
+      .assessment-test-card-item {
+        min-height: 15rem;
+        width: 33.333333%;
+        padding: 0 0.5rem;
+        flex: 0 1 auto;
+
+        @include laptops-l-max {
+          width: 50%;
+        }
+        @include tablets-max {
+          width: 100%;
+        }
+
+        .assessment-card-content {
+          padding: 1rem;
+          width: 100%;
+          border: 1px solid $c-gray-primary;
+          border-radius: 0.5rem;
+          position: relative;
+
+          .assessment-card-image {
+            background-color: $c-gray-lighter;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            height: 12rem;
+            width: 100%;
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          .assessment-card-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: $c-black;
+            margin-bottom: 1rem;
+          }
+
+          .assessment-card-body {
+            overflow-y: auto;
+            max-height: 7rem;
+            min-height: 7rem;
+            margin-bottom: 1rem;
+          }
+
+          .assessment-card-footer {
+            .footer-item {
+              margin-bottom: 0.5rem;
+              font-weight: bold;
+              color: $c-black-light;
+
+              .MuiChip-root {
+                margin-top: 0.5rem;
+                margin-right: 0.5rem;
+                color: $c-black-light;
+                background-color: $c-gray-lighter;
+
+                @include rtl {
+                  margin-left: 0.5rem;
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+
+          .footer-action {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+
+            @include rtl {
+              left: 1rem;
+              right: initial;
+            }
+
+            .MuiIconButton-root {
+              background-color: $c-gray-lighter;
+
+              .fas {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.text-editor-component-wrapper {
+  border: 1px solid transparent;
+  @include d-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .fr-wrapper .fr-placeholder {
+    z-index: 3;
+    //pointer-events: none;
+  }
+  //.fr-wrapper {
+  //  height: auto !important;
+  //  .fr-element {
+  //    font-family: inherit;
+  //    font-size: inherit;
+  //    color: initial;
+  //    line-height: normal;
+  //    ul,ol{
+  //      margin-block-start: 1em;
+  //      margin-block-end: 1em;
+  //      margin-top: 1em;
+  //      margin-bottom: 1em;
+  //      margin-inline-start: 0;
+  //      margin-inline-end: 0;
+  //      padding-inline-start: 40px;
+  //    }
+  //    p {
+  //      //display: block;
+  //      line-height: normal;
+  //      margin-top: 1em;
+  //      margin-bottom: 1em;
+  //      font-size: inherit;
+  //      margin-inline-start: 0;
+  //      margin-inline-end: 0;
+  //      //unicode-bidi: isolate;
+  //      //font-weight: initial;
+  //      //line-height: initial;
+  //    }
+  //    .h1,
+  //    .h2,
+  //    .h3,
+  //    .h4,
+  //    .h5,
+  //    .h6,
+  //    h1,
+  //    h2,
+  //    h3,
+  //    h4,
+  //    h5,
+  //    h6 {
+  //      font-weight: bold;
+  //      line-height: normal;
+  //      color: initial;
+  //      //font-family: initial !important;
+  //    }
+  //    .h1,
+  //    h1 {
+  //      font-size: 2em !important;
+  //      margin-block-start: 0.67em !important;
+  //      margin-block-end: 0.67em !important;
+  //      margin-top: 0.67em !important;
+  //      margin-bottom: 0.67em !important;
+  //    }
+  //    .h2,
+  //    h2 {
+  //      font-size: 1.5em !important;
+  //      margin-block-start: 0.83em;
+  //      margin-block-end: 0.83em;
+  //      margin-top: 0.83em;
+  //      margin-bottom: 0.83em;
+  //    }
+  //    .h3,
+  //    h3 {
+  //      font-size: 1.17em !important;
+  //      margin-block-start: 1em;
+  //      margin-block-end: 1em;
+  //      margin-top: 1em;
+  //      margin-bottom: 1em;
+  //    }
+  //    .h4,
+  //    h4 {
+  //      font-size: 1em !important;
+  //      margin-block-start: 1.33em;
+  //      margin-block-end: 1.33em;
+  //      margin-top: 1.33em;
+  //      margin-bottom: 1.33em;
+  //    }
+  //    .h5,
+  //    h5 {
+  //      font-size: 0.83em !important;
+  //      margin-block-start: 1.67em;
+  //      margin-block-end: 1.67em;
+  //      margin-top: 1.33em;
+  //      margin-bottom: 1.33em;
+  //    }
+  //    .h6,
+  //    h6 {
+  //      font-size: 0.67em !important;
+  //      margin-block-start: 2.33em;
+  //      margin-block-end: 2.33em;
+  //      margin-top: 2.33em;
+  //      margin-bottom: 2.33em;
+  //    }
+  //    pre {
+  //      display: block;
+  //      font-family: monospace;
+  //      unicode-bidi: isolate;
+  //      white-space: pre;
+  //      margin: 1em 0;
+  //    }
+  //    a {
+  //      color: -webkit-link;
+  //      cursor: pointer;
+  //      text-decoration: underline;
+  //    }
+  //    a:focus-visible {
+  //      outline-offset: 1px;
+  //    }
+  //    a:read-write {
+  //      cursor: text;
+  //    }
+  //    a:active {
+  //      color: -webkit-activelink;
+  //    }
+  //  }
+  //}
+  .fr-sticky-dummy {
+    height: 0 !important;
+  }
+  .resize-element {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    bottom: 4px;
+    right: 0;
+    cursor: ns-resize;
+    svg {
+      fill: grey;
+    }
+  }
+  .fr-element-scroll-visible.fr-view {
+    .container {
+      max-width: 100%;
+    }
+  }
+  .fr-sticky-on {
+    position: sticky;
+  }
+
+  button.fr-selection[data-cmd='fontSize'] > span {
+    width: 40px !important;
+  }
+  .fr-toolbar.fr-top {
+    border-radius: 5px 5px 0 0;
+  }
+  .fr-box.fr-basic {
+    width: 100%;
+  }
+  .fr-second-toolbar {
+    border-radius: 0 0 5px 5px;
+  }
+  .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper {
+    max-height: 200px;
+  }
+  .fr-popup {
+    z-index: 3000 !important;
+  }
+  .labels-wrapper {
+    @include d-flex-v-center-h-between;
+    width: 100%;
+    .label-wrapper {
+      font-size: $fz-16px;
+      color: $c-black;
+      margin-bottom: 0.25rem;
+    }
+  }
+  .text-editor-wrapper {
+    @include d-flex;
+    width: 100%;
+    //height: auto !important;
+  }
+  .error-wrapper {
+    font-size: $fz-12px;
+    color: $c-error;
+    margin: 0.25rem 0 0.5rem;
+  }
+}
+.text-editor-component-wrapper:hover,
+.text-editor-highlight {
+  border: 1px solid #9492fa;
+  border-radius: 6px;
+}
+body.fr-view {
+  .container {
+    max-width: 100%;
+  }
+}
+.fr-popup.fr-active {
+  z-index: 9999 !important;
+}

@@ -1,0 +1,24 @@
+@import '../../../../../assets/styles/helpers/Helpers.Style';
+.job-management-evaluate-step {
+  .avatars-component-wrapper {
+    width: 300px;
+    display: block;
+    max-width: 100%;
+    .tag-avatar-wrapper {
+      width: 100%;
+    }
+  }
+  @include phones-max {
+    .evaluate-section {
+      flex-flow: wrap;
+      gap: 10px;
+    }
+    .px-sm-0 {
+      padding-inline: 0px !important ;
+    }
+    .flex-sm-col {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

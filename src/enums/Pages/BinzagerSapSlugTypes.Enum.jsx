@@ -1,0 +1,26 @@
+export const BinzagerSapSlugTypesEnum = {
+  sapCommunicationTypes: {
+    key: 'sap_communication_types',
+    value: 'communication-types',
+  },
+  sapDocumentsTypes: { key: 'sap_documents_types', value: 'documents-types' },
+  sapGrades: { key: 'sap_grades', value: 'grades' },
+  sapRelations: { key: 'sap_relations', value: 'relations' },
+  sapGender: { key: 'sap_gender', value: 'gender' },
+  sapWageType: { key: 'sap_wage_type', value: 'wage-type' },
+  sapEmployeeGroups: { key: 'sap_employee_groups', value: 'employee-groups' },
+  sapEmployeeSubgroups: {
+    key: 'sap_employee_subgroups',
+    value: 'employee-subgroups',
+  },
+  sapContractTypes: { key: 'sap_contract_types', value: 'contract-types' },
+  sapAddressTitles: { key: 'sap_address_titles', value: 'address-titles' },
+  sapMaritalStatus: { key: 'sap_marital_status', value: 'marital-status' },
+  sapReligion: { key: 'sap_religion', value: 'religion' },
+  sapRegion: { key: 'sap_region', value: 'region' },
+  sapNationalities: { key: 'sap_nationalities', value: 'nationalities' },
+  sapBanks: { key: 'sap_banks', value: 'banks' },
+  sapMajor: { key: 'sap_major', value: 'major' },
+  sapEducationType: { key: 'sap_education_types', value: 'education_type' },
+  sapPaymentMethod: { key: 'sap_payment_method', value: 'payment-method' },
+};

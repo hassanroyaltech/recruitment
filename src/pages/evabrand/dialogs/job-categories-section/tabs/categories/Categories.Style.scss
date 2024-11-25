@@ -1,0 +1,138 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.categories-tab-wrapper {
+  margin-top: 1rem;
+  .categories-item-actions-wrapper {
+    @include d-flex-v-center-h-end;
+    padding: 0.5rem;
+  }
+  .categories-items-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    .categories-item-wrapper {
+      @include d-flex;
+      flex-wrap: wrap;
+      .item-contents-wrapper {
+        @include d-flex;
+        .header-and-body-wrapper {
+          @include d-flex;
+          flex-wrap: wrap;
+          .header-menu-wrapper {
+            @include d-flex-v-center-h-between;
+            width: 100%;
+            padding: 0 0.5rem;
+            cursor: default;
+
+            span {
+              cursor: default;
+            }
+
+            p {
+              margin-bottom: 0;
+            }
+          }
+          .collapse-wrapper {
+            @include d-flex;
+            flex-wrap: wrap;
+
+            .MuiCollapse-wrapper {
+              width: 100%;
+              padding-top: 0.5rem;
+
+              .MuiCollapse-wrapperInner {
+                @include d-flex;
+                flex-wrap: wrap;
+                .categories-contents-wrapper {
+                  @include d-flex-v-start-h-center;
+                  width: 100%;
+                  @include phones-s-max {
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                  }
+                  .categories-controls-wrapper {
+                    @include d-flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    .control-wrapper {
+                      @include d-inline-flex;
+                      padding: 0 0.5rem;
+                      margin-bottom: 1rem;
+                      width: 33.33333333%;
+                      @include tablets-max {
+                        width: 100%;
+                      }
+                    }
+                  }
+
+                  .categories-actions-wrapper {
+                    @include d-inline-flex-center;
+                    margin-top: 0.35rem;
+                    margin-bottom: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.is-advanced-mode {
+        .item-contents-wrapper {
+          .categories-actions-wrapper {
+            margin-top: 0.4rem;
+            margin-right: 0.5rem;
+            @include rtl {
+              margin-right: 0;
+              margin-left: 0.5rem;
+            }
+          }
+          .header-and-body-wrapper {
+            .header-menu-wrapper {
+              padding: 0.5rem;
+              min-height: 43px;
+              border-radius: 0.5rem 0.5rem 0 0;
+              box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
+              cursor: not-allowed;
+              span {
+                cursor: not-allowed;
+              }
+              &:not(.Mui-disabled) {
+                cursor: pointer;
+                span {
+                  cursor: pointer;
+                }
+                &:hover {
+                  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+                }
+              }
+            }
+            .collapse-wrapper {
+              margin-bottom: 1rem;
+              box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
+              border-radius: 0 0 0.5rem 0.5rem;
+              .MuiCollapse-wrapper {
+                padding: 0.5rem;
+                .MuiCollapse-wrapperInner {
+                  .categories-contents-wrapper {
+                    .categories-controls-wrapper {
+                      .control-wrapper {
+                        width: 50%;
+                        @include tablets-max {
+                          width: 100%;
+                        }
+                        &.categories-text-editor-control-wrapper {
+                          width: 100%;
+                          margin-bottom: 2rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

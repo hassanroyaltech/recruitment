@@ -1,0 +1,41 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.lookups-import-dialog-content-wrapper {
+  .lookups-import-item-wrapper {
+    @include d-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid $c-gray-lighter;
+    .lookups-import-item-header {
+      @include d-flex-v-center-h-between;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+    .collapse-wrapper {
+      width: 100%;
+    }
+    .active-stage-precondition-body {
+      padding: 0.5rem;
+      border-top: 1px solid $c-gray-lighter;
+      width: 100%;
+    }
+    .created-by-text {
+      text-wrap: nowrap;
+    }
+    .status-wrapper {
+      @include d-inline-flex-center;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      //background-color: $c-gray-lighter;
+      .status-text {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $c-gray-primary;
+      }
+    }
+  }
+  .tab-content-wrapper {
+    padding-top: 1rem;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'src/assets/styles/helpers/mixins/Mixins.Style';
+.connections-header-actions-wrapper {
+  .page-header-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .small-control {
+    flex: 0 1;
+    min-width: 125px;
+    max-width: 125px;
+  }
+}

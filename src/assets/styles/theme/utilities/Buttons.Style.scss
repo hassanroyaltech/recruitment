@@ -1,0 +1,441 @@
+.btns.MuiButtonBase-root {
+  border-radius: 0.5rem;
+  min-height: 32px;
+  line-height: 100%;
+  min-width: 100px;
+  margin: 0 0.25rem;
+  padding: 0.219rem 0.5rem;
+  text-transform: initial;
+  overflow: hidden;
+  font-size: $fz-default;
+  color: var(--c-primary, $c-primary);
+  white-space: nowrap;
+
+  &.small-button {
+    min-width: 50px;
+  }
+  .mdi {
+    line-height: 14px;
+  }
+  .checkbox-groups-wrapper {
+    .form-control-label.MuiFormControlLabel-root {
+      .MuiFormControlLabel-label.Mui-disabled {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  .far,
+  .fab,
+  .fas {
+    font-size: $fz-default;
+  }
+
+  &.theme-solid-hover:hover:not(.Mui-disabled),
+  &.theme-solid {
+    background-color: var(--bg-primary, $c-primary);
+    color: $c-white;
+
+    &.bg-cancel {
+      background-color: $c-gray-lighter;
+      color: $c-black-dark;
+
+      .MuiButton-label {
+        color: $c-black-dark;
+      }
+    }
+
+    &.bg-brand-purple {
+      background-color: #68529f;
+    }
+  }
+
+  &.theme-outline {
+    color: $c-black-light;
+    border: 1px solid $c-gray-light;
+    font-weight: $fw-bold;
+
+    &:not(.Mui-disabled),
+    &:not([disabled]) {
+      &:hover,
+      &.is-active {
+        border-color: $c-accent-secondary;
+        background-color: $c-accent-secondary-light;
+        color: $c-accent-secondary;
+      }
+    }
+  }
+
+  &.theme-menu {
+    color: $c-gray-primary;
+    width: 100%;
+    border-radius: 0;
+    justify-content: flex-start;
+
+    &:not([disabled]) {
+      &:hover {
+        background-color: $c-gray-lighter;
+      }
+    }
+  }
+
+  &.theme-wide {
+    min-height: 66px;
+    color: $c-gray-primary;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0 0 1rem 1rem;
+    position: relative;
+    top: -5px;
+
+    .texts-large {
+      color: $c-black;
+      font-weight: 500;
+    }
+
+    .texts-small {
+      font-size: 10px;
+      text-align: initial;
+    }
+
+    &:not([disabled]) {
+      &:hover {
+        background-color: $c-gray-lighter;
+      }
+    }
+  }
+
+  &.theme-transparent {
+    background-color: transparent;
+    color: $c-black-light;
+
+    .MuiButton-label {
+      color: $c-black-light;
+    }
+
+    &:not([disabled]),
+    &:not(.Mui-disabled) {
+      &:hover,
+      &.is-active {
+        background-color: $c-accent-secondary-light;
+        color: $c-accent-secondary;
+
+        .MuiButton-label {
+          background-color: $c-accent-secondary-light;
+          color: $c-accent-secondary;
+        }
+      }
+    }
+  }
+
+  &.theme-card-title {
+    display: flex;
+    justify-content: flex-start;
+    white-space: normal;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  &.theme-shadow {
+    background-color: $c-white;
+    color: $c-black-light;
+    //box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
+    .MuiButton-label {
+      color: $c-black-light;
+    }
+
+    &:not([disabled]),
+    &:not(.Mui-disabled) {
+      &:hover {
+        background-color: $c-accent-secondary-light;
+        color: $c-accent-secondary;
+
+        .MuiButton-label {
+          background-color: $c-accent-secondary-light;
+          color: $c-accent-secondary;
+        }
+      }
+    }
+  }
+
+  // Start need to be removed when remove reactstrap
+  &.bg-secondary:hover,
+  &.bg-secondary:focus {
+    &:not(:disabled) {
+      background-color: $c-secondary !important;
+    }
+  }
+
+  // End need to be removed when remove reactstrap
+  &:disabled {
+    &:not(.visuallyEnabled) {
+      background-color: $c-gray-secondary !important;
+      border-color: $c-gray-secondary !important;
+      cursor: not-allowed;
+      pointer-events: initial;
+      color: $c-white !important;
+    }
+  }
+
+  &.theme-un-selected {
+    background-color: $c-primary-light;
+    color: $c-white;
+    &.bg-secondary:not(:disabled):focus,
+    &.bg-secondary:not(:disabled):hover {
+      background-color: $c-primary-light !important;
+    }
+  }
+
+  &.theme-selected {
+    background-color: var(--bg-primary, $c-primary);
+    color: $c-white;
+    &.bg-secondary:not(:disabled):focus,
+    &.bg-secondary:not(:disabled):hover {
+      background-color: $c-secondary !important;
+    }
+  }
+
+  &.sm-btn {
+    min-width: 50px;
+  }
+}
+
+.btns-icon.MuiButtonBase-root {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  border-radius: 100%;
+  color: var(--c-primary, $c-primary);
+  padding: 0.2rem;
+  .mdi,
+  .far,
+  .fab,
+  .fas {
+    &::before {
+      font-size: $fz-default;
+    }
+  }
+
+  &.theme-outline {
+    border: 1px solid $c-secondary;
+    color: $c-secondary;
+
+    &.bc-secondary {
+      border: 1px solid $c-secondary;
+      color: $c-secondary;
+
+      &:not([disabled]):hover {
+        background-color: $c-secondary;
+        color: $c-white;
+      }
+    }
+
+    &.bc-primary {
+      border-color: var(--bc-primary, $c-primary);
+      color: var(--c-primary, $c-primary);
+    }
+
+    &.c-blue-lighter {
+      border-color: $c-blue-lighter;
+      color: $c-blue-lighter;
+
+      &:not([disabled]):hover {
+        background-color: $c-blue-lighter;
+        color: $c-white;
+        border-color: $c-white;
+      }
+    }
+
+    .mdi {
+      &::before {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &.theme-outline-dark {
+    border: 1px solid $c-gray-lighter;
+    color: $c-black;
+    background-color: $c-white;
+
+    .mdi,
+    .far,
+    .fab,
+    .fas {
+      &::before {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &.btns-small {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    max-width: 24px;
+
+    .mdi,
+    .far,
+    .fab,
+    .fas {
+      &:before {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &.theme-transparent {
+    background-color: transparent;
+    color: $c-black-light;
+
+    .mdi,
+    .far,
+    .fab,
+    .fas {
+      &::before {
+        font-size: $fz-default;
+      }
+    }
+
+    &:not([disabled]),
+    &:not(.Mui-disabled) {
+      &:hover,
+      &.is-active {
+        background-color: $c-accent-secondary-light;
+        color: $c-accent-secondary;
+      }
+    }
+
+    &[disabled] {
+      background-color: transparent !important;
+      color: $c-gray !important;
+    }
+  }
+
+  &.theme-shadow {
+    .mdi,
+    .far,
+    .fab,
+    .fas {
+      &::before {
+        font-size: $fz-default;
+      }
+    }
+
+    background-color: $c-white;
+    color: $c-black-light;
+
+    &:not([disabled]),
+    &:not(.Mui-disabled) {
+      &:hover {
+        background-color: $c-accent-secondary-light;
+        color: $c-accent-secondary;
+
+        .MuiButton-label {
+          background-color: $c-accent-secondary-light;
+          color: $c-accent-secondary;
+        }
+      }
+    }
+
+    &[disabled] {
+      background-color: transparent !important;
+      color: $c-gray-light;
+    }
+  }
+
+  &.theme-action {
+    color: $c-white;
+
+    &:not(:focus):not(:active):not(.active) {
+      background-color: $c-black-light !important;
+
+      &:hover {
+        background-color: $c-primary !important;
+      }
+    }
+  }
+
+  &.theme-solid {
+    background-color: var(--bg-primary, $c-primary);
+    color: $c-white;
+
+    &.bg-secondary:not(:disabled):focus,
+    &.bg-secondary:not(:disabled):hover {
+      background-color: $c-secondary !important;
+    }
+  }
+
+  &.theme-danger {
+    background-color: $c-danger;
+    color: $c-white;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &.to-square {
+    border-radius: 0.15rem !important;
+  }
+
+  &:disabled {
+    background-color: $c-gray-secondary !important;
+    cursor: not-allowed;
+    pointer-events: initial;
+    color: $c-white !important;
+    border-color: $c-gray-secondary !important;
+  }
+}
+
+.btns-menu {
+  height: 53px;
+  width: 57.5px;
+}
+
+.btns-tag.MuiButtonBase-root {
+  background-color: transparent;
+  min-height: 100%;
+  padding: 0;
+  width: 1rem;
+  min-width: 1rem;
+  transform: rotateZ(-48deg);
+  height: 1rem;
+
+  .MuiButton-label {
+    color: var(--c-primary, $c-primary);
+  }
+}
+
+.dragging-btn {
+  @include d-inline-flex-center;
+  border-radius: 0.5rem;
+  min-width: 30px;
+  min-height: 30px;
+  background-color: $c-white;
+  color: $c-black-light;
+  &.theme-transparent {
+    background-color: transparent;
+  }
+  &.btns-icon {
+    border-radius: 100%;
+  }
+
+  &:not(.is-disabled):hover {
+    cursor: move;
+    background-color: $c-accent-secondary-light;
+    color: $c-accent-secondary;
+  }
+
+  &.is-disabled {
+    background-color: $c-gray-secondary !important;
+    border-color: $c-gray-secondary !important;
+    cursor: not-allowed;
+    pointer-events: initial;
+    color: $c-white !important;
+  }
+}

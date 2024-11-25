@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: elevatus-services
+  name: recruiter-portal
+  labels:
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recruiter-portal
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: recruiter-portal
+        tier: frontend
+    spec:
+      nodeSelector:
+        target: services-node
+        subtarget: frontend
+      containers:
+        - name: recruiter-portal-container
+          imagePullPolicy: Always
+          image: { { IMAGE } }
+          resources:
+            requests:
+              memory: '1000Mi'
+              cpu: '1000m'
+          ports:
+            - containerPort: 8000
+          livenessProbe:
+            tcpSocket:
+              port: 8000
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+          readinessProbe:
+            tcpSocket:
+              port: 8000
+            initialDelaySeconds: 5
+            timeoutSeconds: 2

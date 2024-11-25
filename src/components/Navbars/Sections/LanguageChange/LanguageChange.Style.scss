@@ -1,0 +1,24 @@
+.language-change-wrapper {
+  .language-change-btn {
+    margin: 0 !important;
+    .language-img {
+      width: 26px;
+    }
+  }
+}
+.language-change-popover-wrapper {
+  .MuiPopover-paper {
+    max-width: 125px;
+  }
+  .language-change-items-wrapper {
+    .language-change-popover-btn {
+      width: 100%;
+      margin: 0 !important;
+      padding: 0.5rem 1rem;
+      justify-content: center;
+      img {
+        width: 26px;
+      }
+    }
+  }
+}

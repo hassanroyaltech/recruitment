@@ -1,0 +1,20 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.recipient-login-page {
+  @include d-flex-center;
+  overflow-y: auto;
+  height: 100vh;
+  width: 100vw;
+  min-width: 320px;
+  .recipient-login-box-wrapper {
+    @include d-inline-flex-center;
+    flex-wrap: wrap;
+    max-width: 450px;
+    padding: 1rem 1rem 4.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    .header-description {
+      color: $c-black-light;
+      font-weight: $fw-medium;
+    }
+  }
+}

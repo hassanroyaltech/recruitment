@@ -1,0 +1,5 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.filter-content-section {
+  @include d-flex;
+  flex-wrap: wrap;
+}

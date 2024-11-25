@@ -1,0 +1,54 @@
+{
+  "my-channels-credit": "Crédito para mis canales",
+  "all channels": "Todos los canales",
+  "recommended": "Recomendado",
+  "new-campaign": "Nueva campaña",
+  "search": "Buscar",
+  "sort-by": "Ordenar por",
+  "sort-by-dots": "Ordenar por:",
+  "my-channels-credit-description": "Distribuya sus trabajos a través de canales comprados para aumentar su alcance y acceder a diferentes grupos de talentos",
+  "transaction-pay-failed": "Error en el pago de la transacción",
+  "add-selected-channels-failed-description": "Error al agregar los canales seleccionados, por favor, vuelva a seleccionarlos desde el diálogo",
+  "there-are-no-channels-credit-available": "No hay créditos de canal disponibles",
+  "CardFilterBy": {
+    "regions": "Regiones",
+    "job-title": "Título del trabajo",
+    "select-regions": "-- Seleccionar regiones --",
+    "channel-type": "Tipo de canal",
+    "select-channel-type": "-- Seleccionar tipo de canal --",
+    "job-category": "Categoría de trabajo",
+    "select-job-category": "-- Seleccionar categoría de trabajo --",
+    "industries": "Industrias",
+    "select-industry": "-- Seleccionar industria --",
+    "social-media": "Redes sociales",
+    "job-board": "Bolsa de trabajo",
+    "publication": "Publicación",
+    "community": "Comunidad",
+    "aggregator": "Agregador",
+    "not-channel": "No es un canal"
+  },
+  "ChannelDetailsCard": {
+    "no-selected-channels-description": "Debe seleccionar al menos un canal para continuar",
+    "selected-channels": "Canales seleccionados",
+    "estimated-performance": "Rendimiento estimado",
+    "total": "Total",
+    "credits": "Créditos",
+    "channels": "Canales",
+    "clicks": "Clics"
+  },
+  "ChannelsFilter": {
+    "cost-low-to-high": "Costo: Bajo-Alto",
+    "cost-high-to-low": "Costo: Alto-Bajo",
+    "name-a-to-z": "Nombre: A-Z",
+    "name-z-to-a": "Nombre: Z-A"
+  },
+  "ChannelsCard": {
+    "my-channel-credit": "Mi crédito de canal",
+    "days": "Días",
+    "time-to-process": "Tiempo de procesamiento",
+    "active-duration": "Duración activa",
+    "matching-score": "Puntuación de coincidencia",
+    "channel-add-failed": "Error al agregar el canal",
+    "channel-delete-failed": "Error al eliminar el canal"
+  }
+}

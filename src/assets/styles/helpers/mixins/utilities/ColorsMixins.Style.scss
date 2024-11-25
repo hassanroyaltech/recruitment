@@ -1,0 +1,41 @@
+@mixin colors-loop {
+  @each $prop, $value in $colors {
+    .c-#{$prop} {
+      color: var(--c-#{$prop}, $value) !important;
+    }
+    .c-#{$prop}-before {
+      &::before {
+        color: var(--c-#{$prop}-before, $value) !important;
+      }
+    }
+    .bg-#{$prop} {
+      background-color: var(--bg-#{$prop}, $value) !important;
+    }
+    .bc-#{$prop} {
+      border-color: var(--bc-#{$prop}, $value) !important;
+    }
+    .c-#{$prop}-hover {
+      &:not([disabled]),
+      &:not(.Mui-disabled) {
+        &:hover {
+          color: var(--c-#{$prop}-hover, $value) !important;
+        }
+      }
+    }
+    .bc-#{$prop}-hover {
+      &:not([disabled]),
+      &:not(.Mui-disabled) {
+        &:hover {
+          border-color: var(--bc-#{$prop}-hover, $value) !important;
+        }
+      }
+    }
+    .bg-#{$prop}-hover {
+      background-color: var(--bg-#{$prop}-hover, $value) !important;
+
+      &:hover {
+        background-color: var(--bg-#{$prop}, $value) !important;
+      }
+    }
+  }
+}

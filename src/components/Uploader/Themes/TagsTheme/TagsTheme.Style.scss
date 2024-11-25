@@ -1,0 +1,27 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.tags-theme-component-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  .tags-content-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+
+    .uploader-chip {
+      max-width: 100%;
+      margin: 0.25rem;
+      overflow: hidden;
+      &.is-failed {
+        background-color: $c-error;
+        color: $c-white;
+        .MuiChip-deleteIcon {
+          color: $c-white;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s linear;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.box-theme-component-wrapper {
+  min-height: 150px;
+  width: 100%;
+  position: relative;
+  @include d-flex-center;
+  flex-wrap: wrap;
+  background-color: $c-white;
+
+  .custom-dropzone-wrapper {
+    @include d-flex-column-center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid $c-gray-light;
+    min-height: 190px;
+    .dropzone-items-wrapper {
+      @include d-flex-center;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+    .dropzone-item-wrapper {
+      @include d-inline-flex-center;
+      position: relative;
+      border: 1px solid $c-gray-light;
+      border-radius: 0.25rem;
+      padding: 0.25rem;
+      margin: 0 0.5rem 0.5rem;
+      min-height: 100px;
+      min-width: 100px;
+      .over-item-actions-wrapper {
+        @include d-inline-flex;
+        position: absolute;
+        top: 0.25rem;
+        right: 0;
+        @include rtl {
+          right: initial;
+          left: 0;
+        }
+        .btn-close,
+        .open-gallery-btn,
+        .download-btn {
+          color: $c-white;
+          margin: 0 0.25rem;
+          background-color: rgba(0, 0, 0, 0.25);
+        }
+      }
+      .video-js {
+        width: 30rem;
+        height: 15rem;
+      }
+    }
+    .drop-here {
+      padding: 0 0.5rem 0.5rem;
+      @include d-inline-flex-v-center;
+      pointer-events: none;
+    }
+    .box-theme-image {
+      height: 100px;
+      width: 100px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .video-wrapper {
+      min-height: 100px;
+      min-width: 100px;
+      max-width: 270px;
+    }
+  }
+  &.drag-over {
+    .custom-dropzone-wrapper {
+      border-style: dashed;
+    }
+  }
+}

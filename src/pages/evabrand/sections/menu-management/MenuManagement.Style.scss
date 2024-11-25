@@ -1,0 +1,77 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.menu-management-section-wrapper {
+  @include d-inline-flex-h-center;
+  @include flex-column;
+  min-width: 270px;
+  width: 100%;
+  max-width: 400px;
+  position: sticky;
+  top: 5.7rem;
+  @include laptops-max {
+    position: initial;
+  }
+  .text-item-loader-wrapper {
+    max-width: 41%;
+    margin: 0 0.5rem 0.5rem;
+    display: inline-flex;
+  }
+  .circle-item-loader-wrapper {
+    max-width: 30px;
+    height: 30px;
+    margin: 0 0.25rem 0.5rem;
+  }
+  .menu-card-wrapper {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    .menu-header-wrapper {
+      @include d-flex-center;
+      padding: 0.75rem 0.5rem;
+      border-radius: 0.5rem 0.5rem 0 0;
+      background-color: var(--bg-primary, $c-primary);
+      color: $c-white;
+    }
+    .menu-body-wrapper {
+      @include d-flex-column;
+      width: 100%;
+
+      .menu-items-wrapper {
+        @include d-flex-column;
+        padding: 0 0.5rem;
+        max-height: 65vh;
+        overflow-y: auto;
+        min-height: 150px;
+
+        .menu-item-wrapper {
+          @include d-flex-v-center-h-between;
+          width: 100%;
+          padding: 0.5rem;
+          &:not(:last-child) {
+            border-bottom: 1px solid $c-gray-light;
+          }
+          &.is-not-draggable {
+            transform: none !important;
+          }
+          &.is-dragging {
+            color: var(--c-primary, $c-primary);
+            border-color: var(--bc-primary, $c-primary);
+          }
+          .menu-item-icon-name-wrapper {
+            @include d-inline-flex-v-center;
+            .menu-item-name {
+              padding: 0 0.5rem;
+            }
+          }
+          .menu-item-actions-wrapper {
+            @include d-inline-flex-v-center;
+          }
+        }
+      }
+    }
+    .menu-footer-wrapper {
+      @include d-flex-center;
+      border-top: 1px solid $c-gray-light;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+  }
+}

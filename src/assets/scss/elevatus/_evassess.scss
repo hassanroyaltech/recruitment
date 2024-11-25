@@ -1,0 +1,114 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.step-card {
+  padding: 20px 66px 30px;
+  margin-top: 35px;
+}
+
+.step-button {
+  width: 220px;
+  height: 46px;
+  &.back-button {
+    margin-right: 12px;
+    background: #b7b7b7;
+    border-color: #b7b7b7;
+    color: white;
+
+    &:active {
+      background: #dee2e6 !important;
+      border-color: #dee2e6 !important;
+      color: white !important;
+    }
+  }
+}
+
+.upload-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.action-button.close {
+  position: absolute;
+  top: 0;
+  right: -56px;
+  padding: 0.5rem 0;
+  @include rtl {
+    left: -56px;
+    right: initial;
+  }
+  span {
+    font-size: 48px;
+    line-height: 48px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.list-append-button {
+  position: absolute;
+  width: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  top: 0px;
+  right: -35px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  @include rtl {
+    left: -35px;
+    right: initial;
+  }
+}
+
+.action-close-button.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  @include rtl {
+    left: 1.1rem;
+    right: initial;
+  }
+  span {
+    font-size: 32px;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 564px) {
+  .step-card {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .step-button {
+    width: 120px;
+    height: 36px;
+  }
+
+  .dropzone-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .upload-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.list-remove-button {
+  position: absolute;
+  width: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

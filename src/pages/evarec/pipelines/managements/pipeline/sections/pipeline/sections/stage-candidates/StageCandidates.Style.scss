@@ -1,0 +1,95 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.stage-candidates-section-wrapper {
+  height: 100%;
+  &.is-bulk-select {
+    .candidates-items-wrapper {
+      .candidate-item-wrapper {
+        .card-content-wrapper {
+          &:hover {
+            border-color: $c-accent-secondary-light-more;
+          }
+        }
+      }
+    }
+  }
+
+  .candidates-items-wrapper {
+    height: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-top: 1rem;
+    &.is-dragover {
+      background-color: $c-gray-light;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+    .candidate-item-wrapper {
+      //user-select: none;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+      .timeframe-tag-wrapper {
+        @include d-inline-flex-center;
+        border-radius: 70px;
+        padding: 3px 6px;
+        margin: 0 0.5rem;
+        background-color: $c-gray-lighter;
+        &.is-exceeded-timeframe {
+          background-color: $c-warning;
+        }
+      }
+
+      &.is-disabled-candidate-drag {
+        .card-content-wrapper {
+          background-color: $c-gray-lighter;
+          cursor: not-allowed;
+        }
+      }
+
+      &.is-temp-item {
+        .card-content-wrapper {
+          border-color: $c-accent-secondary-light-more;
+          border-style: dashed;
+          background-color: $c-gray-lightest;
+        }
+      }
+
+      .card-content-wrapper {
+        background-color: $c-white;
+        border-radius: 1rem;
+        border: 1px solid $c-gray-lighter;
+
+        .card-header-wrapper {
+          padding: 1rem 0.5rem 0.5rem;
+
+          .user-avatar-wrapper,
+          .card-user-image-wrapper {
+            min-width: 35px;
+            width: 35px;
+            height: 35px;
+          }
+
+          .card-user-image-wrapper {
+            border-radius: 100%;
+            background-size: 100% 100%;
+            background-position: center;
+          }
+        }
+
+        .card-body-wrapper {
+          @include d-flex-column;
+
+          .body-item-wrapper {
+            @include d-flex;
+            padding: 0 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        .card-footer-wrapper {
+          @include d-flex-v-center-h-between;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

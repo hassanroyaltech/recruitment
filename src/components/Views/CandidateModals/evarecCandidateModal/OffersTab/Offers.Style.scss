@@ -1,0 +1,50 @@
+.full-width {
+  width: 100%;
+}
+
+.max-width-fit {
+  max-width: fit-content;
+}
+
+.auto-height-cl {
+  height: auto !important;
+}
+
+.text-start-al {
+  text-align: start;
+}
+
+.reset-btn-cl {
+  white-space: normal !important;
+  line-height: normal !important;
+}
+
+.mimic-btn-spacing {
+  margin: 0 0.25rem;
+  padding: 0.219rem 0.5rem;
+}
+
+.align-self-st {
+  align-self: normal !important;
+}
+
+.browse-templates-cont {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.scrollabe-list-cl {
+  height: 100%;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.btn-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.methods-grid-wrapper {
+  display: grid;
+  grid-template-columns: 10fr 1fr 10fr;
+}

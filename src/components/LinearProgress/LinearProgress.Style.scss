@@ -1,0 +1,29 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.linear-progress-wrapper {
+  @include d-inline-flex;
+
+  &:not(.is-same-line) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .progresses-text {
+    margin-bottom: 0.25rem;
+    color: $c-black-lighter;
+    font-size: $fz-default;
+  }
+
+  .progress-bar-wrapper {
+    @include d-flex-v-center;
+
+    .linear-progress {
+      min-width: 35px;
+      min-height: 10px;
+      border-radius: 10px;
+      margin: 0 0.5rem;
+      background-color: $c-accent-secondary-lightest;
+    }
+  }
+}

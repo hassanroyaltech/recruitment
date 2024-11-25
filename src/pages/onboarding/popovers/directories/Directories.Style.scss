@@ -1,0 +1,34 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.directories-popover-wrapper {
+  .MuiPaper-root {
+    max-width: 300px;
+    width: 100%;
+    min-height: 471px;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+  .directory-tab-wrapper {
+    @include phones-max {
+      min-width: 270px;
+    }
+
+    .list-items-wrapper {
+      @include d-flex-column;
+      justify-content: flex-start;
+      padding: 0 0.5rem;
+      height: 350px;
+      overflow-y: auto;
+
+      .list-item {
+        @include d-flex-v-center;
+        margin-bottom: 0.5rem;
+        padding: 0 0.5rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: $c-gray-lighter-more;
+        }
+      }
+    }
+  }
+}

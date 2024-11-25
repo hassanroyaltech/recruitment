@@ -1,0 +1,40 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.card-member-wrapper {
+  * {
+    overflow-x: unset !important;
+  }
+  *:not(.fa*) {
+    font-family: var(--font, 'inherit') !important;
+  }
+  background-color: $c-white;
+  border: 1px solid rgba(36, 37, 51, 0.06);
+  border-radius: 6px;
+  overflow-x: unset !important;
+  @include d-inline-flex-column;
+  min-height: 140px;
+  width: 100%;
+
+  .card-header-wrapper {
+    @include d-flex;
+    flex: 0 1 100%;
+    width: 100%;
+  }
+  .body-item-wrapper {
+    @include d-flex-v-center;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+    overflow-x: unset !important;
+  }
+  .card-body-wrapper {
+    padding-inline-start: 35px;
+    @include d-flex-column;
+    width: 100%;
+    overflow-x: unset !important;
+  }
+
+  .card-footer-wrapper {
+    @include d-flex;
+    flex: 0 1 100%;
+    width: 100%;
+  }
+}

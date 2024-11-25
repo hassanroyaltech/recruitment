@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  node:
+    container_name: react_development
+    build:
+      context: ./
+      dockerfile: docker/development/Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/src
+    ##      - ./public:/app/public
+    ##      - ./package.json:/app/package.json
+    ##      - ./package-lock.json:/app/package-lock.json
+    ##      - ./jsconfig.json:/app/jsconfig.json
+    ##      - ./gulpfile.js:/app/gulpfile.js
+    stdin_open: true
+    env_file:
+      - .env
+    restart: always

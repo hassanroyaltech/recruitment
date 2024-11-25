@@ -1,0 +1,44 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.channels-step-wrapper {
+  @include d-flex;
+  align-items: flex-start;
+  @include laptops-max {
+    flex-direction: column;
+  }
+  .childs-wrapper {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .channels-contents-wrapper {
+    @include d-flex;
+    flex-direction: column;
+    width: 100%;
+    @include laptops-max {
+      margin-bottom: 1rem;
+    }
+    .filter-section {
+      @include d-flex-v-center;
+      .filter-item {
+        @include d-inline-flex;
+        width: 50%;
+        @include laptops-l-max {
+          width: 100%;
+        }
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .channels-details-card-wrapper {
+    @include d-inline-flex;
+    min-width: 365px;
+    @include laptops-max {
+      width: 100%;
+    }
+    @include phones-s-max {
+      min-width: initial;
+    }
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}

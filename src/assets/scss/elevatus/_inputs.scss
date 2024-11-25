@@ -1,0 +1,289 @@
+.switcher {
+  position: relative;
+  width: 250px;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+
+  .input-switcher-active {
+    position: absolute;
+    right: 2rem;
+    top: 0.6rem;
+    z-index: 2;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+  }
+
+  .input-switcher-active:not(.is-checked) {
+    color: #838383;
+  }
+  .input-switcher-inactive {
+    position: absolute;
+    left: 2rem;
+    top: 0.6rem;
+    z-index: 1;
+    font-weight: bold;
+    pointer-events: none;
+    font-size: 14px;
+    color: darkgrey;
+  }
+  
+  .input-switcher-inactive-active {
+    position: absolute;
+    left: 2rem;
+    top: 0.6rem;
+    z-index: 1;
+    font-weight: bold;
+    pointer-events: none;
+    font-size: 14px;
+    color: white;
+  }
+
+  .input-switcher-both-active {
+    position: absolute;
+    left: 2rem;
+    top: 0.6rem;
+    z-index: 1;
+    font-weight: bold;
+    pointer-events: none;
+    font-size: 14px;
+    color: white;
+  }
+
+  input {
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(241, 242, 243);
+    outline: none;
+
+    &:before, &:after {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 14px;
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #FFFFFF;
+    }
+
+    //&:before {
+    //   content: 'Inactive';
+    //   left:20px;
+    //}
+    //&:after {
+    //   content: 'Active';
+    //   right:20px;
+    //}
+  }
+
+  label {
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    height: 30px;
+    bottom: 10px;
+    border-radius: 20px;
+    background: $c-green;
+    margin: 0;
+  }
+
+  &.switcher-1 {
+    input {
+      transition: .25s -.1s;
+
+      &:checked {
+        &:before {
+          color: #CCCCCC;
+          transition: color .5s .2s;
+        }
+
+        &:after {
+          color: rgb(241, 242, 243);
+
+          transition: color .5s;
+        }
+
+        & + label {
+          left: 100px;
+          right: 5px;
+          background: $c-green;
+          transition: left .4s .2s, right .5s, background .35s -.1s;
+          
+          &.both {
+            left: 5px!important;
+          }
+        }
+      }
+
+      &:not(:checked) {
+        background: rgb(241, 242, 243);
+        transition: background .5s -.1s;
+
+        &:before {
+          color: rgb(241, 242, 243);
+          transition: color .5s .2s;
+        }
+
+        &:after {
+          color: #CCCCCC;
+          transition: color .5s;
+
+        }
+
+        & + label {
+          left: 5px;
+          right: 100px;
+          background: $c-green;
+          transition: left .5s, right .4s .2s;
+
+        }
+      }
+    }
+  }
+}
+
+.switcherATS {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+
+  input {
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(241, 242, 243);
+    outline: none;
+
+    &:before, &:after {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 12px;
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #FFFFFF;
+    }
+
+    &:before {
+      content: 'Unpublished';
+      left: 20px;
+    }
+
+    &:after {
+      content: 'Published';
+      right: 20px;
+    }
+  }
+
+  label {
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    height: 30px;
+    bottom: 10px;
+    border-radius: 20px;
+    background: $brand-green;
+    margin: 0;
+  }
+
+  &.switcherATS-1 {
+    input {
+      transition: .25s -.1s;
+
+      &:checked {
+        &:before {
+          color: #CCCCCC;
+          transition: color .5s .2s;
+        }
+
+        &:after {
+          color: rgb(241, 242, 243);
+
+          transition: color .5s;
+        }
+
+        & + label {
+          left: 100px;
+          right: 5px;
+          background: $brand-green;
+          transition: left .4s .2s, right .5s, background .35s -.1s;
+        }
+      }
+
+      &:not(:checked) {
+        background: rgb(241, 242, 243);
+        transition: background .5s -.1s;
+
+        &:before {
+          color: rgb(241, 242, 243);
+          transition: color .5s .2s;
+        }
+
+        &:after {
+          color: #CCCCCC;
+          transition: color .5s;
+
+        }
+
+        & + label {
+          left: 5px;
+          right: 100px;
+          background: rgb(218, 218, 218);
+          transition: left .5s, right .4s .2s;
+
+        }
+      }
+    }
+  }
+}
+
+// M-UI form font-override to global (Ubuntu)
+.MuiFormLabel-root {
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+// Grayscale background for some input fields
+#select-template {
+  background-color: #fbfbfb !important;
+}
+
+#select-pipeline {
+  background-color: #fbfbfb !important;
+}
+
+#select-evaluation {
+  background-color: #fbfbfb !important;
+}
+
+#select-time-limit {
+  background-color: #fbfbfb !important;
+}
+
+#select-number-of-retakes {
+  background-color: #fbfbfb !important;
+}
+
+#deadline-selector {
+  background-color: #fbfbfb !important;
+}
+
+// Make checkbox the same color
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: $primary !important;
+}
+

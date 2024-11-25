@@ -1,0 +1,58 @@
+@import '../../../assets/styles/helpers/Helpers.Style';
+
+.eva-analysis-tab {
+  ul {
+    padding: 0 1rem;
+  }
+  .similarity-section {
+    position: relative;
+    @include d-inline-flex-center;
+    padding: 0.5rem;
+    color: $c-gray-primary;
+
+    &:first-child {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    .similarity {
+      &.high {
+        .MuiCircularProgress-colorPrimary {
+          color: #37af40;
+        }
+      }
+      &.medium {
+        .MuiCircularProgress-colorPrimary {
+          color: #facc6c;
+        }
+      }
+      &.low {
+        .MuiCircularProgress-colorPrimary {
+          color: #d80101;
+        }
+      }
+    }
+
+    .similarity-value {
+      font-weight: bold;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.high {
+        color: #37af40;
+      }
+      &.medium {
+        color: #facc6c;
+      }
+      &.low {
+        color: #d80101;
+      }
+    }
+  }
+}

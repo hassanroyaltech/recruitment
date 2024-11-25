@@ -1,0 +1,311 @@
+@import '../../../assets/styles/helpers/Helpers.Style';
+
+.billing-history-view-wrapper {
+  background-color: #f6f7f9;
+  min-height: 91vh;
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+
+  @include rtl {
+    .MuiTablePagination-actions {
+      .MuiSvgIcon-root {
+        transform: rotate(180deg);
+      }
+    }
+    .MuiTablePagination-actions {
+      margin: 0;
+    }
+    .MuiTablePagination-toolbar {
+      padding: 0;
+    }
+  }
+
+  .MuiSelect-outlined.MuiSelect-outlined {
+    margin-left: -1rem;
+    margin-right: 0.5rem;
+    border-radius: 0.7rem;
+    padding-left: 1rem;
+    @include rtl {
+      margin-left: 0.5rem;
+      margin-right: -1rem;
+      padding-left: 0;
+      padding-right: 1rem;
+    }
+  }
+
+  .billing-history-view-content {
+    max-width: 1140px;
+    width: 1140px;
+
+    .history-image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 26rem;
+        height: 26rem;
+      }
+    }
+  }
+
+  .billing-history-title {
+    color: var(--c-primary, #272c6a);
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 2rem;
+  }
+
+  .billing-history-filter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+
+    .MuiInputLabel-formControl {
+      font-size: 14px;
+      font-weight: bold;
+      color: #808080;
+    }
+
+    .search-field-wrapper {
+      width: 100%;
+      padding-right: 1rem;
+
+      .MuiFormControl-root {
+        background: #f0f2f5 0 0 no-repeat padding-box;
+        border-radius: 10px;
+      }
+
+      .MuiInputBase-root {
+        background: #f0f2f5 0 0 no-repeat padding-box;
+        border-radius: 10px;
+      }
+
+      .fa-search {
+        color: #808080;
+      }
+    }
+
+    .autocomplete-wrapper {
+      border: 1px solid #b9babd;
+      border-radius: 10px;
+    }
+
+    .fa-sort-amount-down {
+      color: #808080;
+    }
+
+    .sort-field-wrapper {
+      .MuiInputBase-root {
+        background-color: #f6f7f9 !important;
+      }
+
+      width: 30%;
+      @media (max-width: 910px) {
+        width: 40%;
+      }
+      @media (max-width: 650px) {
+        width: 100%;
+      }
+
+      .vertical-divider {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 0.005rem;
+        background-color: #80808063;
+      }
+
+      .input-stage {
+        color: #808080;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .MuiFormControl-root {
+        width: 100%;
+        background: #ffffffab 0 0 no-repeat padding-box;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .MuiSelect-icon {
+        right: 4rem;
+        @include rtl {
+          right: initial;
+          left: 4rem;
+        }
+      }
+
+      .MuiInputBase-root {
+        background: #ffffffab 0 0 no-repeat padding-box;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #808080;
+      }
+    }
+  }
+
+  .table-pagination {
+    padding-top: 0.5rem;
+  }
+
+  .billing-history-table-wrapper {
+    padding-top: 1rem;
+    @media (max-width: 1650px) {
+      overflow-x: auto;
+      box-sizing: content-box;
+    }
+
+    .MuiButtonBase-root {
+      border-radius: 10rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-transform: capitalize;
+      color: var(--c-primary, #272c6a);
+      font-weight: bold;
+    }
+
+    .billing-history-table-header {
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--c-primary, #272c6a);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      width: 100%;
+
+      .table-header-title {
+        font-weight: bold;
+        font-size: 14px;
+
+        &.is-title {
+          margin-right: 4rem;
+          @include rtl {
+            margin-right: 0;
+            margin-left: 4rem;
+          }
+        }
+      }
+    }
+
+    .table-rows-wrapper {
+      width: 100%;
+
+      .table-row {
+        width: 100%;
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+
+        .table-column {
+          margin: auto;
+          height: 100%;
+          max-height: 3.5rem;
+          padding: 1.2rem 0.5rem;
+          background: #ffffff 0 0 no-repeat padding-box;
+          align-items: center;
+          position: relative;
+          box-shadow: 0 5px 4px #0f0f0f15;
+
+          &:last-child {
+            border-radius: 0 10px 10px 0;
+            @include rtl {
+              border-radius: 10px 0 0 10px;
+            }
+          }
+
+          &:first-child {
+            border-radius: 10px 0 0 10px;
+            @include rtl {
+              border-radius: 0 10px 10px 0;
+            }
+          }
+
+          display: inline-flex;
+          flex: 1 1 100%;
+          text-align: center;
+          justify-content: center;
+          color: black;
+          min-width: 10rem;
+          font-size: 14px;
+
+          img {
+            max-width: 1.2rem !important;
+            max-height: 1.2rem !important;
+          }
+
+          &.is-download {
+            min-width: 6rem;
+            max-width: 6rem;
+          }
+
+          &.is-date {
+            min-width: 8rem;
+            max-width: 8rem;
+          }
+
+          &.is-ref {
+            min-width: 14rem;
+            max-width: 14rem;
+          }
+
+          &.is-status {
+            min-width: 9rem;
+            max-width: 9rem;
+          }
+
+          &.is-price {
+            min-width: 9rem;
+            max-width: 9rem;
+          }
+
+          &.is-successful {
+            color: #37af40;
+          }
+
+          &.is-failed {
+            color: #ee3e2c;
+          }
+        }
+
+        &.is-header {
+          margin-bottom: 0;
+
+          .table-column {
+            color: var(--c-primary, #272c6a);
+            font-weight: bold;
+            background-color: transparent;
+            box-shadow: 0 0 0 transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .history-table-loader {
+    .MuiSkeleton-root {
+      width: 100%;
+      min-height: 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffffce 0 0 no-repeat padding-box;
+      box-shadow: 0 3px 6px #00000029;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      padding: 0.5rem 2.5rem 0.5rem 3rem;
+    }
+  }
+}

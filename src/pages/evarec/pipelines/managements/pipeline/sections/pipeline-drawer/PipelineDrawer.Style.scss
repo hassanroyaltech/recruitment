@@ -1,0 +1,170 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.pipeline-details-section-wrapper {
+  z-index: 50 !important;
+
+  .MuiPaper-root {
+    padding-top: 72px;
+    @include d-flex;
+    flex-direction: row;
+    box-shadow: none;
+    border-left: 1px solid $c-gray-light;
+    @include rtl {
+      border-right: 1px solid $c-gray-light;
+      border-left: initial;
+    }
+
+    .details-contents-wrapper {
+      width: 37vw;
+      min-width: 37vw;
+      max-width: 37vw;
+      @include tablets-max {
+        width: 90vw;
+        max-width: 90vw;
+      }
+      @include phones-max {
+        width: 90vw;
+        max-width: 90vw;
+      }
+      @include phones-s-max {
+        width: 90vw;
+        max-width: 90vw;
+      }
+      @include phones-xs-max {
+        width: 90vw;
+        max-width: 90vw;
+      }
+
+      @include d-inline-flex-column;
+
+      .details-header-wrapper {
+        @include d-flex-h-between;
+        flex: 0 1 0;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .details-actions-wrapper {
+      @include d-inline-flex-column;
+      align-items: center;
+      padding: 1rem 0.5rem;
+
+      .btns-icon {
+        margin-bottom: 0.5rem;
+      }
+
+      border-left: 1px solid $c-gray-light;
+      @include rtl {
+        border-right: 1px solid $c-gray-light;
+        border-left: initial;
+      }
+    }
+  }
+
+  .pipeline-side-drawer-info {
+    display: grid;
+    padding: 0 0.5rem;
+    grid-template-columns: 0.5fr auto;
+    @include tablets-max {
+      max-width: 100vw;
+    }
+    .info-cell {
+      display: flex;
+      margin-bottom: 1rem !important;
+      padding: 0 0.5rem;
+    }
+    .pointer {
+      cursor: pointer;
+    }
+  }
+  .user-image-wrapper {
+    min-height: 35px;
+    min-width: 35px;
+  }
+  .notes-tab-wrapper {
+    .MuiFormHelperText-root {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.pipeline-side-drawer-info {
+  .small-control {
+    min-width: 100px;
+    max-width: 120px;
+  }
+  .timeframe-fields-wrapper {
+    @include phones-max {
+      flex-wrap: wrap;
+    }
+    .shared-select-wrapper {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.pipeline-task-card-wrapper {
+  border: 1px solid rgba(36, 37, 51, 0.06);
+  border-radius: 6px;
+}
+
+.query-item-label {
+  color: white;
+  background-color: #242533;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-size: 12px;
+}
+.query-placeholder {
+  text-decoration-line: underline;
+  &.no-underline {
+    text-decoration-line: none;
+  }
+  &.active {
+    color: #9fa0b0;
+    &.card-mode {
+      color: black;
+    }
+  }
+  &.highlighted {
+    color: #4851c8;
+    &.card-mode {
+      color: $c-gray;
+    }
+  }
+}
+.icon-wrapper {
+  background-color: #ece9fc;
+  border-radius: 8px;
+}
+.max-width-100 {
+  max-width: 100px;
+}
+.mx-half {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+.pipeline-task-library-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  opacity: 0.3;
+}
+.input-fz-20px {
+  input {
+    font-size: 20px !important;
+  }
+}
+
+.query-item-error-class {
+  color: $c-error !important;
+  font-weight: normal !important;
+  &.with-border {
+    border-color: $c-error !important;
+  }
+}

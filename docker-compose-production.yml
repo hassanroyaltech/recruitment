@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  web:
+    container_name: recruiter-production-Web
+    build:
+      context: ./
+      dockerfile: docker/master/nginx/Dockerfile
+    ports:
+      - 8011:80
+      - 4431:443
+    restart: always
+    links:
+      - node-recruiter
+  node-recruiter:
+    container_name: recruiter-production-React
+    build:
+      context: ./
+      dockerfile: docker/master/Dockerfile
+    ports:
+      - 8000:8000
+    restart: always

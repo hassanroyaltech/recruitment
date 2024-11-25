@@ -1,0 +1,12 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.template-setup-tab-wrapper {
+  @include d-flex-h-center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+
+  .body-content-wrapper {
+    max-width: 896px;
+    width: 100%;
+  }
+}

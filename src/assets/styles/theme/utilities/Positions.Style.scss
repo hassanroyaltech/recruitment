@@ -1,0 +1,36 @@
+.p-relative {
+  position: relative !important;
+}
+
+.p-absolute,
+.p-absolute-r-0,
+.p-absolute-tr-0,
+.p-absolute-tr-10px {
+  position: absolute !important;
+}
+
+.p-absolute-r-0 {
+  right: 0;
+  @include rtl {
+    left: 0;
+    right: initial;
+  }
+}
+.p-absolute-tr-10px {
+  right: 10px;
+  @include rtl {
+    left: 10px;
+    right: initial;
+  }
+}
+
+.p-absolute-tr-0 {
+  top: 0;
+}
+.p-absolute-tr-10px {
+  top: 10px;
+}
+
+.top-m5px {
+  top: -5px;
+}

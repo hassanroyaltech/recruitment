@@ -1,0 +1,12 @@
+{
+  "dispatchers": "المرسلون",
+  "dispatchers-description": "وصف المرسلون",
+  "assign-to": "التعيين ل",
+  "assign-to-users": "التعيين إلى المستخدمين",
+  "select-users": "-- إختر المستخدميين --",
+  "search": "البحث",
+  "this-field-is-required": "هذا الحقل مطلوب",
+  "dispatcher-process": "عملية الإرسال",
+  "assign-to-users-successfully": "تم التعيين إلى المستخدمين بنجاح",
+  "assign-to-users-failed": "فشل التخصيص إلى المستخدمين"
+}

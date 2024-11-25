@@ -1,0 +1,99 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.page-wrapper {
+  padding: 2rem;
+  @include tablets-max {
+    padding: 1rem;
+  }
+}
+.page-body-wrapper {
+  width: 100%;
+}
+.tab-wrapper {
+  padding: 1rem 0;
+}
+
+.lookups-import-dialog-content-wrapper {
+  .lookups-import-item-wrapper {
+    @include d-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid $c-gray-lighter;
+    .lookups-import-item-header {
+      @include d-flex-v-center-h-between;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+    .collapse-wrapper {
+      width: 100%;
+    }
+    .active-stage-precondition-body {
+      padding: 0.5rem;
+      border-top: 1px solid $c-gray-lighter;
+      width: 100%;
+    }
+    .created-by-text {
+      text-wrap: nowrap;
+    }
+    .status-wrapper {
+      @include d-inline-flex-center;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      //background-color: $c-gray-lighter;
+      .status-text {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $c-gray-primary;
+      }
+    }
+  }
+  .tab-content-wrapper {
+    padding-top: 1rem;
+  }
+}
+
+.setups-card-wrapper {
+  @include d-inline-flex;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  &.is-half-width {
+    max-width: 50%;
+    @include tablets-max {
+      max-width: 100%;
+    }
+  }
+  .setups-content-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    border: 1px solid $c-gray-light;
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    .setups-card-body-wrapper {
+      @include d-flex;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+      .body-item-wrapper {
+        @include d-flex-v-center;
+        flex-wrap: wrap;
+        padding: 0 0.5rem;
+      }
+    }
+    .setups-card-footer-wrapper {
+      @include d-flex-v-center-h-between;
+      flex-wrap: wrap;
+      border-top: 1px solid $c-gray-light;
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.recovery-text-width {
+  min-width: 90px;
+}
+.btn-recovery {
+  height: 40px;
+}

@@ -1,0 +1,48 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.candidate-actions-management-popover-wrapper {
+  .MuiPaper-root {
+    max-width: 400px;
+    padding: 0.5rem 0 0;
+    @include phones-max {
+      max-width: 300px;
+    }
+    .actions-management-section {
+      .is-actions-tab {
+        min-height: 650px; // must be increased on open the tab
+      }
+      .is-list-tab {
+        min-height: 250px;
+      }
+    }
+    .checkbox-groups-wrapper {
+      .MuiFormControlLabel-root {
+        margin: 0;
+      }
+    }
+    .MuiAvatar-root {
+      width: 28px !important;
+      min-width: 28px !important;
+      height: 28px !important;
+    }
+    .list-items-wrapper {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .list-items-wrapper,
+    .actions-types-items-wrapper {
+      @include d-flex-column;
+      padding: 0 0.5rem;
+      .list-item,
+      .actions-types-item {
+        @include d-flex-v-center;
+        margin-bottom: 0.5rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: $c-gray-lighter-more;
+        }
+      }
+    }
+  }
+}

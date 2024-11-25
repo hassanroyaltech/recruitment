@@ -1,0 +1,48 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.responsibility-management-popover-wrapper {
+  .MuiPaper-root {
+    max-width: 400px;
+    padding: 0.5rem 0 0;
+    @include phones-max {
+      max-width: 300px;
+    }
+
+    .user-image-wrapper {
+      border-radius: 100%;
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+    }
+    .MuiAvatar-root {
+      width: 28px !important;
+      min-width: 28px !important;
+      height: 28px !important;
+    }
+
+    .selection-group-items-wrapper {
+      @include d-flex-column;
+      justify-content: flex-start;
+      padding: 0 0.5rem;
+      height: 350px;
+      overflow-y: auto;
+
+      .selection-group-item {
+        @include d-flex-v-center;
+        margin-bottom: 0.5rem;
+        padding: 0 0.5rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: $c-gray-lighter-more;
+        }
+      }
+    }
+  }
+}
+
+.responsibility-types-popover-wrapper {
+  .MuiPaper-root {
+    max-width: 100px;
+  }
+}

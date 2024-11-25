@@ -1,0 +1,12 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.push-to-partner-tab-wrapper {
+  .push-to-partner-card-wrapper {
+    background-color: $c-white;
+    padding: 1rem 1rem 0;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    .push-to-partner-card-body {
+      @include d-flex-column;
+    }
+  }
+}

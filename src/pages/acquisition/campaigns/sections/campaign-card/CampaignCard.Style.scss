@@ -1,0 +1,64 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.campaign-cards-wrapper {
+  @include d-flex-h-center;
+  flex-wrap: wrap;
+  .campaign-card-wrapper {
+    width: 25%;
+    @include laptops-l-max {
+      width: 33.33333333%;
+    }
+    @include laptops-max {
+      width: 50%;
+    }
+    @include phones-s-max {
+      width: 100%;
+    }
+    .card-header-wrapper {
+      padding: 0.5rem 0;
+      justify-content: space-between;
+    }
+    .card-body-wrapper {
+      .card-body-item-wrapper {
+        @include d-flex-v-center-h-between;
+        flex-wrap: wrap;
+        flex: 0 1 100%;
+        padding: 0 0.5rem;
+        margin-bottom: 0.5rem;
+        .card-image-wrapper {
+          @include d-inline-flex;
+          height: 32px;
+          width: 32px;
+          min-width: 32px;
+          border: 1px solid $c-gray-light;
+          border-radius: 32px;
+        }
+        .item-sections-wrapper {
+          @include d-inline-flex-v-center;
+        }
+      }
+    }
+    .card-footer-wrapper {
+      justify-content: space-between;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: ' ';
+        background-color: $c-gray-light;
+        height: 1px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @include rtl {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        width: 95%;
+      }
+      .footer-dates-wrapper {
+        @include d-inline-flex-v-center;
+      }
+    }
+  }
+}

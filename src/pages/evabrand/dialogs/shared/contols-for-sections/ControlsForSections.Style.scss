@@ -1,0 +1,24 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.controls-for-sections-shared-wrapper {
+  @include d-flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  .controls-wrapper {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0 0.5rem;
+    &.is-half-width {
+      max-width: 50%;
+      @include tablets-max {
+        max-width: 100%;
+      }
+    }
+    .input-theme-component-wrapper {
+      .custom-dropzone-wrapper {
+        .drop-here {
+          font-size: $fz-12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+
+.integrations-settings-management-dialog-wrapper {
+  .MuiPaper-root {
+    max-width: 750px;
+  }
+  .integrations-settings-management-content-dialog-wrapper {
+    .api-key-input-wrapper {
+      @include d-flex;
+    }
+    .box-field-wrapper {
+      @include d-flex;
+      @include phones-s-max {
+        flex-wrap: wrap;
+      }
+    }
+    .inline-label-wrapper {
+      min-width: 120px;
+    }
+  }
+}

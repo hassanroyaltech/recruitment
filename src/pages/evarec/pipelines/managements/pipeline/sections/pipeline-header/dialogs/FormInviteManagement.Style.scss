@@ -1,0 +1,42 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.form-invite-management-dialog-wrapper {
+  .MuiPaper-root {
+    max-width: 650px;
+  }
+  .form-invite-management-content-dialog-wrapper {
+    .box-field-wrapper {
+      @include d-flex;
+      @include phones-max {
+        flex-wrap: wrap;
+        .invite-box-wrapper {
+          padding: 0;
+        }
+      }
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+      .invite-box-wrapper {
+        @include d-flex;
+        padding: 0;
+        .invite-box-body-wrapper {
+          @include d-flex;
+          flex-wrap: wrap;
+          border-radius: 0.35rem;
+          border: 1px solid $c-gray-lighter;
+          padding: 0.5rem 0.5rem 0;
+          min-height: 30px;
+          .avatars-component-wrapper {
+            max-width: calc(50% - 0.5rem);
+          }
+        }
+      }
+    }
+    .inline-label-wrapper {
+      max-width: 150px;
+      min-width: 150px;
+      margin-top: 0.5rem;
+      color: $c-black-lighter;
+      padding-inline-end: 0.5rem;
+      padding-inline-start: 0;
+    }
+  }
+}

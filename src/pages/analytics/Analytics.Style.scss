@@ -1,0 +1,155 @@
+@import '../../assets/styles/helpers/Helpers.Style';
+
+//TODO: Diana: Move later to mixins
+.dark-text-color {
+  color: #020b1f;
+}
+.light-text-color {
+  color: #808192;
+}
+.primary-box-color {
+  background-color: #4851c8;
+}
+.fz-81px {
+  font-size: 81px;
+}
+
+.diagrams-containers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include tablets-max {
+    display: block;
+  }
+}
+
+.analytics-container {
+  .tabs-wrapper.theme-default .MuiButtonBase-root.MuiTab-root {
+    padding-bottom: 1rem;
+  }
+  .MuiInputLabel-root {
+    font-size: 14px !important;
+  }
+}
+
+// TODO: Diana: Move to mixins and themes later
+.btn-outline-light {
+  border: 1px solid #f3f3f4;
+  border-radius: 4px !important;
+  color: #020b1f !important;
+  font-weight: normal !important;
+}
+.btn-primary-light:hover {
+  background-color: #4851c8;
+}
+
+.btn-primary-light {
+  background-color: var(--bg-primary, #19289b);
+  border-radius: 4px !important;
+  color: white !important;
+  font-weight: normal !important;
+}
+
+.width-100-align-text {
+  width: 100px;
+  text-align: left;
+  &.rtl {
+    text-align: right;
+  }
+}
+
+.analytics-side-menu-wrapper {
+  width: 15%;
+  @include tablets-max {
+    display: none;
+  }
+}
+.toggle-analytics-side-menu-wrapper {
+  display: none;
+  @include tablets-max {
+    display: block;
+  }
+}
+.analytics-dashboard-wrapper {
+  display: flex;
+  @include tablets-max {
+    display: block;
+  }
+  .m-end-25px {
+    margin-inline-end: 26px;
+  }
+}
+.dashboard-filter {
+  @include tablets-max {
+    display: block;
+  }
+}
+.dashboard-filter > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.dashboard-filter-add-extra-btn {
+  @include tablets-max {
+    @include d-flex-center;
+  }
+}
+.dashboard-filter-toggle-group-wrapper {
+  @include tablets-max {
+    @include d-flex-center;
+  }
+}
+
+.analytics-tabs-wrapper {
+  .tabs-header-wrapper {
+    max-width: 50%;
+  }
+}
+
+.dashboard-right-side-container {
+  width: -webkit-fill-available;
+  border-left: 1px solid #f0f2f5;
+  max-width: 85%;
+  @include tablets-max {
+    max-width: 100%;
+  }
+}
+
+.widget-setup-container {
+  display: flex;
+  @include tablets-max {
+    display: block;
+  }
+}
+
+.widget-setup-side-container {
+  @include tablets-max {
+    width: 100% !important;
+  }
+}
+
+.widget-setup-main-side-container {
+  @include tablets-max {
+    width: 100% !important;
+  }
+}
+
+.widget-setup-result-actions {
+  @include d-flex-h-between;
+  @include tablets-max {
+    @include d-flex-column-center;
+  }
+}
+.popover-btn-analytics {
+  @include d-flex;
+  justify-content: flex-start;
+}
+
+.actions-btns {
+  position: absolute;
+  top: 26px;
+  right: 0;
+  transform: translate(-50%, -50%);
+  @include rtl {
+    right: unset;
+    left: 23px;
+  }
+}

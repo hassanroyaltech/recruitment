@@ -1,0 +1,130 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.stepper-wrapper {
+  &.MuiStepper-root {
+    background-color: transparent;
+    padding: 0 0.5rem 1.5rem;
+    @include d-flex-v-center;
+    flex-wrap: wrap;
+  }
+  overflow-x: auto;
+
+  .MuiStepConnector-alternativeLabel {
+    top: initial;
+    // left: calc(-50% + 20px);
+    // right: calc(50% + 20px);
+    // position: absolute;
+    bottom: 12px;
+
+    @include rtl {
+      left: calc(50% + 20px);
+      right: calc(-50% + 20px);
+    }
+  }
+
+  .step-progress-text-wrapper {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .MuiStep-horizontal {
+    padding: 0;
+  }
+  .step-label-wrapper,
+  .step-button-wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0.5rem;
+    .MuiRadio-root {
+      padding: 0.5rem 0;
+    }
+    .MuiStepLabel-horizontal {
+      flex-direction: row-reverse;
+      .MuiStepLabel-iconContainer {
+        @include rtl {
+          padding-right: 0;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+    .MuiStepLabel-iconContainer {
+      order: 2;
+
+      svg {
+        fill: $c-gray-secondary;
+      }
+      .MuiStepIcon-active {
+        // svg {
+        fill: $c-secondary;
+        // }
+      }
+    }
+
+    .MuiStepLabel-label {
+      color: $c-gray-secondary;
+      order: 1;
+      margin-top: 0;
+
+      &.MuiStepLabel-active {
+        color: $c-secondary;
+      }
+    }
+  }
+  .step-wrapper {
+    display: inline-flex;
+    justify-content: center;
+
+    &.has-error-step {
+      .MuiStepIcon-root {
+        fill: $c-error;
+        color: $c-error;
+      }
+      .step-button-wrapper {
+        .MuiStepLabel-iconContainer {
+          // svg {
+          //   fill: $c-gray-secondary;
+          // }
+          .MuiStepIcon-active {
+            // svg {
+            fill: $c-error;
+            // }
+          }
+        }
+
+        .MuiStepLabel-label {
+          color: $c-error;
+        }
+        .radio-icon {
+          color: $c-error !important;
+        }
+      }
+    }
+    &.is-with-completed {
+      &.MuiStep-completed {
+        .MuiStepIcon-root {
+          fill: $c-green-primary !important;
+          color: $c-green-primary !important;
+        }
+        .step-button-wrapper {
+          .MuiStepLabel-iconContainer {
+            // svg {
+            //   fill: $c-gray-secondary;
+            // }
+            .MuiStepIcon-active {
+              // svg {
+              fill: $c-green-primary !important;
+              // }
+            }
+          }
+
+          .MuiStepLabel-label {
+            color: $c-green-primary !important;
+          }
+          .radio-icon {
+            color: $c-green-primary !important;
+          }
+        }
+      }
+    }
+  }
+}

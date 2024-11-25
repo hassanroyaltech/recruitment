@@ -1,0 +1,12 @@
+{
+  "dispatchers": "Expediteurs",
+  "dispatchers-description": "Expediteurs Beschrijving",
+  "assign-to": "Toewijzen aan",
+  "assign-to-users": "Toewijzen aan gebruikers",
+  "select-users": "-- Gebruikers selecteren --",
+  "search": "Zoeken",
+  "this-field-is-required": "Dit veld is verplicht",
+  "dispatcher-process": "Expediteur Proces",
+  "assign-to-users-successfully": "Succesvol toewijzen aan gebruikers",
+  "assign-to-users-failed": "Toewijzen aan gebruikers mislukt"
+}

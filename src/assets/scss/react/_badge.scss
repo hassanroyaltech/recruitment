@@ -1,0 +1,14 @@
+.badge + .badge {
+  margin-left: 4px;
+  @include rtl {
+    margin-right: 4px;
+    margin-left: 0;
+  }
+}
+.badge.badge-dot i {
+  margin-right: 0.6rem;
+  @include rtl {
+    margin-left: 0.6rem;
+    margin-right: 0;
+  }
+}

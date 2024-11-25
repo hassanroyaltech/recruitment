@@ -1,0 +1,11 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.social-media-shared-wrapper {
+  @include d-flex-v-start-h-center;
+  flex-wrap: wrap;
+  .controls-wrapper {
+    margin-bottom: 1rem;
+    width: 50%;
+    @include d-inline-flex;
+    padding: 0 0.5rem;
+  }
+}

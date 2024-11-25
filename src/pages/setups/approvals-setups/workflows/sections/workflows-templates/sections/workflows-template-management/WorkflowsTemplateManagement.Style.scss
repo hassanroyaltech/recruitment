@@ -1,0 +1,294 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.workflow-type-management-section-wrapper {
+  .page-header-wrapper {
+    @include d-flex-h-between;
+    align-items: flex-start;
+    @include tablets-max {
+      flex-wrap: wrap;
+      .description-text {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .condition-item-wrapper {
+    @include d-flex;
+    @include phones-max {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+    .condition-controls-wrapper {
+      @include laptops-l-max {
+        flex-wrap: wrap;
+      }
+      .first-controls-group {
+        @include laptops-max {
+          flex-direction: column;
+        }
+        .condition-type-item,
+        .existence-type-item {
+          width: 240px;
+          min-width: 240px;
+        }
+      }
+      .second-controls-group {
+        max-width: 25%;
+        @include laptops-l-max {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .colored {
+    &.green-primary {
+      .autocomplete-wrapper {
+        &:hover,
+        &.is-focused-input {
+          &:not(.is-disabled) {
+            .text-field-wrapper .inputs .MuiInputBase-root {
+              border-color: $c-green-primary;
+            }
+          }
+        }
+      }
+      .input-wrapper .text-field-wrapper .inputs .MuiInputBase-root {
+        border-color: $c-green-primary;
+        .MuiInputBase-input {
+          color: $c-green-primary;
+        }
+        .dropdown-icon-wrapper {
+          color: $c-green-primary;
+        }
+      }
+    }
+    &.warning {
+      .autocomplete-wrapper {
+        &:hover,
+        &.is-focused-input {
+          &:not(.is-disabled) {
+            .text-field-wrapper .inputs .MuiInputBase-root {
+              border-color: $c-warning;
+            }
+          }
+        }
+      }
+      .input-wrapper {
+        .text-field-wrapper .inputs .MuiInputBase-root {
+          border-color: $c-warning;
+          .MuiInputBase-input {
+            color: $c-warning;
+          }
+
+          .dropdown-icon-wrapper {
+            color: $c-warning;
+          }
+        }
+      }
+    }
+  }
+  .condition-add-btn {
+    width: 100%;
+    max-width: calc(100% - 47px);
+    @include phones-max {
+      max-width: 100%;
+    }
+  }
+  .approvals-wrapper {
+    @include d-flex-center;
+    overflow-x: auto;
+    padding: 0.5rem;
+    .dragging-btn {
+      &:not(:hover) {
+        box-shadow: none;
+        background-color: transparent;
+      }
+    }
+
+    .approval-section {
+      @include d-flex;
+      flex-wrap: wrap;
+      padding: 0 0.5rem;
+      align-self: flex-start;
+      .approvals-right-section-items-wrapper,
+      .approvals-left-section-items-wrapper {
+        @include d-flex;
+        flex-wrap: wrap;
+        .approval-content-wrapper {
+          padding: 0.5rem 0;
+          border-radius: 0.5rem;
+          border: 1px solid $c-gray-light;
+          width: 100%;
+        }
+        .approval-items-wrapper {
+          width: 100%;
+          height: 300px;
+          overflow-y: auto;
+
+          .approval-item-wrapper {
+            @include d-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            min-height: 40px;
+            &.is-focused-item {
+              background-color: $c-blue-lightest-more;
+              border-top: 1px solid $c-gray-lighter;
+              border-bottom: 1px solid $c-gray-lighter;
+            }
+            .shared-control-wrapper {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .approvals-right-section-items-wrapper {
+        .approval-number-wrapper {
+          @include d-inline-flex-center;
+          height: 46px;
+          width: 46px;
+          min-width: 46px;
+          border: 1px solid $c-gray-light;
+          border-radius: 0.5rem;
+          margin: 0 0.5rem;
+        }
+        .approval-text-wrapper {
+          @include d-flex-v-center;
+          width: 100%;
+          min-height: 46px;
+          border-radius: 0.5rem;
+          padding: 0.5rem;
+          border: 1px solid $c-gray-light;
+        }
+        .condition-type-item {
+          min-width: 240px;
+        }
+        .item-pink {
+          .dragging-btn,
+          .approval-text-wrapper,
+          .approval-number-wrapper {
+            border-color: $c-pink;
+            color: $c-pink;
+            background-color: lighten($c-pink, 35%);
+          }
+        }
+        .item-success {
+          .dragging-btn,
+          .approval-text-wrapper,
+          .approval-number-wrapper {
+            border-color: $c-success;
+            color: $c-success;
+            background-color: lighten($c-success, 45%);
+          }
+        }
+        .item-secondary {
+          .dragging-btn,
+          .approval-text-wrapper,
+          .approval-number-wrapper {
+            border-color: $c-secondary;
+            color: $c-secondary;
+            background-color: lighten($c-secondary, 45%);
+          }
+        }
+        .item-info {
+          .dragging-btn,
+          .approval-text-wrapper,
+          .approval-number-wrapper {
+            border-color: $c-info;
+            color: $c-info;
+            background-color: lighten($c-info, 22%);
+          }
+        }
+        .item-yellow {
+          .dragging-btn,
+          .approval-text-wrapper,
+          .approval-number-wrapper {
+            border-color: $c-yellow;
+            color: $c-yellow;
+            background-color: lighten($c-yellow, 45%);
+          }
+        }
+      }
+    }
+    .approvals-right-section-wrapper {
+      min-width: 320px;
+      &.approval-section {
+        .approval-items-wrapper {
+          .approval-item-wrapper {
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+    .approvals-left-section-wrapper {
+      max-width: 33.33333333%;
+      min-width: 320px;
+      .approval-content-wrapper {
+        min-height: 408px;
+      }
+    }
+  }
+  .escalation-rules-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    .period-controls-wrapper {
+      @include d-flex;
+      padding: 0 0.5rem;
+    }
+    .MuiInputBase-input[type='number'] {
+      max-width: 112px;
+      padding: 0 0 0 0.5rem !important;
+      @include rtl {
+        padding-right: 0 !important;
+        padding-left: 0.5rem !important;
+      }
+      text-align: center;
+    }
+    .MuiAutocomplete-input {
+      max-width: 185px;
+    }
+  }
+  .label-wrapper {
+    margin-bottom: 0.25rem !important;
+    color: #000000 !important;
+    font-size: 14px !important;
+  }
+  .times-controls-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+    .repeated-input {
+      .MuiInputBase-input[type='number'] {
+        max-width: 60px;
+      }
+    }
+  }
+  .automation-controls-wrapper {
+    @include d-flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    .automation-checkboxes-wrapper {
+      @include d-inline-flex-v-center;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid $c-gray-light;
+      border-radius: 0.5rem;
+    }
+    .from-last-reminder-wrapper {
+      @include d-inline-flex-center;
+      min-height: 45px;
+      padding: 0 0.5rem;
+      background-color: $c-gray-lighter;
+      border-radius: 0 0.25rem 0.25rem 0;
+      @include rtl {
+        border-radius: 0.3rem 0 0 0.3rem;
+      }
+    }
+  }
+  .notifications-responsive-handler-container {
+    @include d-flex;
+    overflow-x: auto;
+    max-width: 100%;
+    .notifications-responsive-handler {
+      min-width: 767px;
+      width: 100%;
+    }
+  }
+}

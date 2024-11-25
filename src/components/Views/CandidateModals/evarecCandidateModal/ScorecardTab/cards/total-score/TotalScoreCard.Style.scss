@@ -1,0 +1,26 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.total-score-card {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  .c-neutral-scale-1 {
+    color: $c-neutral-scale-1;
+  }
+  .c-neutral-scale-2 {
+    color: $c-neutral-scale-2;
+  }
+  .best-decision-view {
+    border: 1px solid $c-secondary-3;
+    padding: 5px;
+    border-radius: 4px;
+    flex-grow: 1;
+  }
+  .progress {
+    background: $c-neutral-scale-5;
+    height: 4px;
+    .progress-rate {
+      background: $c-black-light;
+    }
+  }
+}

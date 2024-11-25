@@ -1,0 +1,52 @@
+@import 'src/assets/styles/helpers/Helpers.Style';
+.quick-filters-section-wrapper {
+  @include d-flex;
+  @include flex-h-between;
+  padding: 1rem 0 0;
+  @include phones-xs-max {
+    flex-direction: column;
+  }
+  .filter-content-section {
+    @include d-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .is-quarter-width {
+      width: 16.666666667%;
+      @include laptops-xl-max {
+        width: 20%;
+      }
+      @include laptops-l-max {
+        width: 25%;
+      }
+      @include laptops-max {
+        width: 33.333333%;
+      }
+      @include tablets-max {
+        width: 50%;
+      }
+      @include phones-max {
+        width: 100%;
+      }
+    }
+  }
+}
+.quick-filters-popover-wrapper {
+  .quick-filters-wrapper {
+    .quick-filters-header {
+      @include d-flex-center;
+      padding: 0.5rem;
+    }
+    .quick-filters-body {
+      max-width: 235px;
+      border-radius: 17px;
+      .checkbox-groups-wrapper {
+        pointer-events: none;
+      }
+    }
+    .quick-filters-footer {
+      @include d-flex-center;
+      padding: 0.5rem;
+      border-top: 1px solid $c-gray-light;
+    }
+  }
+}

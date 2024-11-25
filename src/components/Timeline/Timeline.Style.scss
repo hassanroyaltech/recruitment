@@ -1,0 +1,27 @@
+@import 'src/assets/styles/helpers/Helpers.Style.scss';
+.timeline-wrapper {
+  &.sm-size {
+    .MuiTimelineDot-root {
+      @include d-inline-flex-center;
+      min-width: 15px;
+      min-height: 15px;
+      padding: 0;
+      border: 0;
+    }
+    .MuiTimelineItem-root {
+      min-height: 50px;
+    }
+  }
+  .MuiTimelineDot-root {
+    @include d-inline-flex-center;
+    min-width: 30px;
+    min-height: 30px;
+    padding: 0;
+    border: 0;
+  }
+  .MuiTimelineItem-missingOppositeContent {
+    &::before {
+      content: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin widths {
+  @each $key, $value in $widths {
+    .w-#{$key} {
+      width: #{$value} !important;
+    }
+    @include tablets-max {
+      .w-t-#{$key} {
+        width: #{$value} !important;
+      }
+    }
+
+    @include phones-max {
+      .w-p-#{$key} {
+        width: #{$value} !important;
+      }
+    }
+    @include phones-s-max {
+      .w-ps-#{$key} {
+        width: #{$value} !important;
+      }
+    }
+    .mxw-#{$key} {
+      max-width: #{$value} !important;
+    }
+    .miw-#{$key} {
+      min-width: #{$value} !important;
+    }
+  }
+}
